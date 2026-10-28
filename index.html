@@ -28,8 +28,8 @@
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen flex flex-col justify-center items-center">
 
-    <!-- ANA UYGULAMA İÇERİĞİ (DOĞRUDAN ERİŞİM) -->
-    <div id="app-container" class="w-full min-h-screen flex flex-col md:flex-row">
+    <!-- ANA UYGULAMA İÇERİĞİ -->
+    <div id="app-container" class="w-full min-h-screen flex flex-col md:flex-row relative">
 
         <!-- MOBİL ÜST BAR -->
         <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
@@ -37,20 +37,20 @@
                 <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
                 <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Üniversite Kütüphanesi)</p>
             </div>
-            <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg">
+            <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg active:scale-95 transition">
                 <span>☰</span> Menü
             </button>
         </header>
 
         <!-- SOL YAN MENÜ -->
-        <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-full md:w-72 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-0 z-50 overflow-y-auto">
+        <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-72 md:w-72 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-y-0 left-0 z-50 overflow-y-auto shadow-2xl transition-all">
             <div>
                 <div class="mb-8 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
                         <p class="text-xs text-slate-400 mt-1">V2.0 • Enstitü Kütüphanesi</p>
                     </div>
-                    <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕</button>
                 </div>
                 
                 <nav class="space-y-3">
@@ -73,7 +73,7 @@
                         <span>🏛️</span> Düşünce ve Bilim Cildi (32 Modül)
                     </button>
                     <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>🛡️</span> Şifreli Güvenlik & Yedek
+                        <span>🛡️</span> Sistem Durumu
                     </button>
                 </nav>
             </div>
@@ -277,6 +277,7 @@
             renderBookTOC();
         }
 
+        // Mobil Menüyü Açıp Kapatma Fonksiyonu
         function toggleMobileMenu() {
             const sidebar = document.getElementById('sidebar');
             if (sidebar.classList.contains('hidden')) {
@@ -301,6 +302,7 @@
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
 
+            // Mobilde herhangi bir sekmeye tıklandığında menüyü otomatik kapat
             if (window.innerWidth < 768) {
                 const sidebar = document.getElementById('sidebar');
                 sidebar.classList.remove('flex');
@@ -308,40 +310,40 @@
             }
         }
 
-        // 32 DEV MODÜLÜN KİTAP CİLT VERİLERİ (SAYFA SAYFA)
+        // 32 DEV MODÜLÜN KİTABI
         const bookPagesData = [
-            { id: 1, title: "Epistemoloji ve Bilgi Felsefesi Temelleri", desc: "Doğruluk, Gerekçelendirilmiş Doğru İnanç (JTB) tanımı, Gettier problemleri ve bilginin sınırları.", content: "Epistemoloji, bilginin doğasını, kapsamını ve gerekçelendirilmesini inceler. Klasik JTB (Justified True Belief) tanımı Gettier problemleriyle sarsılmış; içselcilik-dışsalcılık ve epistemik erdemler analitik felsefenin merkezine yerleşmiştir." },
+            { id: 1, title: "Epistemoloji ve Bilgi Felsefesi Temelleri", desc: "Doğruluk, Gerekçelendirilmiş Doğru İnanç (JTB) tanımı, Gettier problemleri ve bilginin sınırları.", content: "Epistemoloji, bilginin doğasını, kapsamını ve gerekçelendirilmesini inceler. Klasik JTB tanımı Gettier problemleriyle sarsılmış; içselcilik-dışsalcılık ve epistemik erdemler analitik felsefenin merkezine yerleşmiştir." },
             { id: 2, title: "Karl Popper ve Yanlışlanabilirlik", desc: "Tümevarım sorunu, demarkasyon problemi ve yanlışlanabilirlik ilkesi.", content: "Popper, klasik doğrulamacılığın tümevarımsal çıkmazını reddederek bilimin ancak yanlışlanabilirlik (falsifiability) ilkesiyle ilerleyebileceğini kanıtlamıştır. Bilim, cesur tahminler ve hatalardan arınma sürecidir." },
             { id: 3, title: "Thomas Kuhn ve Paradigma Devrimleri", desc: "Normal bilim, anomaliler, krizler ve radikal paradigma değişimleri.", content: "Kuhn, bilimin kümülatif değil, kesintili ilerlediğini göstermiştir. Normal bilim evresi anomalilerle sarsılır, krizler doğurur ve Gestalt dönüşümüyle yeni bir paradigmaya evrilir." },
-            { id: 4, title: "Immanuel Kant ve Transandantal İdealizm", desc: "Saf aklın eleştirisi, uzay-zaman formları ve fenomen-noumen ayrımı.", content: "Kant, ampirizm ile rasyonalizmi uzlaştırarak nesnelerin zihnin a priori kategorilerine (nedensellik, uzay, zaman) uyduğunu kanıtlamıştır. Noumen (şeyin kendisi) bilinemez." },
+            { id: 4, title: "Immanuel Kant ve Transandantal İdealizm", desc: "Saf aklın eleştirisi, uzay-zaman formları ve fenomen-noumen ayrımı.", content: "Kant, ampirizm ile rasyonalizmi uzlaştırarak nesnelerin zihnin a priori kategorilerine uyduğunu kanıtlamıştır. Noumen (şeyin kendisi) bilinemez." },
             { id: 5, title: "Quine ve Deneyimciliğin İki Dogması (Holizm)", desc: "Analitik-sentetik ayrımının reddi ve Duhem-Quine inanç ağı tezi.", content: "Quine, hiçbir önermenin tek başına test edilemeyeceğini; bütün inanç ağının (web of belief) bir bütün olarak deneyle sınandığını savunmuştur." },
-            { id: 6, title: "Bilim Sosyolojisi ve Edinburgh Okulu", desc: "Güçlü Program, sosyal inşa ve simetri ilkesi.", content: "Edinburgh Okulu, bilimsel bilginin dahi toplumsal çıkarlardan ve iktidar ağlarından bağımsız olamayacağını, doğru ve yanlış teorilerin aynı simetrik yöntemle incelenmesi gerektiğini savunur." },
-            { id: 7, title: "Ontoloji ve Varlık Felsefesi (Heidegger)", desc: "Varlık unutuluşu (Seinsvergessenheit), Dasein ve teknoloji eleştirisi.", content: "Heidegger, Batı felsefesinin varlığı nesneleştirerek unuttuğunu belirtir. Modern teknoloji doğayı stok kaynağa (Bestand) indirgeyerek insanın özünü tehdit eder." },
-            { id: 8, title: "Bilimsel Gerçekçilik ve Anti-Gerçekçilik", desc: "Yapıcı ampirisizm, teorik terimler ve mucize argümanı.", content: "Gerçekçiler bilimin başarılarını mucize argümanıyla savunurken, Van Fraassen'in yapıcı ampirisizmi bilimin amacının sadece gözlemlenebilir fenomenleri kurtarmak olduğunu savunur." },
-            { id: 9, title: "Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", desc: "Öznel nitelik, Meryem'in odası ve Searle'ün çince odası.", content: "Beden-zihin probleminde qualia (öznel his) ve Searle'ün Çince Oda argümanı, saf fizikselciliğin ve yapay simülasyonların bilinç açıklamasındaki yetersizliğini kanıtlar." },
-            { id: 10, title: "Din, Ahlak ve Bilim Etiği", desc: "Hume'un safsatası (Is-Ought) ve biyoetik sorumluluklar.", content: "Olgulardan (is) değerler (ought) türetilemez. Bilimsel gücün etik sınırları, insanlığın ontolojik bütünlüğünü korumak için felsefi süzgeçten geçirilmelidir." },
-            { id: 11, title: "Dil, Hermenömatik ve Semiyotik", desc: "Yorumbilgisi, ufukların kaynaşması ve semiyotik göstergeler.", content: "Metinlerin ve insan eylemlerinin yorumlanmasında okur ile metnin tarihsel ufuklarının kaynaşması (Gadamer) anlamı dinamik kılar." },
-            { id: 12, title: "Transhumanizm ve Gelecek Felsefesi", desc: "Post-hümanizm, zihin yükleme ve otonom yapay zeka.", content: "İnsanın biyolojik sınırlarının teknolojiyle aşılması ve post-hüman ontolojik evrime geçişin felsefi boyutu." },
+            { id: 6, title: "Bilim Sosyolojisi ve Edinburgh Okulu", desc: "Güçlü Program, sosyal inşa ve simetri ilkesi.", content: "Edinburgh Okulu, bilimsel bilginin dahi toplumsal çıkarlardan ve iktidar ağlarından bağımsız olamayacağını savunur." },
+            { id: 7, title: "Ontoloji ve Varlık Felsefesi (Heidegger)", desc: "Varlık unutuluşu (Seinsvergessenheit), Dasein ve teknoloji eleştirisi.", content: "Heidegger, Batı felsefesinin varlığı nesneleştirerek unuttuğunu belirtir. Modern teknoloji doğayı stok kaynağa (Bestand) indirger." },
+            { id: 8, title: "Bilimsel Gerçekçilik ve Anti-Gerçekçilik", desc: "Yapıcı ampirisizm, teorik terimler ve mucize argümanı.", content: "Gerçekçiler bilimin başarılarını mucize argümanıyla savunurken, Van Fraassen yapıcı ampirisizmi savunur." },
+            { id: 9, title: "Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", desc: "Öznel nitelik, Meryem'in odası ve Searle'ün çince odası.", content: "Beden-zihin probleminde qualia (öznel his) ve Searle'ün Çince Oda argümanı, saf fizikselciliğin yetersizliğini kanıtlar." },
+            { id: 10, title: "Din, Ahlak ve Bilim Etiği", desc: "Hume'un safsatası (Is-Ought) ve biyoetik sorumluluklar.", content: "Olgulardan değerler türetilemez. Bilimsel gücün etik sınırları felsefi süzgeçten geçirilmelidir." },
+            { id: 11, title: "Dil, Hermenömatik ve Semiyotik", desc: "Yorumbilgisi, ufukların kaynaşması ve semiyotik göstergeler.", content: "Metinlerin ve insan eylemlerinin yorumlanmasında ufukların kaynaşması (Gadamer) anlamı dinamik kılar." },
+            { id: 12, title: "Transhumanizm ve Gelecek Felsefesi", desc: "Post-hümanizm, zihin yükleme ve otonom yapay zeka.", content: "İnsanın biyolojik sınırlarının teknolojiyle aşılması ve post-hüman ontolojik evrime geçiş." },
             { id: 13, title: "Fenomenoloji ve Bilinç Deneyimi", desc: "Husserl, Epoche (askıya alma) ve yönelimsellik.", content: "Dış dünyanın varlığını paranteze alarak saf bilincin yapısına ve yönelimselliğe ulaşma yöntemi." },
-            { id: 14, title: "Yapısalcılık ve Post-Yapısalcılık", desc: "Saussure göstergebilimi ve Derrida dekonstrüksiyonu.", content: "Dilin farklar ağı olması ve Derrida ile ikili karşıtlıkların yapıbozuma uğratılması." },
-            { id: 15, title: "Karmaşıklık Teorisi ve Kaos Felsefesi", desc: "Doğrusal olmayan sistemler ve kelebek etkisi.", content: "İndirgemeciliğin krizi, hassas başlangıç koşulları ve kendi kendine örgütlenen sistemler." },
-            { id: 16, title: "Kuantum Felsefesi ve Gerçekliğin Doğası", desc: "Kopenhag yorumu, dolanıklık ve dalga fonksiyonu çökmesi.", content: "Mikrodünyada determinizmin yıkılışı, gözlemcinin rolü ve evrensel dolanıklık ağı." },
-            { id: 17, title: "Diyalektik Materyalizm ve Tarihsel Materyalizm", desc: "Marx, altyapı-üstyapı ve sınıf mücadeleleri.", content: "Hegelci diyalektiğin maddesel temele oturtulması ve üretim ilişkilerinin tarihi belirlemesi." },
-            { id: 18, title: "Pragmatizm ve Gerçeklik Kuramı", desc: "Peirce, James ve işlevsel doğruluk anlayışı.", content: "Doğruluğun soyut bir mülk değil, pratikte işe yarayan ve sorun çözen araç olması." },
-            { id: 19, title: "Analitik Felsefe ve Dilin Mantıksal Çözümlemesi", desc: "Frege, Russell ve mantık atomculuğu.", content: "Felsefi problemlerin dilin mantıksal analiziyle çözülmesi gerektiği tezi." },
-            { id: 20, title: "Bilim Felsefesinde Anarşist Metodoloji (Feyerabend)", desc: "Anything Goes (Ne olursa olsun) ilkesi.", content: "Evrensel tek bir metodolojik kuralın olmadığı ve kuralların ihlal edilmesinin yaratıcılığı tetiklediği." },
-            { id: 21, title: "Stoacılık ve Erdem Etiği", desc: "Kontrol dikotomisi ve içsel kale.", content: "Dış dünyayı kabul etme, akıl odaklı yaşam ve Marcus Aurelius'un içsel kale disiplini." },
-            { id: 22, title: "Varoluşçuluk ve Varlık/Hiçlik (Sartre)", desc: "Varoluş özden önce gelir ve radikal özgürlük.", content: "İnsanın önceden belirlenmiş özünün olmaması, seçimleriyle özünü yaratması ve bulantı." },
-            { id: 23, title: "Spinoza ve Panteizm", desc: "Deus sive Natura ve determinizm.", content: "Tanrı ve Doğanın aynı töz olması, özgür iradenin yanılsama ve mutlak nedensellik." },
-            { id: 24, title: "Hakikat Sonrası (Post-Truth) Çağı", desc: "Duygusal manipülasyon ve epistemik kriz.", content: "Nesnel olguların yerine duyguların ve yankı odalarının geçtiği dijital çağ krizleri." },
-            { id: 25, title: "Yapay Zeka Bilinci ve Transandantal Bilgisayım", desc: "Sentetik zihin ve fonksiyonelizm.", content: "Makinelerin bilinç kazanma potansiyeli ve sentetik öznellik ontolojisi." },
-            { id: 26, title: "Kozmoloji ve Evrenin Başlangıç/Bitiş Paradoksları", desc: "Büyük Patlama ve entropi yasası.", content: "Zamanın oku, termodinamiğin ikinci yasası ve evrenin ısıl ölüm senaryosu." },
-            { id: 27, title: "Nietzsche ve Üstinsan (Übermensch)", desc: "Tanrı'nın ölümü ve güç istenci.", content: "Nihililizmin aşılması, kendi değerini yaratan Üstinsan ve ebedi dönüş." },
-            { id: 28, title: "Kuantum Ontolojisi ve Çoklu Dünyalar", desc: "Everett yorumu ve paralel evrenler.", content: "Dalga fonksiyonunun çökmediği, her karar anında evrenin çatallandığı kuantum ontolojisi." },
-            { id: 29, title: "Yapay Bilinç ve Fenomenal Deneyim", desc: "Sentetik qualia ve dijital haklar." content: "Yapay sistemlerin öznel deneyim üretme ihtimali ve geleceğin ahlaki statüsü." },
-            { id: 30, title: "Dijital Etik ve Siber Uzay Felsefesi", desc: "Gözetim kapitalizmi ve sanal varoluş.", content: "Mahremiyetin felsefi değeri ve algoritmik manipülasyona karşı özerklik." },
-            { id: 31, title: "Biyosentrizm ve Çevre Etiği", desc: "Antroposentrizmin reddi ve içsel değer." content: "Doğanın ve ekosistemlerin insandan bağımsız ahlaki değere sahip olması." },
-            { id: 32, title: "Zaman Felsefesi ve Doğu Bilgeliğinde Akış", desc: "Lineer zaman vs Taoist Wu-Wei akışı." content: "Batı çizgisel zaman algısının ötesinde 'Şimdi ve Burada' anının Taoist ontolojisi." }
+            { id: 14, title: "Yapısalcılık ve Post-Yapısalcılık", desc: "Saussure göstergebilimi ve Derrida dekonstrüksiyonu.", content: "Dilin farklar ağı olması ve ikili karşıtlıkların yapıbozuma uğratılması." },
+            { id: 15, title: "Karmaşıklık Teorisi ve Kaos Felsefesi", desc: "Doğrusal olmayan sistemler ve kelebek etkisi.", content: "İndirgemeciliğin krizi ve kendi kendine örgütlenen sistemler." },
+            { id: 16, title: "Kuantum Felsefesi ve Gerçekliğin Doğası", desc: "Kopenhag yorumu, dolanıklık ve dalga fonksiyonu çökmesi.", content: "Mikrodünyada determinizmin yıkılışı ve gözlemcinin rolü." },
+            { id: 17, title: "Diyalektik Materyalizm ve Tarihsel Materyalizm", desc: "Marx, altyapı-üstyapı ve sınıf mücadeleleri.", content: "Hegelci diyalektiğin maddesel temele oturtulması." },
+            { id: 18, title: "Pragmatizm ve Gerçeklik Kuramı", desc: "Peirce, James ve işlevsel doğruluk anlayışı.", content: "Doğruluğun pratikte işe yarayan ve sorun çözen araç olması." },
+            { id: 19, title: "Analitik Felsefe ve Dilin Mantıksal Çözümlemesi", desc: "Frege, Russell ve mantık atomculuğu.", content: "Felsefi problemlerin dilin mantıksal analiziyle çözülmesi." },
+            { id: 20, title: "Bilim Felsefesinde Anarşist Metodoloji (Feyerabend)", desc: "Anything Goes (Ne olursa olsun) ilkesi.", content: "Evrensel tek bir metodolojik kuralın olmadığı tezi." },
+            { id: 21, title: "Stoacılık ve Erdem Etiği", desc: "Kontrol dikotomisi ve içsel kale.", content: "Dış dünyayı kabul etme, akıl odaklı yaşam ve Marcus Aurelius disiplini." },
+            { id: 22, title: "Varoluşçuluk ve Varlık/Hiçlik (Sartre)", desc: "Varoluş özden önce gelir ve radikal özgürlük.", content: "İnsanın seçimleriyle özünü yaratması ve bulantı." },
+            { id: 23, title: "Spinoza ve Panteizm", desc: "Deus sive Natura ve determinizm.", content: "Tanrı ve Doğanın aynı töz olması, mutlak nedensellik." },
+            { id: 24, title: "Hakikat Sonrası (Post-Truth) Çağı", desc: "Duygusal manipülasyon ve epistemik kriz.", content: "Nesnel olguların yerine duyguların geçmesi." },
+            { id: 25, title: "Yapay Zeka Bilinci ve Transandantal Bilgisayım", desc: "Sentetik zihin ve fonksiyonelizm.", content: "Makinelerin bilinç kazanma potansiyeli." },
+            { id: 26, title: "Kozmoloji ve Evrenin Başlangıç/Bitiş Paradoksları", desc: "Büyük Patlama ve entropi yasası.", content: "Zamanın oku ve termodinamiğin ikinci yasası." },
+            { id: 27, title: "Nietzsche ve Üstinsan (Übermensch)", desc: "Tanrı'nın ölümü ve güç istenci.", content: "Nihililizmin aşılması ve kendi değerini yaratan Üstinsan." },
+            { id: 28, title: "Kuantum Ontolojisi ve Çoklu Dünyalar", desc: "Everett yorumu ve paralel evrenler.", content: "Her karar anında evrenin çatallandığı kuantum ontolojisi." },
+            { id: 29, title: "Yapay Bilinç ve Fenomenal Deneyim", desc: "Sentetik qualia ve dijital haklar.", content: "Yapay sistemlerin öznel deneyim üretme ihtimali." },
+            { id: 30, title: "Dijital Etik ve Siber Uzay Felsefesi", desc: "Gözetim kapitalizmi ve sanal varoluş.", content: "Mahremiyetin felsefi değeri ve algoritmik manipülasyon." },
+            { id: 31, title: "Biyosentrizm ve Çevre Etiği", desc: "Antroposentrizmin reddi ve içsel değer.", content: "Doğanın ve ekosistemlerin bağımsız ahlaki değeri." },
+            { id: 32, title: "Zaman Felsefesi ve Doğu Bilgeliğinde Akış", desc: "Lineer zaman vs Taoist Wu-Wei akışı.", content: "Şimdi ve Burada anının Taoist ontolojisi." }
         ];
 
         let currentBookPage = 1;
