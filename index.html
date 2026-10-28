@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Tam Donanımlı Ekosistem</title>
+    <title>Kahramanın Yolculuğu 2.0 - Hiyerarşik Akademi Sürümü</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -68,7 +68,7 @@
                 <div class="mb-8 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • Tam Donanımlı Sürüm</p>
+                        <p class="text-xs text-slate-400 mt-1">V2.0 • Hiyerarşik Akademi</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
                 </div>
@@ -114,7 +114,7 @@
                     <div class="relative z-10 max-w-2xl">
                         <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Özel Komuta Merkezi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm hiyerarşik modüller, notlar ve alışkanlık serileri tam kapasite aktif.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Bilgi Akademisi hiyerarşik alt kategorilerle tamamen yenilendi.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -136,7 +136,7 @@
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
                         <h4 class="text-xs md:text-sm font-semibold text-slate-400">Hiyerarşik Mimari</h4>
                         <p class="text-2xl md:text-3xl font-bold text-white mt-1">Seviye 3</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Menü > Alan > Başlık</span>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Menü > Akademi > Alt Konu</span>
                     </div>
                 </div>
             </section>
@@ -209,14 +209,12 @@
 
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
                         <h3 class="text-lg font-semibold text-goldAccent">Kayıtlı Notlar Arşivi</h3>
-                        <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2">
-                            <!-- Dinamik Notlar -->
-                        </div>
+                        <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. ALIŞKANLIK & SERİLER (YENİ MODÜL) -->
+            <!-- 4. ALIŞKANLIK & SERİLER -->
             <section id="tab-aliskanlik" class="hidden space-y-6">
                 <div>
                     <h2 class="text-2xl font-bold text-white">Alışkanlık & Seri Takibi (Streak Tracker)</h2>
@@ -239,9 +237,7 @@
 
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
                         <h3 class="text-lg font-semibold text-goldAccent">Aktif Seri Takibi</h3>
-                        <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2">
-                            <!-- Alışkanlıklar Buraya Gelecek -->
-                        </div>
+                        <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
             </section>
@@ -267,121 +263,31 @@
                 </div>
             </section>
 
-            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER -->
+            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (HİYERARŞİK LİSTE VE TIKLANABİLİR ALT MENÜLER) -->
             <section id="tab-akademi" class="hidden space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi & Leitner Hafıza Motoru</h2>
-                    <p class="text-slate-400 text-sm">12 ana disiplin altında hiyerarşik alt başlıklar ve aralıklı tekrar modülleri.</p>
+                <!-- GÖRÜNÜM 1: 12 AKADEMİ LİSTESİ -->
+                <div id="akademi-listesi-view" class="space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi & Leitner Hafıza Motoru</h2>
+                        <p class="text-slate-400 text-sm">İncelemek ve alt kategorilerine ulaşmak istediğiniz akademi disiplinine tıklayın.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="akademi-cards-container">
+                        <!-- Javascript ile dinamik doldurulacak -->
+                    </div>
                 </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 01</span>
-                        <h3 class="font-bold text-white">Düşünce ve Bilim</h3>
-                        <p class="text-xs text-slate-400">Bilimsel metot ve felsefi temeller.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Popper & Yanlışlanabilirlik</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
-                        </div>
+
+                <!-- GÖRÜNÜM 2: SEÇİLEN AKADEMİNİN ALT KATEGORİ DETAYI (BAŞLANGIÇTA GİZLİ) -->
+                <div id="akademi-detay-view" class="hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <button onclick="geriAkademiListesineDon()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700">
+                            <span>←</span> Tüm Akademilere Geri Dön
+                        </button>
+                        <span id="detay-badge" class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Kategori</span>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 02</span>
-                        <h3 class="font-bold text-white">Matematik & Soyut Mantık</h3>
-                        <p class="text-xs text-slate-400">Analitik düşünce ve sayısal modelleme.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Boole Cebri ve Mantık Devreleri</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 03</span>
-                        <h3 class="font-bold text-white">Tarih & Medeniyetler</h3>
-                        <p class="text-xs text-slate-400">Stratejik kırılma noktaları ve sosyoloji.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Antik Çağ & Akdeniz Havzası</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 04</span>
-                        <h3 class="font-bold text-white">Liderlik & Vizyon</h3>
-                        <p class="text-xs text-slate-400">Stratejik karar alma ve kişisel disiplin.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Zihinsel Dayanıklılık</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 05</span>
-                        <h3 class="font-bold text-white">Ekonomi & Finans</h3>
-                        <p class="text-xs text-slate-400">Sermaye yönetimi ve varlık stratejileri.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Bileşik Getiri Dinamikleri</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 06</span>
-                        <h3 class="font-bold text-white">Teknoloji & Yazılım</h3>
-                        <p class="text-xs text-slate-400">Dijital mimari ve yerel şifreleme.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> AES-GCM Veri Güvenliği</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 07</span>
-                        <h3 class="font-bold text-white">Sanat & Estetik</h3>
-                        <p class="text-xs text-slate-400">Tasarım felsefesi ve akustiğin temel yasaları.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Akor Teorisi ve Armoni</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 08</span>
-                        <h3 class="font-bold text-white">Psikoloji & Nörobilim</h3>
-                        <p class="text-xs text-slate-400">Bilişsel işlevler ve hafıza mekanizmaları.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Nöroplastisite ve Öğrenme</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 09</span>
-                        <h3 class="font-bold text-white">Mimari & Mekan</h3>
-                        <p class="text-xs text-slate-400">Form, fonksiyon ve mekan ergonomisi.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Mekansal Oran ve Geometri</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 10</span>
-                        <h3 class="font-bold text-white">Strateji & Oyun Teorisi</h3>
-                        <p class="text-xs text-slate-400">Karar ağaçları ve rekabet analitiği.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Nash Dengesi & Karar Ağacı</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 11</span>
-                        <h3 class="font-bold text-white">Doğa & Çevre Bilimleri</h3>
-                        <p class="text-xs text-slate-400">Ekoloji, evrim ve sürdürülebilir sistemler.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Doğal Döngüler & Ekoloji</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
-                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 12</span>
-                        <h3 class="font-bold text-white">Dil & İletişim</h3>
-                        <p class="text-xs text-slate-400">Retorik ve etkili ifade biçimleri.</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
-                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> İkna Metotları & Retorik</p>
-                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
-                        </div>
+
+                    <div id="akademi-detay-icerik" class="space-y-4">
+                        <!-- Seçilen akademinin alt konuları buraya gelecek -->
                     </div>
                 </div>
             </section>
@@ -423,6 +329,7 @@
             }
             renderNotes();
             renderHabits();
+            renderAkademiCards();
         }
 
         function toggleMobileMenu() {
@@ -457,6 +364,121 @@
                 sidebar.classList.remove('flex');
                 sidebar.classList.add('hidden');
             }
+        }
+
+        // BİLGİ AKADEMİSİ HİYERARŞİK VERİ YAPISI
+        const akademilerVeri = [
+            { id: 1, baslik: "Düşünce ve Bilim", aciklama: "Bilimsel metot, felsefi temeller ve yanlışlanabilirlik.", altKonular: [
+                { altBaslik: "Alt Konu 01: Popper & Yanlışlanabilirlik", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Bilimsel teorilerin test edilebilir ve çürütülebilir olması gerekir." },
+                { altBaslik: "Alt Konu 02: Bilimsel Devrimler Yapısı (Kuhn)", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Normal bilim dönemleri ile paradigma değişim döngüleri." }
+            ]},
+            { id: 2, baslik: "Matematik & Soyut Mantık", aciklama: "Analitik düşünce, sayısal modelleme ve cebir.", altKonular: [
+                { altBaslik: "Alt Konu 01: Boole Cebri ve Mantık Devreleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "0 ve 1 mantıksal operatörlerinin dijital sistemlere uyarlanması." },
+                { altBaslik: "Alt Konu 02: Sayı Teorisi Temelleri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Asal sayılar ve kriptografik yansımaları." }
+            ]},
+            { id: 3, baslik: "Tarih & Medeniyetler", aciklama: "Stratejik kırılma noktaları ve sosyolojik evrim.", altKonular: [
+                { altBaslik: "Alt Konu 01: Antik Çağ & Akdeniz Havzası", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Ticaret yolları ve erken dönem devlet formasyonları." },
+                { altBaslik: "Alt Konu 02: Sanayi Devrimi ve Dönüşüm", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Sermaye, enerji ve üretim teknolojilerinin toplumsal etkileri." }
+            ]},
+            { id: 4, baslik: "Liderlik & Vizyon", aciklama: "Stratejik karar alma ve kişisel disiplin.", altKonular: [
+                { altBaslik: "Alt Konu 01: Zihinsel Dayanıklılık", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Kriz durumlarında karar alma mekanizmalarını koruma." },
+                { altBaslik: "Alt Konu 02: Ekip Yönetimi & Delegasyon", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Küçük ekiplerde verimlilik ve sorumluluk paylaşımı." }
+            ]},
+            { id: 5, baslik: "Ekonomi & Finans", aciklama: "Sermaye yönetimi ve varlık stratejileri.", altKonular: [
+                { altBaslik: "Alt Konu 01: Bileşik Getiri Dinamikleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Zaman ve sermaye büyüme eğrilerinin matematiksel analizi." },
+                { altBaslik: "Alt Konu 02: Nakit Akışı ve Bütçeleme", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Mikro işletmelerde likidite ve risk yönetimi." }
+            ]},
+            { id: 6, baslik: "Teknoloji & Yazılım", aciklama: "Dijital mimari ve yerel şifreleme sistemleri.", altKonular: [
+                { altBaslik: "Alt Konu 01: AES-GCM Veri Güvenliği", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "İstemci tarafında uçtan uca şifreleme ve bütünlük kontrolü." },
+                { altBaslik: "Alt Konu 02: Modüler Mimari Prensipleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Sürdürülebilir ve ölçeklenebilir kod yapıları." }
+            ]},
+            { id: 7, baslik: "Sanat & Estetik", aciklama: "Tasarım felsefesi ve akustiğin temel yasaları.", altKonular: [
+                { altBaslik: "Alt Konu 01: Akor Teorisi ve Armoni", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Gitar klavyesinde aralıklar ve akor geçiş formülleri." },
+                { altBaslik: "Alt Konu 02: Mekansal Estetik ve Oran", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Görsel ve fiziksel tasarımlarda oran dengesi." }
+            ]},
+            { id: 8, baslik: "Psikoloji & Nörobilim", aciklama: "Bilişsel işlevler ve hafıza mekanizmaları.", altKonular: [
+                { altBaslik: "Alt Konu 01: Nöroplastisite ve Öğrenme", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Beynin yeni beceriler edinirken oluşturduğu sinaptik bağlar." },
+                { altBaslik: "Alt Konu 02: Leitner Algoritma Mantığı", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Aralıklı tekrar ile uzun süreli hafızaya kayıt." }
+            ]},
+            { id: 9, baslik: "Mimari & Mekan", aciklama: "Form, fonksiyon ve mekan ergonomisi.", altKonular: [
+                { altBaslik: "Alt Konu 01: Mekansal Oran ve Geometri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Yaşam ve çalışma alanlarında ergonomik yerleşim." },
+                { altBaslik: "Alt Konu 02: Malzeme Bilimi & Dayanım", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Ahşap, metal ve kompozitlerin fiziksel özellikleri." }
+            ]},
+            { id: 10, baslik: "Strateji & Oyun Teorisi", aciklama: "Karar ağaçları ve rekabet analitiği.", altKonular: [
+                { altBaslik: "Alt Konu 01: Nash Dengesi & Karar Ağacı", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Çok aktörlü senaryolarda en optimal stratejiyi seçme." },
+                { altBaslik: "Alt Konu 02: Kaynak Dağılım Stratejileri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Kısıtlı kaynaklarla maksimum etki elde etme." }
+            ]},
+            { id: 11, baslik: "Doğa & Çevre Bilimleri", aciklama: "Ekoloji, evrim ve sürdürülebilir sistemler.", altKonular: [
+                { altBaslik: "Alt Konu 01: Doğal Döngüler & Ekoloji", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Sistemlerin kendi kendine sürdürülebilirlik ilkeleri." },
+                { altBaslik: "Alt Konu 02: Enerji Dönüşümü", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Termodinamiğin temel yasalarının doğal sistemlerdeki yeri." }
+            ]},
+            { id: 12, baslik: "Dil & İletişim", aciklama: "Retorik ve etkili ifade biçimleri.", altKonular: [
+                { altBaslik: "Alt Konu 01: İkna Metotları & Retorik", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Argüman oluşturma ve net ifade teknikleri." },
+                { altBaslik: "Alt Konu 02: Kavramsal Çerçeve Kurulumu", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Karmaşık fikirleri sade ve anlaşılır dillere çevirme." }
+            ]}
+        ];
+
+        function renderAkademiCards() {
+            const container = document.getElementById('akademi-cards-container');
+            if (!container) return;
+            container.innerHTML = '';
+            akademilerVeri.forEach(akademi => {
+                container.innerHTML += `
+                    <div onclick="akademiDetayAc(${akademi.id})" class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-3 cursor-pointer group">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-goldAccent font-bold">AKADEMİ ${String(akademi.id).padStart(2, '0')}</span>
+                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Tıkla & İncele ➔</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base group-hover:text-goldAccent transition">${akademi.baslik}</h3>
+                        <p class="text-xs text-slate-400">${akademi.aciklama}</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-emerald-400 font-medium">
+                            📁 ${akademi.altKonular.length} Alt Kategori Mevcut
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function akademiDetayAc(id) {
+            const akademi = akademilerVeri.find(a => a.id === id);
+            if (!akademi) return;
+
+            document.getElementById('akademi-listesi-view').classList.add('hidden');
+            document.getElementById('akademi-detay-view').classList.remove('hidden');
+            document.getElementById('detay-badge').innerText = `AKADEMİ ${String(akademi.id).padStart(2, '0')} - HİYERARŞİK GÖRÜNÜM`;
+
+            const icerikDiv = document.getElementById('akademi-detay-icerik');
+            let html = `
+                <div class="bg-cardBg border border-goldAccent/30 p-6 rounded-2xl mb-6 space-y-2 shadow-xl">
+                    <h3 class="text-2xl font-extrabold text-white">${akademi.baslik}</h3>
+                    <p class="text-sm text-slate-300">${akademi.aciklama}</p>
+                </div>
+                <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-3">Alt Menü & Konu Başlıkları:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            `;
+
+            akademi.altKonular.forEach((alt, idx) => {
+                html += `
+                    <div class="bg-slate-900/90 border border-slate-800 p-5 rounded-xl space-y-3 hover:border-slate-700 transition">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-goldAccent">ALT BAŞLIK 0${idx+1}</span>
+                            <span class="text-[11px] px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🔁 ${alt.kutu}</span>
+                        </div>
+                        <h5 class="font-bold text-white text-sm">${alt.altBaslik}</h5>
+                        <p class="text-xs text-slate-400 bg-slate-950 p-3 rounded-lg border border-slate-800/80">
+                            <strong class="text-slate-300">Çalışma Notu:</strong> ${alt.not}
+                        </p>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            icerikDiv.innerHTML = html;
+        }
+
+        function geriAkademiListesineDon() {
+            document.getElementById('akademi-detay-view').classList.add('hidden');
+            document.getElementById('akademi-listesi-view').classList.remove('hidden');
         }
 
         // Not Defteri
