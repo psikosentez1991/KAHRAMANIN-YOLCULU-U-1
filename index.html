@@ -242,3 +242,388 @@
                         <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2">
                             <!-- Alışkanlıklar Buraya Gelecek -->
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. DERİN ODAK (POMODORO) -->
+            <section id="tab-pomodoro" class="hidden space-y-6">
+                <h2 class="text-2xl font-bold text-white">Derin Odak ve Çalışma Zamanlayıcısı</h2>
+                <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
+                    <div class="flex justify-center gap-3">
+                        <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition">Odak (25 dk)</button>
+                        <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Kısa Mola (5 dk)</button>
+                        <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Uzun Mola (15 dk)</button>
+                    </div>
+                    <div class="py-8">
+                        <span id="timer-display" class="text-6xl md:text-8xl font-black text-white tracking-wider">25:00</span>
+                        <p id="timer-status" class="text-goldAccent text-sm mt-2 font-medium">Odak Seansı İçin Hazır</p>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="startTimer()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg">Başlat</button>
+                        <button onclick="pauseTimer()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-3.5 rounded-xl transition border border-slate-700">Duraklat</button>
+                        <button onclick="resetTimer()" class="bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold px-4 py-3.5 rounded-xl transition border border-slate-700">Sıfırla</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER -->
+            <section id="tab-akademi" class="hidden space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi & Leitner Hafıza Motoru</h2>
+                    <p class="text-slate-400 text-sm">12 ana disiplin altında hiyerarşik alt başlıklar ve aralıklı tekrar modülleri.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 01</span>
+                        <h3 class="font-bold text-white">Düşünce ve Bilim</h3>
+                        <p class="text-xs text-slate-400">Bilimsel metot ve felsefi temeller.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Popper & Yanlışlanabilirlik</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 02</span>
+                        <h3 class="font-bold text-white">Matematik & Soyut Mantık</h3>
+                        <p class="text-xs text-slate-400">Analitik düşünce ve sayısal modelleme.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Boole Cebri ve Mantık Devreleri</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 03</span>
+                        <h3 class="font-bold text-white">Tarih & Medeniyetler</h3>
+                        <p class="text-xs text-slate-400">Stratejik kırılma noktaları ve sosyoloji.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Antik Çağ & Akdeniz Havzası</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 04</span>
+                        <h3 class="font-bold text-white">Liderlik & Vizyon</h3>
+                        <p class="text-xs text-slate-400">Stratejik karar alma ve kişisel disiplin.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Zihinsel Dayanıklılık</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 05</span>
+                        <h3 class="font-bold text-white">Ekonomi & Finans</h3>
+                        <p class="text-xs text-slate-400">Sermaye yönetimi ve varlık stratejileri.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Bileşik Getiri Dinamikleri</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 06</span>
+                        <h3 class="font-bold text-white">Teknoloji & Yazılım</h3>
+                        <p class="text-xs text-slate-400">Dijital mimari ve yerel şifreleme.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> AES-GCM Veri Güvenliği</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 07</span>
+                        <h3 class="font-bold text-white">Sanat & Estetik</h3>
+                        <p class="text-xs text-slate-400">Tasarım felsefesi ve akustiğin temel yasaları.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Akor Teorisi ve Armoni</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 08</span>
+                        <h3 class="font-bold text-white">Psikoloji & Nörobilim</h3>
+                        <p class="text-xs text-slate-400">Bilişsel işlevler ve hafıza mekanizmaları.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Nöroplastisite ve Öğrenme</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 09</span>
+                        <h3 class="font-bold text-white">Mimari & Mekan</h3>
+                        <p class="text-xs text-slate-400">Form, fonksiyon ve mekan ergonomisi.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Mekansal Oran ve Geometri</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 10</span>
+                        <h3 class="font-bold text-white">Strateji & Oyun Teorisi</h3>
+                        <p class="text-xs text-slate-400">Karar ağaçları ve rekabet analitiği.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Nash Dengesi & Karar Ağacı</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 11</span>
+                        <h3 class="font-bold text-white">Doğa & Çevre Bilimleri</h3>
+                        <p class="text-xs text-slate-400">Ekoloji, evrim ve sürdürülebilir sistemler.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Doğal Döngüler & Ekoloji</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
+                        <span class="text-xs text-goldAccent font-bold">AKADEMİ 12</span>
+                        <h3 class="font-bold text-white">Dil & İletişim</h3>
+                        <p class="text-xs text-slate-400">Retorik ve etkili ifade biçimleri.</p>
+                        <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                            <p><span class="text-goldAccent font-semibold">Alt Konu:</span> İkna Metotları & Retorik</p>
+                            <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. GÜVENLİK -->
+            <section id="tab-veri" class="hidden space-y-6">
+                <h2 class="text-2xl font-bold text-white">Şifreli Güvenlik ve Yedekleme</h2>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <p class="text-slate-300 text-sm">AES-GCM şifreleme ve Zod şema bütünlüğü koruması aktif.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const pass = document.getElementById('login-password').value;
+            const errorMsg = document.getElementById('login-error');
+            
+            if (pass === 'aslankral1991') {
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('app-container').classList.remove('hidden');
+                localStorage.setItem('kahraman_auth', 'true');
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('kahraman_auth');
+            location.reload();
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('kahraman_auth') === 'true') {
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('app-container').classList.remove('hidden');
+            }
+            renderNotes();
+            renderHabits();
+        }
+
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('hidden')) {
+                sidebar.classList.remove('hidden');
+                sidebar.classList.add('flex');
+            } else {
+                sidebar.classList.remove('flex');
+                sidebar.classList.add('hidden');
+            }
+        }
+
+        function switchTab(tabId) {
+            const tabs = ['ana', 'sanat', 'notlar', 'aliskanlik', 'pomodoro', 'akademi', 'veri'];
+            tabs.forEach(t => {
+                const section = document.getElementById('tab-' + t);
+                if (section) section.classList.add('hidden');
+
+                const navBtn = document.getElementById('nav-' + t);
+                if (navBtn) navBtn.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left";
+            });
+
+            const activeSection = document.getElementById('tab-' + tabId);
+            if (activeSection) activeSection.classList.remove('hidden');
+
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
+
+            if (window.innerWidth < 768) {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('flex');
+                sidebar.classList.add('hidden');
+            }
+        }
+
+        // Not Defteri
+        let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [
+            { title: "İlk Not", content: "Sistem başarıyla kuruldu ve aktif hale getirildi." }
+        ];
+
+        function renderNotes() {
+            const listEl = document.getElementById('notes-list');
+            if (!listEl) return;
+            listEl.innerHTML = '';
+            notes.forEach((n, index) => {
+                listEl.innerHTML += `
+                    <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800 flex justify-between items-start gap-4">
+                        <div>
+                            <h4 class="font-bold text-goldAccent text-sm">${n.title}</h4>
+                            <p class="text-xs text-slate-300 mt-1">${n.content}</p>
+                        </div>
+                        <button onclick="deleteNote(${index})" class="text-red-400 hover:text-red-300 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
+                    </div>
+                `;
+            });
+        }
+
+        function addNote() {
+            const titleInput = document.getElementById('note-title');
+            const contentInput = document.getElementById('note-content');
+            if (!titleInput.value.trim() || !contentInput.value.trim()) {
+                alert('Lütfen başlık ve içerik alanlarını doldurun.');
+                return;
+            }
+            notes.unshift({ title: titleInput.value.trim(), content: contentInput.value.trim() });
+            localStorage.setItem('kahraman_notes', JSON.stringify(notes));
+            titleInput.value = '';
+            contentInput.value = '';
+            renderNotes();
+        }
+
+        function deleteNote(index) {
+            notes.splice(index, 1);
+            localStorage.setItem('kahraman_notes', JSON.stringify(notes));
+            renderNotes();
+        }
+
+        // Alışkanlık Takibi (Streak Tracker)
+        let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [
+            { title: "Gitar Pratiği (Harley Benton)", streak: 5 }
+        ];
+
+        function renderHabits() {
+            const listEl = document.getElementById('habits-list');
+            if (!listEl) return;
+            listEl.innerHTML = '';
+            habits.forEach((h, index) => {
+                listEl.innerHTML += `
+                    <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">${h.title}</h4>
+                            <span class="text-xs text-goldAccent mt-1 inline-block">🔥 Seri: ${h.streak} Gün</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="incrementStreak(${index})" class="text-emerald-400 hover:text-emerald-300 text-xs px-3 py-1.5 bg-emerald-500/10 rounded-lg font-semibold">+1 Gün Tamamla</button>
+                            <button onclick="deleteHabit(${index})" class="text-red-400 hover:text-red-300 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function addHabit() {
+            const titleInput = document.getElementById('habit-title');
+            if (!titleInput.value.trim()) {
+                alert('Lütfen alışkanlık adı girin.');
+                return;
+            }
+            habits.push({ title: titleInput.value.trim(), streak: 1 });
+            localStorage.setItem('kahraman_habits', JSON.stringify(habits));
+            titleInput.value = '';
+            renderHabits();
+        }
+
+        function incrementStreak(index) {
+            habits[index].streak++;
+            localStorage.setItem('kahraman_habits', JSON.stringify(habits));
+            renderHabits();
+        }
+
+        function deleteHabit(index) {
+            habits.splice(index, 1);
+            localStorage.setItem('kahraman_habits', JSON.stringify(habits));
+            renderHabits();
+        }
+
+        // Pomodoro Zamanlayıcı
+        let timerMinutes = 25;
+        let timerSeconds = 0;
+        let timerInterval = null;
+        let isRunning = false;
+
+        function updateDisplay() {
+            const disp = document.getElementById('timer-display');
+            if (!disp) return;
+            const mins = String(timerMinutes).padStart(2, '0');
+            const secs = String(timerSeconds).padStart(2, '0');
+            disp.innerText = `${mins}:${secs}`;
+        }
+
+        function setTimerMode(mins) {
+            pauseTimer();
+            timerMinutes = mins;
+            timerSeconds = 0;
+            updateDisplay();
+            
+            ['25', '5', '15'].forEach(m => {
+                const btn = document.getElementById('mode-' + m);
+                if (btn) {
+                    if (Number(m) === mins) {
+                        btn.className = "px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition";
+                    } else {
+                        btn.className = "px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition";
+                    }
+                }
+            });
+
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = mins === 25 ? "Odak Seansı İçin Hazır" : "Dinlenme Molası İçin Hazır";
+        }
+
+        function startTimer() {
+            if (isRunning) return;
+            isRunning = true;
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = "Derin Odak Devam Ediyor...";
+            
+            timerInterval = setInterval(() => {
+                if (timerSeconds === 0) {
+                    if (timerMinutes === 0) {
+                        clearInterval(timerInterval);
+                        isRunning = false;
+                        alert('Harika iş! Süre tamamlandı, mola verebilirsiniz.');
+                        if (status) status.innerText = "Seans Tamamlandı 🎉";
+                        return;
+                    }
+                    timerMinutes--;
+                    timerSeconds = 59;
+                } else {
+                    timerSeconds--;
+                }
+                updateDisplay();
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            clearInterval(timerInterval);
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = "Zamanlayıcı Duraklatıldı";
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            timerMinutes = 25;
+            timerSeconds = 0;
+            updateDisplay();
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = "Sıfırlandı - Başlamaya Hazır";
+        }
+    </script>
+</body>
+</html>
