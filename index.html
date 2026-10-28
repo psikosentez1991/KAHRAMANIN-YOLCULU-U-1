@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Akıllı Geri Tuşlu Sürüm</title>
+    <title>Kahramanın Yolculuğu 2.0 - Mobil Geri Tuşu Korumalı Sürüm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -68,7 +68,7 @@
                 <div class="mb-8 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • Akıllı Geri Tuşlu Sürüm</p>
+                        <p class="text-xs text-slate-400 mt-1">V2.0 • Mobil Korumalı Sürüm</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
                 </div>
@@ -114,7 +114,7 @@
                     <div class="relative z-10 max-w-2xl">
                         <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Özel Komuta Merkezi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm hiyerarşik modüller ve akıllı geri tuşu mimarisi aktif.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm hiyerarşik modüller ve mobil geri tuşu koruması aktif.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -136,7 +136,7 @@
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
                         <h4 class="text-xs md:text-sm font-semibold text-slate-400">Hiyerarşik Mimari</h4>
                         <p class="text-2xl md:text-3xl font-bold text-white mt-1">Seviye 3</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Akıllı Geri Dönüş Destekli</span>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Mobil Geri Tuşu Uyumlu</span>
                     </div>
                 </div>
             </section>
@@ -263,7 +263,7 @@
                 </div>
             </section>
 
-            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (AKILLI GERİ TUŞLU) -->
+            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (MOBİL GERİ TUŞU UYUMLU) -->
             <section id="tab-akademi" class="hidden space-y-6">
                 <!-- GÖRÜNÜM 1: 12 AKADEMİ LİSTESİ -->
                 <div id="akademi-listesi-view" class="space-y-6">
@@ -277,7 +277,6 @@
 
                 <!-- GÖRÜNÜM 2: SEÇİLEN AKADEMİNİN ALT KATEGORİ DETAYI -->
                 <div id="akademi-detay-view" class="hidden space-y-6">
-                    <!-- HER ZAMAN ÜST SOLDA YER ALAN SABİT GERİ TUŞU -->
                     <div class="flex items-center justify-between border-b border-slate-800 pb-4">
                         <button onclick="geriAkademiListesineDon()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700 shadow-md">
                             <span>←</span> Geri Dön (Akademi Listesi)
@@ -329,6 +328,16 @@
             renderAkademiCards();
         }
 
+        // TELEFON / TABLET GERİ TUŞU KONTROLÜ (POPSTATE)
+        window.addEventListener('popstate', function(event) {
+            const detayView = document.getElementById('akademi-detay-view');
+            // Eğer akademi detay ekranı açıksa, geri tuşuna basıldığında ana listeye dön ve siteden atmasını engelle
+            if (detayView && !detayView.classList.contains('hidden')) {
+                history.pushState(null, '', window.location.href); // State'i koru
+                geriAkademiListesineDon();
+            }
+        });
+
         function toggleMobileMenu() {
             const sidebar = document.getElementById('sidebar');
             if (sidebar.classList.contains('hidden')) {
@@ -356,7 +365,6 @@
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
 
-            // Sekme değiştirildiğinde akademi detay görünümünü sıfırla (listeye dönsün)
             document.getElementById('akademi-detay-view').classList.add('hidden');
             document.getElementById('akademi-listesi-view').classList.remove('hidden');
 
@@ -443,6 +451,9 @@
         function akademiDetayAc(id) {
             const akademi = akademilerVeri.find(a => a.id === id);
             if (!akademi) return;
+
+            // Tarayıcı geçmişine detay durumu ekle (telefon geri tuşu yakalamak için)
+            history.pushState({ view: 'detay', id: id }, '', window.location.href);
 
             document.getElementById('akademi-listesi-view').classList.add('hidden');
             document.getElementById('akademi-detay-view').classList.remove('hidden');
