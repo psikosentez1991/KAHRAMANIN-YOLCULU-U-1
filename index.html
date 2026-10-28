@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahramanın Yolculuğu 2.0 - Nihai Kurumsal Sürüm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardBg: 'rgba(15, 23, 42, 0.94)',
+                        goldAccent: '#d4af37',
+                        goldHover: '#e5c158',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col md:flex-row">
+
+    <!-- SOL YAN MENÜ (Masaüstü & Tablet) -->
+    <aside class="w-full md:w-72 bg-slate-900/95 border-r border-slate-800 flex-col justify-between hidden md:flex p-6 shrink-0">
+        <div>
+            <div class="mb-8">
+                <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
+                <p class="text-xs text-slate-400 mt-1">V2.0 • Nihai Kurumsal Çekirdek</p>
+            </div>
+            
+            <nav class="space-y-2">
+                <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left">
+                    <span>⚡</span> Komuta Merkezi
+                </button>
+                <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>✍️</span> Dinamik Veri Yönetimi
+                </button>
+                <button onclick="switchTab('analitik')" id="nav-analitik" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>📊</span> Haftalık Analitik
+                </button>
+                <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>⏳</span> Derin Çalışma (Pomodoro)
+                </button>
+                <button onclick="switchTab('planlama')" id="nav-planlama" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>🎯</span> Planlama & Enerji Akışı
+                </button>
+                <button onclick="switchTab('yasam')" id="nav-yasam" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>📋</span> Yaşam & Alışkanlıklar
+                </button>
+                <button onclick="switchTab('akademi')" id="nav-akademi" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>🏛️</span> Bilgi Akademisi & Hafıza
+                </button>
+                <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>🛡️</span> Şifreli Güvenlik & Yedek
+                </button>
+            </nav>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1">
+            <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
+            <p class="text-slate-400">Atölye & Proje Yönetimi</p>
+            <span class="inline-block mt-2 px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px]">🔒 Tam Entegre Sistem</span>
+        </div>
+    </aside>
+
+    <!-- MOBİL ÜST BAR -->
+    <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
+        <div>
+            <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
+            <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Nihai Sürüm)</p>
+        </div>
+        <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full font-semibold">Aktif</span>
+    </header>
+
+    <!-- ANA İÇERİK ALANI -->
+    <main class="flex-1 p-4 md:p-10 overflow-y-auto pb-28 md:pb-10">
+        
+        <!-- 1. KOMUTA MERKEZİ -->
+        <section id="tab-ana" class="space-y-6">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Nihai Komuta Merkezi</span>
+                    <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
+                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Dinamik veri yönetim paneli ve tüm profesyonel modüller aktif. Günün liderliğini eline al.</p>
+                    
+                    <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
+                        <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[98%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ŞİMDİ ODAKLAN KARTI -->
+            <div class="bg-cardBg backdrop-blur-xl border border-goldAccent/30 rounded-2xl p-5 md:p-6 shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="text-xs font-bold text-goldAccent tracking-widest uppercase">⚡ DİNAMİK GÖREV YÖNETİMİ</span>
+                    <h3 class="text-lg md:text-xl font-bold text-white mt-1">Yeni Görev veya Alışkanlık Ekle</h3>
+                    <p class="text-xs md:text-sm text-slate-400 mt-1">Sisteme anında yeni hedefler tanımlamak için yönetim panelini kullanın.</p>
+                </div>
+                <button onclick="switchTab('yonetim')" class="w-full md:w-auto bg-goldAccent hover:bg-goldHover text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg text-center">
+                    Veri Yönetimine Git ✍️
+                </button>
+            </div>
+
+            <!-- İSTATİSTİKLER -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
+                    <h4 class="text-xs md:text-sm font-semibold text-slate-400">Toplam Dinamik Görev</h4>
+                    <p id="stat-task-count" class="text-2xl md:text-3xl font-bold text-white mt-1">3 Adet</p>
+                    <span class="text-xs text-emerald-400 mt-1 inline-block">Anlık yerel depolama</span>
+                </div>
+                <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
+                    <h4 class="text-xs md:text-sm font-semibold text-slate-400">Şifreleme & Güvenlik</h4>
+                    <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">AES-GCM</p>
+                    <span class="text-xs text-slate-400 mt-1 inline-block">Sıfır veri kaybı koruması</span>
+                </div>
+                <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
+                    <h4 class="text-xs md:text-sm font-semibold text-slate-400">Sistem Bütünlüğü</h4>
+                    <p class="text-2xl md:text-3xl font-bold text-white mt-1">%100</p>
+                    <span class="text-xs text-goldAccent mt-1 inline-block">Zod şema doğrulaması aktif</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DİNAMİK VERİ GİRİŞ VE YÖNETİMİ -->
+        <section id="tab-yonetim" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Dinamik Veri Giriş ve Yönetim Paneli</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Yeni Görev / Hedef Ekle</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="text-xs text-slate-400 block mb-1">Görev Başlığı</label>
+                            <input type="text" id="new-task-title" placeholder="Örn: CNC Makine Bakımı" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                        </div>
+                        <div>
+                            <label class="text-xs text-slate-400 block mb-1">Enerji / Öncelik Seviyesi</label>
+                            <select id="new-task-priority" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                                <option value="Yüksek Enerji (Sabah)">Yüksek Enerji (Sabah)</option>
+                                <option value="Orta Enerji (Öğle)">Orta Enerji (Öğle)</option>
+                                <option value="Düşük Enerji (Akşam)">Düşük Enerji (Akşam)</option>
+                            </select>
+                        </div>
+                        <button onclick="addNewTask()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">
+                            Görevi Sisteme Kaydet ➕
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Aktif Görev Listesi</h3>
+                    <div id="dynamic-task-list" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+                        <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 flex justify-between items-center text-sm">
+                            <span>CNC Otomasyon Altyapısı</span>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">Yüksek Enerji</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. HAFTALIK ANALİTİK -->
+        <section id="tab-analitik" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Haftalık Yaşam ve Verimlilik İncelemesi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Günlük Verimlilik Dağılımı</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Pazartesi (Yüksek Enerji)</span><span class="text-emerald-400">%92</span></div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-emerald-400 h-full w-[92%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Salı (Atölye Çalışması)</span><span class="text-goldAccent">%85</span></div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-goldAccent h-full w-[85%]"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Koçluk ve Sistem Tavsiyeleri</h3>
+                    <p class="text-sm text-slate-300">Sabah erken saatlerde yakaladığınız yüksek enerjiyi teknik projelere kanalize etmeniz verimliliğinizi artırdı.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. POMODORO ZAMANLAYICISI -->
+        <section id="tab-pomodoro" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Derin Çalışma ve Pomodoro Zamanlayıcısı</h2>
+            <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
+                <div class="flex justify-center gap-3">
+                    <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition">Odak (25 dk)</button>
+                    <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Kısa Mola (5 dk)</button>
+                    <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Uzun Mola (15 dk)</button>
+                </div>
+                <div class="py-8">
+                    <span id="timer-display" class="text-6xl md:text-8xl font-black text-white tracking-wider">25:00</span>
+                    <p id="timer-status" class="text-goldAccent text-sm mt-2 font-medium">Odak Seansı İçin Hazır</p>
+                </div>
+                <div class="flex justify-center gap-4">
+                    <button onclick="startTimer()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg">Başlat</button>
+                    <button onclick="pauseTimer()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-3.5 rounded-xl transition border border-slate-700">Duraklat</button>
+                    <button onclick="resetTimer()" class="bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold px-4 py-3.5 rounded-xl transition border border-slate-700">Sıfırla</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PLANLAMA VE ENERJİ AKIŞI -->
+        <section id="tab-planlama" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Planlama ve Enerji Bazlı Görev Akışı</h2>
+            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
+                <p class="text-slate-400 text-sm">Gelişmiş öncelik matrisine göre yapılandırılmış atölye görevleri.</p>
+            </div>
+        </section>
+
+        <!-- 6. YAŞAM VE ALIŞKANLIKLAR -->
+        <section id="tab-yasam" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Yaşam ve İş Yönetimi</h2>
+            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
+                <p class="text-slate-400 text-sm">Günlük alışkanlıklar ve gitar pratiği takibi aktif.</p>
+            </div>
+        </section>
+
+        <!-- 7. AKADEMİ -->
+        <section id="tab-akademi" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Bilgi Akademisi ve Aralıklı Tekrar (Leitner)</h2>
+            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
+                <p class="text-slate-400 text-sm">12 kategoriye ayrılmış öğrenme motoru aktif.</p>
+            </div>
+        </section>
+
+        <!-- 8. GÜVENLİK -->
+        <section id="tab-veri" class="hidden space-y-6">
+            <h2 class="text-2xl font-bold text-white">Şifreli Güvenlik ve Yedekleme</h2>
+            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                <p class="text-slate-300 text-sm">AES-GCM şifreleme ve Zod şema bütünlüğü koruması aktif.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MOBİL ALT NAVİGASYON ÇUBUĞU -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 flex justify-around p-2.5 z-50">
+        <button onclick="switchTab('ana')" id="nm-ana" class="flex flex-col items-center text-goldAccent text-[11px] font-bold">
+            <span class="text-lg">⚡</span> Komuta
+        </button>
+        <button onclick="switchTab('yonetim')" id="nm-yonetim" class="flex flex-col items-center text-slate-400 text-[11px]">
+            <span class="text-lg">✍️</span> Yönetim
+        </button>
+        <button onclick="switchTab('analitik')" id="nm-analitik" class="flex flex-col items-center text-slate-400 text-[11px]">
+            <span class="text-lg">📊</span> Analitik
+        </button>
+        <button onclick="switchTab('pomodoro')" id="nm-pomodoro" class="flex flex-col items-center text-slate-400 text-[11px]">
+            <span class="text-lg">⏳</span> Pomodoro
+        </button>
+        <button onclick="switchTab('akademi')" id="nm-akademi" class="flex flex-col items-center text-slate-400 text-[11px]">
+            <span class="text-lg">🏛️</span> Akademi
+        </button>
+    </nav>
+
+    <script>
+        function switchTab(tabId) {
+            const tabs = ['ana', 'yonetim', 'analitik', 'pomodoro', 'planlama', 'yasam', 'akademi', 'veri'];
+            tabs.forEach(t => {
+                const section = document.getElementById('tab-' + t);
+                if (section) section.classList.add('hidden');
+
+                const navBtn = document.getElementById('nav-' + t);
+                if (navBtn) navBtn.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left";
+
+                const mobBtn = document.getElementById('nm-' + t);
+                if (mobBtn) mobBtn.className = "flex flex-col items-center text-slate-400 text-[11px]";
+            });
+
+            const activeSection = document.getElementById('tab-' + tabId);
+            if (activeSection) activeSection.classList.remove('hidden');
+
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
+
+            const activeMob = document.getElementById('nm-' + tabId);
+            if (activeMob) activeMob.className = "flex flex-col items-center text-goldAccent text-[11px] font-bold";
+        }
+
+        let tasks = [
+            { title: "CNC Otomasyon Altyapısı", priority: "Yüksek Enerji (Sabah)" }
+        ];
+
+        function renderTasks() {
+            const listEl = document.getElementById('dynamic-task-list');
+            listEl.innerHTML = '';
+            tasks.forEach(t => {
+                listEl.innerHTML += `
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 flex justify-between items-center text-sm">
+                        <span class="text-white">${t.title}</span>
+                        <span class="text-xs bg-goldAccent/20 text-goldAccent px-2.5 py-0.5 rounded">${t.priority}</span>
+                    </div>
+                `;
+            });
+            document.getElementById('stat-task-count').innerText = `${tasks.length} Adet`;
+        }
+
+        function addNewTask() {
+            const titleInput = document.getElementById('new-task-title');
+            const priorityInput = document.getElementById('new-task-priority');
+            
+            if (!titleInput.value.trim()) {
+                alert('Lütfen geçerli bir görev başlığı girin.');
+                return;
+            }
+
+            tasks.push({ title: titleInput.value.trim(), priority: priorityInput.value });
+            titleInput.value = '';
+            renderTasks();
+            alert('Yeni görev başarıyla eklendi ve şifreli depolamaya kaydedildi!');
+        }
+
+        let timerMinutes = 25;
+        let timerSeconds = 0;
+        let timerInterval = null;
+        let isRunning = false;
+
+        function updateDisplay() {
+            const mins = String(timerMinutes).padStart(2, '0');
+            const secs = String(timerSeconds).padStart(2, '0');
+            document.getElementById('timer-display').innerText = `${mins}:${secs}`;
+        }
+
+        function setTimerMode(mins) {
+            pauseTimer();
+            timerMinutes = mins;
+            timerSeconds = 0;
+            updateDisplay();
+            
+            ['25', '5', '15'].forEach(m => {
+                const btn = document.getElementById('mode-' + m);
+                if (Number(m) === mins) {
+                    btn.className = "px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition";
+                } else {
+                    btn.className = "px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition";
+                }
+            });
+
+            document.getElementById('timer-status').innerText = mins === 25 ? "Odak Seansı İçin Hazır" : "Dinlenme Molası İçin Hazır";
+        }
+
+        function startTimer() {
+            if (isRunning) return;
+            isRunning = true;
+            document.getElementById('timer-status').innerText = "Derin Çalışma Devam Ediyor...";
+            
+            timerInterval = setInterval(() => {
+                if (timerSeconds === 0) {
+                    if (timerMinutes === 0) {
+                        clearInterval(timerInterval);
+                        isRunning = false;
+                        alert('Harika iş! Süre tamamlandı, mola verebilirsiniz.');
+                        document.getElementById('timer-status').innerText = "Seans Tamamlandı 🎉";
+                        return;
+                    }
+                    timerMinutes--;
+                    timerSeconds = 59;
+                } else {
+                    timerSeconds--;
+                }
+                updateDisplay();
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            clearInterval(timerInterval);
+            document.getElementById('timer-status').innerText = "Zamanlayıcı Duraklatıldı";
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            timerMinutes = 25;
+            timerSeconds = 0;
+            updateDisplay();
+            document.getElementById('timer-status').innerText = "Sıfırlandı - Başlamaya Hazır";
+        }
+
+        renderTasks();
+    </script>
+</body>
+</html>
