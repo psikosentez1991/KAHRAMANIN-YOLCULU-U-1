@@ -29,7 +29,7 @@
         }
     </style>
 </head>
-<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col md:flex-row relative">
+<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col md:flex-row">
 
     <!-- MOBİL ÜST BAR VE MENÜ BUTONU (Sadece Telefonda Görünür) -->
     <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
@@ -42,16 +42,16 @@
         </button>
     </header>
 
-    <!-- SOL YAN MENÜ (Masaüstünde Sabit, Mobilde Tam Ekran Açılır Katman) -->
-    <aside id="sidebar" class="fixed inset-0 z-50 bg-slate-950/98 md:bg-slate-900/95 md:border-r md:border-slate-800 flex flex-col justify-between p-6 shrink-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:static md:min-h-screen">
+    <!-- SOL YAN MENÜ (Masaüstünde Sabit, Mobilde Gizli/Açılır) -->
+    <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-full md:w-72 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-0 z-50 overflow-y-auto">
         <div>
             <div class="mb-8 flex justify-between items-center">
                 <div>
                     <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
                     <p class="text-xs text-slate-400 mt-1">V2.0 • Kurumsal Çekirdek</p>
                 </div>
-                <!-- Mobilde Menüyü Kapatma Çarpısı -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-2xl font-bold p-2">✕ Kapat</button>
+                <!-- Mobilde Kapatma Butonu -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
             </div>
             
             <nav class="space-y-3">
@@ -98,7 +98,7 @@
                 <div class="relative z-10 max-w-2xl">
                     <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Nihai Komuta Merkezi</span>
                     <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Dinamik veri yönetim paneli ve tam ekran mobil menü sistemi aktif. Günün liderliğini eline al.</p>
+                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Dinamik veri yönetim paneli ve kusursuz mobil menü yapısı aktif. Günün liderliğini eline al.</p>
                     
                     <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                         <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[98%]"></div>
@@ -258,7 +258,13 @@
         // Mobilde Menüyü Açıp Kapatma Fonksiyonu
         function toggleMobileMenu() {
             const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('-translate-x-full');
+            if (sidebar.classList.contains('hidden')) {
+                sidebar.classList.remove('hidden');
+                sidebar.classList.add('flex');
+            } else {
+                sidebar.classList.remove('flex');
+                sidebar.classList.add('hidden');
+            }
         }
 
         function switchTab(tabId) {
@@ -279,7 +285,9 @@
 
             // Mobilde herhangi bir sekmeye tıklandığında menüyü otomatik kapat
             if (window.innerWidth < 768) {
-                document.getElementById('sidebar').classList.add('-translate-x-full');
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('flex');
+                sidebar.classList.add('hidden');
             }
         }
 
