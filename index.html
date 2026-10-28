@@ -28,30 +28,8 @@
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen flex flex-col justify-center items-center">
 
-    <!-- GİRİŞ EKRANI (KAPALI DEVRE KORUMA) -->
-    <div id="login-screen" class="fixed inset-0 z-50 bg-darkBg flex justify-center items-center p-4">
-        <div class="bg-cardBg border border-goldAccent/40 rounded-3xl p-8 max-w-md w-full text-center space-y-6 shadow-2xl backdrop-blur-xl">
-            <div>
-                <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">🔒 Kapalı Devre Sistem</span>
-                <h2 class="text-2xl font-extrabold text-white mt-3">KAHRAMANIN YOLCULUĞU</h2>
-                <p class="text-slate-400 text-xs mt-1">Bu alan yalnızca sistem sahibine (Aslan Kral) özeldir.</p>
-            </div>
-            
-            <div class="space-y-4 text-left">
-                <div>
-                    <label class="text-xs text-slate-400 block mb-1">Erişim Şifresi</label>
-                    <input type="password" id="login-password" placeholder="Şifrenizi girin..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-goldAccent">
-                </div>
-                <button onclick="checkLogin()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg text-sm">
-                    Sisteme Giriş Yap 🛡️
-                </button>
-                <p id="login-error" class="text-red-400 text-xs text-center hidden">Hatalı şifre! Lütfen tekrar deneyin.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ANA UYGULAMA İÇERİĞİ -->
-    <div id="app-container" class="hidden w-full min-h-screen flex flex-col md:flex-row">
+    <!-- ANA UYGULAMA İÇERİĞİ (DOĞRUDAN ERİŞİM) -->
+    <div id="app-container" class="w-full min-h-screen flex flex-col md:flex-row">
 
         <!-- MOBİL ÜST BAR -->
         <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
@@ -103,7 +81,6 @@
             <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-6">
                 <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
                 <p class="text-slate-400">Üniversite Düzeyi Kütüphane</p>
-                <button onclick="logout()" class="mt-2 w-full bg-red-500/20 text-red-400 hover:bg-red-500/30 py-1.5 rounded-lg text-center font-semibold transition">Oturumu Kapat 🔒</button>
             </div>
         </aside>
 
@@ -131,9 +108,9 @@
                         <span class="text-xs text-slate-400 mt-1 inline-block">Kitap ve Ders formatı</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Güvenlik Standardı</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">AES-GCM</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Tam şifreli koruma</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Sistem Durumu</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">Aktif 🛡️</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Kesintisiz erişim</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
                         <h4 class="text-xs md:text-sm font-semibold text-slate-400">Düşünce & Bilim Cildi</h4>
@@ -284,9 +261,9 @@
 
             <!-- 7. GÜVENLİK -->
             <section id="tab-veri" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">Şifreli Güvenlik ve Yedekleme</h2>
+                <h2 class="text-2xl font-bold text-white">Sistem Durumu</h2>
                 <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <p class="text-slate-300 text-sm">AES-GCM şifreleme ve Zod şema bütünlüğü koruması aktif.</p>
+                    <p class="text-slate-300 text-sm">Doğrudan erişim modu aktif. Tüm kütüphane emrinizde.</p>
                 </div>
             </section>
 
@@ -294,28 +271,7 @@
     </div>
 
     <script>
-        function checkLogin() {
-            const pass = document.getElementById('login-password').value;
-            const errorMsg = document.getElementById('login-error');
-            if (pass === 'aslankral1991') {
-                document.getElementById('login-screen').classList.add('hidden');
-                document.getElementById('app-container').classList.remove('hidden');
-                localStorage.setItem('kahraman_auth', 'true');
-            } else {
-                errorMsg.classList.remove('hidden');
-            }
-        }
-
-        function logout() {
-            localStorage.removeItem('kahraman_auth');
-            location.reload();
-        }
-
         window.onload = function() {
-            if (localStorage.getItem('kahraman_auth') === 'true') {
-                document.getElementById('login-screen').classList.add('hidden');
-                document.getElementById('app-container').classList.remove('hidden');
-            }
             renderNotes();
             renderHabits();
             renderBookTOC();
