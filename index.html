@@ -31,12 +31,27 @@
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen flex flex-col md:flex-row">
 
-    <!-- SOL YAN MENÜ (Tüm Cihazlarda Sabit ve Görünür) -->
-    <aside class="w-full md:w-72 bg-slate-900/95 border-r border-slate-800 flex flex-col justify-between p-6 shrink-0 min-h-screen">
+    <!-- MOBİL ÜST BAR VE MENÜ BUTONU (Sadece Telefonda Görünür) -->
+    <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
         <div>
-            <div class="mb-8">
-                <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-xs text-slate-400 mt-1">V2.0 • Masaüstü Düzen (Tüm Cihazlar)</p>
+            <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
+            <p class="text-[10px] text-slate-400">Aslan Kral 🛡️</p>
+        </div>
+        <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg">
+            <span>☰</span> Menü
+        </button>
+    </header>
+
+    <!-- SOL YAN MENÜ (Masaüstünde Sabit, Mobilde Açılır/Kapanır) -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-slate-900/98 border-r border-slate-800 flex flex-col justify-between p-6 shrink-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:static md:min-h-screen">
+        <div>
+            <div class="mb-8 flex justify-between items-center">
+                <div>
+                    <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
+                    <p class="text-xs text-slate-400 mt-1">V2.0 • Kurumsal Çekirdek</p>
+                </div>
+                <!-- Mobilde Menüyü Kapatma Çarpısı -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-400 hover:text-white text-lg font-bold p-1">✕</button>
             </div>
             
             <nav class="space-y-2">
@@ -75,7 +90,7 @@
     </aside>
 
     <!-- ANA İÇERİK ALANI -->
-    <main class="flex-1 p-6 md:p-10 overflow-y-auto pb-12">
+    <main class="flex-1 p-4 md:p-10 overflow-y-auto">
         
         <!-- 1. KOMUTA MERKEZİ -->
         <section id="tab-ana" class="space-y-6">
@@ -83,7 +98,7 @@
                 <div class="relative z-10 max-w-2xl">
                     <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Nihai Komuta Merkezi</span>
                     <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm cihazlarda masaüstü düzeni aktif edildi. Günün liderliğini eline al.</p>
+                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Dinamik veri yönetim paneli ve açılır mobil menü sistemi aktif. Günün liderliğini eline al.</p>
                     
                     <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                         <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[98%]"></div>
@@ -240,6 +255,12 @@
     </main>
 
     <script>
+        // Mobilde Menüyü Açıp Kapatma Fonksiyonu
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+        }
+
         function switchTab(tabId) {
             const tabs = ['ana', 'yonetim', 'analitik', 'pomodoro', 'planlama', 'yasam', 'akademi', 'veri'];
             tabs.forEach(t => {
@@ -255,6 +276,11 @@
 
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
+
+            // Mobilde herhangi bir sekmeye tıklandığında menüyü otomatik kapat
+            if (window.innerWidth < 768) {
+                document.getElementById('sidebar').classList.add('-translate-x-full');
+            }
         }
 
         let tasks = [
