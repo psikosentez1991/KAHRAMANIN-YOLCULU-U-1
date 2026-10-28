@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Hiyerarşik Kurumsal Sürüm</title>
+    <title>Kahramanın Yolculuğu 2.0 - Derinleştirilmiş Kişisel Ekosistem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,11 +22,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(11, 15, 25, 0.75), rgba(11, 15, 25, 0.96)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
     </style>
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen flex flex-col md:flex-row">
@@ -35,7 +30,7 @@
     <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
         <div>
             <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-            <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Hiyerarşik Mimari)</p>
+            <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Kişisel Ekosistem)</p>
         </div>
         <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg">
             <span>☰</span> Menü
@@ -48,7 +43,7 @@
             <div class="mb-8 flex justify-between items-center">
                 <div>
                     <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                    <p class="text-xs text-slate-400 mt-1">V2.0 • Hiyerarşik Modül</p>
+                    <p class="text-xs text-slate-400 mt-1">V2.0 • Derinleştirilmiş Sürüm</p>
                 </div>
                 <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
             </div>
@@ -57,23 +52,17 @@
                 <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left">
                     <span>⚡</span> Komuta Merkezi
                 </button>
-                <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                    <span>✍️</span> Dinamik Veri Yönetimi
+                <button onclick="switchTab('sanat')" id="nav-sanat" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
+                    <span>🎸</span> Sanat & Akustik (Gitar)
                 </button>
                 <button onclick="switchTab('analitik')" id="nav-analitik" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                     <span>📊</span> Haftalık Analitik
                 </button>
                 <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                    <span>⏳</span> Derin Çalışma (Pomodoro)
-                </button>
-                <button onclick="switchTab('planlama')" id="nav-planlama" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                    <span>🎯</span> Planlama & Enerji Akışı
-                </button>
-                <button onclick="switchTab('yasam')" id="nav-yasam" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                    <span>📋</span> Yaşam & Alışkanlıklar
+                    <span>⏳</span> Derin Odak (Pomodoro)
                 </button>
                 <button onclick="switchTab('akademi')" id="nav-akademi" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                    <span>🏛️</span> Bilgi Akademisi & Hafıza
+                    <span>🏛️</span> Bilgi Akademisi & Leitner
                 </button>
                 <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                     <span>🛡️</span> Şifreli Güvenlik & Yedek
@@ -83,8 +72,8 @@
 
         <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-6">
             <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
-            <p class="text-slate-400">Atölye & Proje Yönetimi</p>
-            <span class="inline-block mt-2 px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px]">🔒 Hiyerarşik Kural Aktif</span>
+            <p class="text-slate-400">Kişisel Gelişim Ekosistemi</p>
+            <span class="inline-block mt-2 px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px]">🔒 Saf Bireysel Mimari</span>
         </div>
     </aside>
 
@@ -95,9 +84,9 @@
         <section id="tab-ana" class="space-y-6">
             <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
                 <div class="relative z-10 max-w-2xl">
-                    <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Hiyerarşik Komuta Merkezi</span>
+                    <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Komuta Merkezi</span>
                     <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Menü > İlgili Alan > Alt Menü kuralı tüm modüllere entegre edildi.</p>
+                    <p class="text-slate-300 mt-2 text-sm md:text-lg">Bilgi Akademisi hafıza kartları ve aralıklı tekrar motoru hiyerarşik derinleştirme ile güncellendi.</p>
                     
                     <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                         <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -105,57 +94,60 @@
                 </div>
             </div>
 
-            <!-- İSTATİSTİKLER -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                    <h4 class="text-xs md:text-sm font-semibold text-slate-400">Toplam Dinamik Görev</h4>
-                    <p id="stat-task-count" class="text-2xl md:text-3xl font-bold text-white mt-1">3 Adet</p>
-                    <span class="text-xs text-emerald-400 mt-1 inline-block">Anlık yerel depolama</span>
+                    <h4 class="text-xs md:text-sm font-semibold text-slate-400">Aktif Odak Modülü</h4>
+                    <p class="text-2xl md:text-3xl font-bold text-white mt-1">Akademi & Hafıza</p>
+                    <span class="text-xs text-emerald-400 mt-1 inline-block">Leitner motoru aktif</span>
                 </div>
                 <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
                     <h4 class="text-xs md:text-sm font-semibold text-slate-400">Şifreleme & Güvenlik</h4>
                     <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">AES-GCM</p>
                     <span class="text-xs text-slate-400 mt-1 inline-block">Sıfır veri kaybı koruması</span>
                 </div>
-                <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
+                <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
                     <h4 class="text-xs md:text-sm font-semibold text-slate-400">Hiyerarşik Mimari</h4>
-                    <p class="text-2xl md:text-3xl font-bold text-white mt-1">Aktif</p>
-                    <span class="text-xs text-goldAccent mt-1 inline-block">Kusursuz modüler yapı</span>
+                    <p class="text-2xl md:text-3xl font-bold text-white mt-1">Seviye 3</p>
+                    <span class="text-xs text-goldAccent mt-1 inline-block">Menü > Alan > Alt Başlık</span>
                 </div>
             </div>
         </section>
 
-        <!-- 2. DİNAMİK VERİ YÖNETİMİ -->
-        <section id="tab-yonetim" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white">Dinamik Veri Giriş ve Yönetim Paneli</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <h3 class="text-lg font-semibold text-goldAccent">Yeni Görev / Hedef Ekle</h3>
-                    <div class="space-y-3">
-                        <div>
-                            <label class="text-xs text-slate-400 block mb-1">Görev Başlığı</label>
-                            <input type="text" id="new-task-title" placeholder="Örn: CNC Makine Bakımı" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+        <!-- 2. SANAT & AKUSTİK (GİTAR PRATİK SİSTEMİ) -->
+        <section id="tab-sanat" class="hidden space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Sanat & Akustik (Gitar Pratik Laboratuvarı)</h2>
+                <p class="text-slate-400 text-sm mt-1">Harley Benton HB D-120CE Black ile icra, teknik ve parmak disiplini modülü.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
+                    <span class="text-xs text-goldAccent font-bold">ALT MENÜ 01</span>
+                    <h3 class="text-lg font-bold text-white">Parmek Egzersizleri</h3>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                        <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                            <p class="font-semibold text-white">Konu: Örümcek Yürüyüşü</p>
+                            <p class="text-slate-400 mt-1">Kromatik geçişler ile sol el parmak bağımsızlığı.</p>
                         </div>
-                        <div>
-                            <label class="text-xs text-slate-400 block mb-1">Enerji / Öncelik Seviyesi</label>
-                            <select id="new-task-priority" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                                <option value="Yüksek Enerji (Sabah)">Yüksek Enerji (Sabah)</option>
-                                <option value="Orta Enerji (Öğle)">Orta Enerji (Öğle)</option>
-                                <option value="Düşük Enerji (Akşam)">Düşük Enerji (Akşam)</option>
-                            </select>
-                        </div>
-                        <button onclick="addNewTask()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">
-                            Görevi Sisteme Kaydet ➕
-                        </button>
                     </div>
                 </div>
-
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <h3 class="text-lg font-semibold text-goldAccent">Aktif Görev Listesi</h3>
-                    <div id="dynamic-task-list" class="space-y-2 max-h-64 overflow-y-auto pr-1">
-                        <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 flex justify-between items-center text-sm">
-                            <span>CNC Otomasyon Altyapısı</span>
-                            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">Yüksek Enerji</span>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
+                    <span class="text-xs text-goldAccent font-bold">ALT MENÜ 02</span>
+                    <h3 class="text-lg font-bold text-white">Akor ve Ritim Disiplini</h3>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                        <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                            <p class="font-semibold text-white">Konu: Barre Akor Hakimiyeti</p>
+                            <p class="text-slate-400 mt-1">F ve Bm akorlarında baskı kalitesi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
+                    <span class="text-xs text-goldAccent font-bold">ALT MENÜ 03</span>
+                    <h3 class="text-lg font-bold text-white">Repertuvar & Şarkılar</h3>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                        <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
+                            <p class="font-semibold text-white">Konu: Akustik Parça Analizi</p>
+                            <p class="text-slate-400 mt-1">Seçilen eserlerin akor şemaları.</p>
                         </div>
                     </div>
                 </div>
@@ -164,15 +156,15 @@
 
         <!-- 3. HAFTALIK ANALİTİK -->
         <section id="tab-analitik" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white">Haftalık Yaşam ve Verimlilik İncelemesi</h2>
+            <h2 class="text-2xl font-bold text-white">Haftalık Bireysel Gelişim Analizi</h2>
             <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
-                <p class="text-slate-400 text-sm">Haftalık performans dağılımları ve koçluk önerileri.</p>
+                <p class="text-slate-400 text-sm">Zihinsel odak süreleri ve hafıza tekrar oranları.</p>
             </div>
         </section>
 
-        <!-- 4. POMODORO ZAMANLAYICISI -->
+        <!-- 4. DERİN ODAK (POMODORO) -->
         <section id="tab-pomodoro" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white">Derin Çalışma ve Pomodoro Zamanlayıcısı</h2>
+            <h2 class="text-2xl font-bold text-white">Derin Odak ve Çalışma Zamanlayıcısı</h2>
             <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
                 <div class="flex justify-center gap-3">
                     <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition">Odak (25 dk)</button>
@@ -191,92 +183,138 @@
             </div>
         </section>
 
-        <!-- 5. PLANLAMA -->
-        <section id="tab-planlama" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white">Planlama ve Enerji Bazlı Görev Akışı</h2>
-            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
-                <p class="text-slate-400 text-sm">Gelişmiş öncelik matrisine göre yapılandırılmış atölye görevleri.</p>
-            </div>
-        </section>
-
-        <!-- 6. YAŞAM -->
-        <section id="tab-yasam" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white">Yaşam ve İş Yönetimi</h2>
-            <div class="bg-cardBg border border-slate-800 rounded-2xl p-6">
-                <p class="text-slate-400 text-sm">Günlük alışkanlıklar ve gitar pratiği takibi aktif.</p>
-            </div>
-        </section>
-
-        <!-- 7. BİLGİ AKADEMİSİ VE HAFIZA MOTORU (12 KATEGORİ) -->
+        <!-- 5. BİLGİ AKADEMİSİ & LEİTNER HAFIZA MOTORU (DERİNLEŞTİRİLMİŞ İÇERİK) -->
         <section id="tab-akademi" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi ve Aralıklı Tekrar (Leitner)</h2>
-            <p class="text-slate-400 text-sm mb-6">12 ana akış ve modüler ders yapısı ile kalıcı öğrenme laboratuvarı.</p>
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi & Leitner Hafıza Motoru</h2>
+                <p class="text-slate-400 text-sm">12 ana disiplin altında hiyerarşik alt başlıklar ve aralıklı tekrar modülleri.</p>
+            </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 01 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 01</span>
-                    <h3 class="font-bold text-white mt-1">Düşünce ve Bilim</h3>
-                    <p class="text-xs text-slate-400 mt-2">Bilimsel metot, felsefi temeller ve soyut modelleme.</p>
+                    <h3 class="font-bold text-white">Düşünce ve Bilim</h3>
+                    <p class="text-xs text-slate-400">Bilimsel metot ve felsefi temeller.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Popper & Yanlışlanabilirlik</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 02 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 02</span>
-                    <h3 class="font-bold text-white mt-1">Matematik ve Soyut Mantık</h3>
-                    <p class="text-xs text-slate-400 mt-2">Analitik düşünce, sayılar teorisi ve mantıksal mimari.</p>
+                    <h3 class="font-bold text-white">Matematik & Soyut Mantık</h3>
+                    <p class="text-xs text-slate-400">Analitik düşünce ve sayısal modelleme.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Boole Cebri ve Mantık Devreleri</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 03 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 03</span>
-                    <h3 class="font-bold text-white mt-1">Tarih ve Medeniyetler</h3>
-                    <p class="text-xs text-slate-400 mt-2">İnsanlık tarihi, stratejik dönüm noktaları ve sosyoloji.</p>
+                    <h3 class="font-bold text-white">Tarih & Medeniyetler</h3>
+                    <p class="text-xs text-slate-400">Stratejik kırılma noktaları ve sosyoloji.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Antik Çağ & Akdeniz Havzası</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 04 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 04</span>
-                    <h3 class="font-bold text-white mt-1">Liderlik ve Yönetim</h3>
-                    <p class="text-xs text-slate-400 mt-2">Ekip yönetimi, vizyoner girişimcilik ve operasyonel akış.</p>
+                    <h3 class="font-bold text-white">Liderlik & Vizyon</h3>
+                    <p class="text-xs text-slate-400">Stratejik karar alma ve kişisel disiplin.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Zihinsel Dayanıklılık</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 05 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 05</span>
-                    <h3 class="font-bold text-white mt-1">Ekonomi ve Finans</h3>
-                    <p class="text-xs text-slate-400 mt-2">Sermaye yönetimi, mikroekonomi ve yatırım stratejileri.</p>
+                    <h3 class="font-bold text-white">Ekonomi & Finans</h3>
+                    <p class="text-xs text-slate-400">Sermaye yönetimi ve varlık stratejileri.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Bileşik Getiri Dinamikleri</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 06 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 06</span>
-                    <h3 class="font-bold text-white mt-1">Teknoloji ve Mühendislik</h3>
-                    <p class="text-xs text-slate-400 mt-2">CNC otomasyon, donanım mimarisi ve dijital sistemler.</p>
+                    <h3 class="font-bold text-white">Teknoloji & Yazılım</h3>
+                    <p class="text-xs text-slate-400">Dijital mimari ve yerel şifreleme.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> AES-GCM Veri Güvenliği</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 07 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 07</span>
-                    <h3 class="font-bold text-white mt-1">Sanat ve Estetik</h3>
-                    <p class="text-xs text-slate-400 mt-2">Tasarım felsefesi, akustik (gitar) ve görsel sanatlar.</p>
+                    <h3 class="font-bold text-white">Sanat & Estetik (Akustik)</h3>
+                    <p class="text-xs text-slate-400">Tasarım felsefesi ve müzikal armoni.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Akor Teorisi ve Ton Kalıpları</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 08 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 08</span>
-                    <h3 class="font-bold text-white mt-1">Psikoloji ve Zihinsel Disiplin</h3>
-                    <p class="text-xs text-slate-400 mt-2">Bilişsel odak, motivasyon ve psikolojik dayanıklılık.</p>
+                    <h3 class="font-bold text-white">Psikoloji & Nörobilim</h3>
+                    <p class="text-xs text-slate-400">Bilişsel işlevler ve hafıza mekanizmaları.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Leitner Algoritma Mantığı</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 09 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 09</span>
-                    <h3 class="font-bold text-white mt-1">Mimari ve Mekan Tasarımı</h3>
-                    <p class="text-xs text-slate-400 mt-2">Özel atölye ve mobilya tasarımı, iç mekan ergonomisi.</p>
+                    <h3 class="font-bold text-white">Mimari & Mekan</h3>
+                    <p class="text-xs text-slate-400">Form, fonksiyon ve ergonomi.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Yaşam Alanı Tasarımı</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 10 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 10</span>
-                    <h3 class="font-bold text-white mt-1">Strateji ve Oyun Teorisi</h3>
-                    <p class="text-xs text-slate-400 mt-2">Karar alma mekanizmaları ve rekabetçi analitik.</p>
+                    <h3 class="font-bold text-white">Strateji & Oyun Teorisi</h3>
+                    <p class="text-xs text-slate-400">Karar ağaçları ve rekabet analitiği.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Nash Dengesi</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 3 (Haftalık Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 11 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 11</span>
-                    <h3 class="font-bold text-white mt-1">Doğa ve Çevre Bilimleri</h3>
-                    <p class="text-xs text-slate-400 mt-2">Ekoloji, sürdürülebilirlik ve doğal malzemeler.</p>
+                    <h3 class="font-bold text-white">Doğa & Çevre Bilimleri</h3>
+                    <p class="text-xs text-slate-400">Ekoloji ve sürdürülebilir sistemler.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Doğal Döngüler</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 2 (3 Günde Bir Tekrar)</p>
+                    </div>
                 </div>
-                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg">
+                <!-- 12 -->
+                <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2">
                     <span class="text-xs text-goldAccent font-bold">AKADEMİ 12</span>
-                    <h3 class="font-bold text-white mt-1">Dil ve İletişim</h3>
-                    <p class="text-xs text-slate-400 mt-2">Etkili ifade, retorik ve profesyonel müzakereler.</p>
+                    <h3 class="font-bold text-white">Dil & İletişim</h3>
+                    <p class="text-xs text-slate-400">Retorik ve etkili ifade biçimleri.</p>
+                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-300 space-y-1">
+                        <p><span class="text-goldAccent font-semibold">Alt Konu:</span> Kavramsal Çerçeve Kurulumu</p>
+                        <p><span class="text-emerald-400 font-semibold">Leitner Kutu:</span> Kutu 1 (Her Gün Tekrar)</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 8. GÜVENLİK -->
+        <!-- 6. GÜVENLİK -->
         <section id="tab-veri" class="hidden space-y-6">
             <h2 class="text-2xl font-bold text-white">Şifreli Güvenlik ve Yedekleme</h2>
             <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
@@ -299,7 +337,7 @@
         }
 
         function switchTab(tabId) {
-            const tabs = ['ana', 'yonetim', 'analitik', 'pomodoro', 'planlama', 'yasam', 'akademi', 'veri'];
+            const tabs = ['ana', 'sanat', 'analitik', 'pomodoro', 'akademi', 'veri'];
             tabs.forEach(t => {
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
@@ -319,41 +357,6 @@
                 sidebar.classList.remove('flex');
                 sidebar.classList.add('hidden');
             }
-        }
-
-        let tasks = [
-            { title: "CNC Otomasyon Altyapısı", priority: "Yüksek Enerji (Sabah)" }
-        ];
-
-        function renderTasks() {
-            const listEl = document.getElementById('dynamic-task-list');
-            if (!listEl) return;
-            listEl.innerHTML = '';
-            tasks.forEach(t => {
-                listEl.innerHTML += `
-                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700/50 flex justify-between items-center text-sm">
-                        <span class="text-white">${t.title}</span>
-                        <span class="text-xs bg-goldAccent/20 text-goldAccent px-2.5 py-0.5 rounded">${t.priority}</span>
-                    </div>
-                `;
-            });
-            const statEl = document.getElementById('stat-task-count');
-            if (statEl) statEl.innerText = `${tasks.length} Adet`;
-        }
-
-        function addNewTask() {
-            const titleInput = document.getElementById('new-task-title');
-            const priorityInput = document.getElementById('new-task-priority');
-            
-            if (!titleInput.value.trim()) {
-                alert('Lütfen geçerli bir görev başlığı girin.');
-                return;
-            }
-
-            tasks.push({ title: titleInput.value.trim(), priority: priorityInput.value });
-            titleInput.value = '';
-            renderTasks();
-            alert('Yeni görev başarıyla eklendi ve şifreli depolamaya kaydedildi!');
         }
 
         let timerMinutes = 25;
@@ -394,7 +397,7 @@
             if (isRunning) return;
             isRunning = true;
             const status = document.getElementById('timer-status');
-            if (status) status.innerText = "Derin Çalışma Devam Ediyor...";
+            if (status) status.innerText = "Derin Odak Devam Ediyor...";
             
             timerInterval = setInterval(() => {
                 if (timerSeconds === 0) {
@@ -429,8 +432,6 @@
             const status = document.getElementById('timer-status');
             if (status) status.innerText = "Sıfırlandı - Başlamaya Hazır";
         }
-
-        renderTasks();
     </script>
 </body>
 </html>
