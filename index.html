@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Üniversite Kütüphanesi & Tüm Akademiler</title>
+    <title>Kahramanın Yolculuğu 2.0 - 12 Orijinal Ana Akademi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -35,60 +35,65 @@
         <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
             <div>
                 <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Tüm Akademiler)</p>
+                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (12 Ana Akademi)</p>
             </div>
             <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg active:scale-95 transition">
                 <span>☰</span> Menü
             </button>
         </header>
 
-        <!-- SOL YAN MENÜ (TÜM AKADEMİLER VE MODÜLLER) -->
+        <!-- SOL YAN MENÜ (12 ORİJİNAL ANA AKADEMİ) -->
         <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-72 md:w-80 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-y-0 left-0 z-50 overflow-y-auto shadow-2xl transition-all">
             <div>
                 <div class="mb-6 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • Kütüphane & Akademiler</p>
+                        <p class="text-xs text-slate-400 mt-1">V2.0 • 12 Orijinal Ana Akademi</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕</button>
                 </div>
                 
-                <nav class="space-y-2">
-                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left text-sm">
+                <nav class="space-y-1.5 text-xs">
+                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left">
                         <span>⚡</span> Komuta Merkezi
                     </button>
-                    <button onclick="switchTab('sanat')" id="nav-sanat" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
+                    <button onclick="switchTab('sanat')" id="nav-sanat" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>🎸</span> Sanat & Akustik (Gitar)
                     </button>
-                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
+                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>📝</span> Dinamik Not Defteri
                     </button>
-                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
+                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>🔥</span> Alışkanlık & Seriler
-                    </button><button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
+                    </button>
+                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>⏳</span> Derin Odak (Pomodoro)
                     </button>
-                    <button onclick="switchTab('akademi')" id="nav-akademi" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
-                        <span>🏛️</span> Düşünce ve Bilim Cildi (32 Modül)
-                    </button>
-                    <button onclick="switchTab('teknoloji')" id="nav-teknoloji" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
-                        <span>💻</span> Teknoloji & Mimari Akademi
-                    </button>
-                    <button onclick="switchTab('finans')" id="nav-finans" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
-                        <span>📊</span> Finans & İşletme Akademisi
-                    </button>
-                    <button onclick="switchTab('psikoloji')" id="nav-psikoloji" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
-                        <span>🧠</span> Psikoloji & Zihin Akademisi
-                    </button>
-                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm">
-                        <span>🛡️</span> Şifreli Güvenlik & Durum
+
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">12 Orijinal Ana Akademi</div>
+
+                    <button onclick="switchTab('akd-1')" id="nav-akd-1" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 1. Düşünce ve Bilim Akademisi</button>
+                    <button onclick="switchTab('akd-2')" id="nav-akd-2" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 2. Teknoloji & Mühendislik</button>
+                    <button onclick="switchTab('akd-3')" id="nav-akd-3" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 3. İşletme & Finans Akademisi</button>
+                    <button onclick="switchTab('akd-4')" id="nav-akd-4" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 4. Psikoloji & Zihin Akademisi</button>
+                    <button onclick="switchTab('akd-5')" id="nav-akd-5" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 5. Sanat, Estetik & Edebiyat</button>
+                    <button onclick="switchTab('akd-6')" id="nav-akd-6" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 6. Mimari, Tasarım & Üretim</button>
+                    <button onclick="switchTab('akd-7')" id="nav-akd-7" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 7. Strateji & Liderlik Akademisi</button>
+                    <button onclick="switchTab('akd-8')" id="nav-akd-8" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 8. Doğa, Tarım & Ekoloji</button>
+                    <button onclick="switchTab('akd-9')" id="nav-akd-9" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 9. Sağlık, Beden & Fiziksel Zindelik</button>
+                    <button onclick="switchTab('akd-10')" id="nav-akd-10" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 10. Tarih, Kültür & Medeniyet</button>
+                    <button onclick="switchTab('akd-11')" id="nav-akd-11" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 11. Dil, İletişim & Retorik</button>
+                    <button onclick="switchTab('akd-12')" id="nav-akd-12" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 12. Gelecekbilim & İnovasyon</button>
+
+                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left mt-3">
+                        <span>🛡️</span> Sistem Durumu
                     </button>
                 </nav>
             </div>
 
-            <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-6">
+            <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-4">
                 <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
-                <p class="text-slate-400">Üniversite Düzeyi Kütüphane</p>
+                <p class="text-slate-400">12 Orijinal Ana Akademi</p>
             </div>
         </aside>
 
@@ -99,9 +104,9 @@
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Üniversite Kütüphanesi</span>
+                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Komuta Merkezi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm akademiler, 32 modüllü felsefe cildi ve özel laboratuvarlar eksiksiz olarak emrinde.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">12 Orijinal Ana Akademi sol menüde eksiksiz olarak emrinde.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -111,9 +116,9 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Aktif Akademiler</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">4 Ana Enstitü</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Tam Kütüphane Modu</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Akademi Mimarisi</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">12 Ana Enstitü</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Orijinal Yapı</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
                         <h4 class="text-xs md:text-sm font-semibold text-slate-400">Sistem Durumu</h4>
@@ -121,9 +126,9 @@
                         <span class="text-xs text-slate-400 mt-1 inline-block">Kesintisiz erişim</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Düşünce & Bilim Cildi</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">32 Sayfa / Modül</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Doktoraüstü Kitap Modu</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Disiplin</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Tam Kapsam</p>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Kişisel Ekosistem</span>
                     </div>
                 </div>
             </section>
@@ -215,117 +220,36 @@
                 </div>
             </section>
 
-            <!-- 6. DÜŞÜNCE VE BİLİM KİTABI (32 SAYFALIK CİLT) -->
-            <section id="tab-akademi" class="hidden space-y-6">
-                <!-- KİTAP GİRİŞ / İÇİNDEKİLER -->
-                <div id="book-index-view" class="space-y-6">
-                    <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border border-goldAccent/30 p-8 rounded-3xl shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div class="space-y-2">
-                            <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Akademik Cilt 01</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold text-white book-title">Düşünce ve Bilim Enstitüsü</h2>
-                            <p class="text-slate-300 text-sm">32 Modüllü Doktoraüstü Kitap Modu. Sayfaları çevirerek veya içindekilerden seçerek okuyun.</p>
-                        </div>
-                        <button onclick="openBookPage(1)" class="bg-goldAccent hover:bg-goldHover text-slate-950 font-extrabold px-8 py-4 rounded-2xl transition shadow-xl text-sm flex items-center gap-2 shrink-0">
-                            <span>📖</span> Kitabı Aç ve Oku
-                        </button>
-                    </div>
+            <!-- 12 ORİJİNAL ANA AKADEMİ İÇERİK KAPSÜLLERİ -->
+            <section id="tab-akd-1" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 01</span><h2 class="text-3xl font-extrabold text-white">Düşünce ve Bilim Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Epistemoloji, Popperian yanlışlanabilirlik, Kuhn paradigma devrimleri, ontoloji ve bilim felsefesinin en üst düzey analitik temelleri.</p></div></section>
+            
+            <section id="tab-akd-2" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 02</span><h2 class="text-3xl font-extrabold text-white">Teknoloji & Mühendislik</h2><p class="text-slate-300 text-sm leading-relaxed">ERP sistem mimarileri, yazılım geliştirme ekosistemleri, veritabanı denetimi, donanım optimizasyonları ve dijital altyapılar.</p></div></section>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="book-toc-grid"></div>
-                </div>
+            <section id="tab-akd-3" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 03</span><h2 class="text-3xl font-extrabold text-white">İşletme & Finans Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Maliyet muhasebesi, malzeme bütçeleme (Kronospan/Kastamonu levha maliyetleri), karlılık analizleri ve kurumsal finansal denetim.</p></div></section>
 
-                <!-- KİTAP OKUMA / SAYFA ÇEVİRME GÖRÜNÜMÜ -->
-                <div id="book-reader-view" class="hidden space-y-6">
-                    <div class="flex justify-between items-center bg-slate-900 border border-slate-800 p-4 rounded-2xl shadow-md">
-                        <button onclick="backToBookIndex()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700">
-                            <span>←</span> İçindekiler Tablosuna Dön
-                        </button>
-                        <div class="flex items-center gap-3">
-                            <button onclick="prevBookPage()" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-slate-700">◀ Önceki Sayfa</button>
-                            <span id="page-number-indicator" class="text-xs font-bold text-goldAccent px-3 py-1 bg-goldAccent/10 rounded-lg">Sayfa 01 / 32</span>
-                            <button onclick="nextBookPage()" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-slate-700">Sonraki Sayfa ▶</button>
-                        </div>
-                    </div>
+            <section id="tab-akd-4" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 04</span><h2 class="text-3xl font-extrabold text-white">Psikoloji & Zihin Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Psikosentez, arketipler, kahramanın yolculuğu psikolojisi, bilişsel önyargılar ve zihinsel denge dinamikleri.</p></div></section>
 
-                    <!-- KİTAP SAYFASI DUVARI -->
-                    <div class="bg-bookPage border border-goldAccent/30 p-6 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden space-y-6 min-h-[500px] flex flex-col justify-between">
-                        <div class="absolute top-4 right-6 text-goldAccent/20 text-6xl font-black select-none book-title" id="watermark-page">01</div>
-                        
-                        <div class="space-y-4 relative z-10">
-                            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                                <span id="page-module-badge" class="text-xs text-goldAccent font-bold uppercase tracking-widest">MODÜL 01</span>
-                                <span class="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🎓 Doktoraüstü Seviye</span>
-                            </div>
-                            <h3 id="page-title" class="text-2xl md:text-3xl font-extrabold text-white book-title">Epistemoloji ve Bilgi Felsefesi Temelleri</h3>
-                            <div id="page-content" class="text-sm md:text-base text-slate-300 leading-relaxed space-y-4 bg-slate-950/60 p-6 rounded-2xl border border-slate-800/80"></div>
-                        </div>
+            <section id="tab-akd-5" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 05</span><h2 class="text-3xl font-extrabold text-white">Sanat, Estetik & Edebiyat</h2><p class="text-slate-300 text-sm leading-relaxed">Şiir yazımı, seslendirme, karakter yaratımı, akustik müzik teorisi ve estetik felsefe.</p></div></section>
 
-                        <div class="flex justify-between items-center pt-6 border-t border-slate-800/80 text-xs text-slate-400 relative z-10">
-                            <span>Aslan Kral - Üniversite Kütüphanesi</span>
-                            <span id="page-footer-num" class="text-goldAccent font-bold">Sayfa 1</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section id="tab-akd-6" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 06</span><h2 class="text-3xl font-extrabold text-white">Mimari, Tasarım & Üretim</h2><p class="text-slate-300 text-sm leading-relaxed">Özel mobilya imalatı, mutfak dolapları ve gardırop tasarımı, ahşap işçiliği, atölye otomasyonu ve CNC sistemleri.</p></div></section>
 
-            <!-- 7. TEKNOLOJİ & MİMARİ AKADEMİSİ -->
-            <section id="tab-teknoloji" class="hidden space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Teknoloji & Mimari Akademi</h2>
-                    <p class="text-slate-400 text-sm mt-1">Yazılım mimarileri, ERP sistemleri ve dijital ekosistemler.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">ERP & Enterprise Sistemler</h3>
-                        <p class="text-xs text-slate-300">Kurumsal kaynak planlaması, veritabanı mimarileri ve otomasyon altyapıları.</p>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">Web Ekosistemleri & GitHub</h3>
-                        <p class="text-xs text-slate-300">Single-page uygulamalar, versiyon kontrolü ve bulut barındırma standartları.</p>
-                    </div>
-                </div>
-            </section>
+            <section id="tab-akd-7" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 07</span><h2 class="text-3xl font-extrabold text-white">Strateji & Liderlik Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Kurumsal yönetim, proje müzakereleri, müşteri ilişkileri yönetimi ve operasyonel verimlilik stratejileri.</p></div></section>
 
-            <!-- 8. FİNANS & İŞLETME AKADEMİSİ -->
-            <section id="tab-finans" class="hidden space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Finans & İşletme Akademisi</h2>
-                    <p class="text-slate-400 text-sm mt-1">Maliyet muhasebesi, finansal modül denetimi ve kurumsal operasyonlar.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">Maliyet ve Fiyatlandırma Stratejileri</h3>
-                        <p class="text-xs text-slate-300">Malzeme maliyet analizi, Kronospan/Kastamonu levha maliyetleri ve karlılık hesapları.</p>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">Kurumsal Finansal Denetim</h3>
-                        <p class="text-xs text-slate-300">Bilanço yönetimi, vergi mevzuatı ve muhasebe süreçleri denetimi.</p>
-                    </div>
-                </div>
-            </section>
+            <section id="tab-akd-8" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 08</span><h2 class="text-3xl font-extrabold text-white">Doğa, Tarım & Ekoloji</h2><p class="text-slate-300 text-sm leading-relaxed">Toprakla çalışma, bahçe düzenlemesi, doğa elementleri ve ekolojik dengenin felsefi boyutu.</p></div></section>
 
-            <!-- 9. PSİKOLOJİ & ZİHİN AKADEMİSİ -->
-            <section id="tab-psikoloji" class="hidden space-y-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Psikoloji & Zihin Akademisi</h2>
-                    <p class="text-slate-400 text-sm mt-1">Bilişsel süreçler, psikolojik arketipler ve insan bilinci.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">Psikosentez ve Arketipler</h3>
-                        <p class="text-xs text-slate-300">İnsan bilinçaltı yapıları, kahramanın yolculuğu ve içsel denge dinamikleri.</p>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-goldAccent">Bilişsel Önyargılar ve Karar Alma</h3>
-                        <p class="text-xs text-slate-300">Kahneman sezgisel karar mekanizmaları ve mantıksal süzgeçler.</p>
-                    </div>
-                </div>
-            </section>
+            <section id="tab-akd-9" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 09</span><h2 class="text-3xl font-extrabold text-white">Sağlık, Beden & Fiziksel Zindelik</h2><p class="text-slate-300 text-sm leading-relaxed">Düzenli fitness rutinleri, fiziksel dayanıklılık, beslenme disiplini ve zihin-beden bütünlüğü.</p></div></section>
 
-            <!-- 10. GÜVENLİK VE DURUM -->
+            <section id="tab-akd-10" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 10</span><h2 class="text-3xl font-extrabold text-white">Tarih, Kültür & Medeniyet</h2><p class="text-slate-300 text-sm leading-relaxed">Medeniyetlerin evrimi, tarihi kırılma noktaları ve kültürel miras analizleri.</p></div></section>
+
+            <section id="tab-akd-11" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 11</span><h2 class="text-3xl font-extrabold text-white">Dil, İletişim & Retorik</h2><p class="text-slate-300 text-sm leading-relaxed">Etkili sözleşme müzakereleri, retorik sanatları ve dilbilimsel yapı analizleri.</p></div></section>
+
+            <section id="tab-akd-12" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 12</span><h2 class="text-3xl font-extrabold text-white">Gelecekbilim & İnovasyon</h2><p class="text-slate-300 text-sm leading-relaxed">Teknolojik öngörüler, yapay zeka entegrasyonları, fabrika otomasyon projeleri ve vizyoner gelecek tasarımları.</p></div></section>
+
+            <!-- GÜVENLİK -->
             <section id="tab-veri" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">Sistem Durumu ve Güvenlik</h2>
+                <h2 class="text-2xl font-bold text-white">Sistem Durumu</h2>
                 <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <p class="text-slate-300 text-sm">Tüm akademiler, kütüphane cildi ve kişisel modüller aktif ve güvenli durumda.</p>
+                    <p class="text-slate-300 text-sm">12 Orijinal Ana Akademi ve kişisel modüller tam kapasite aktif durumda.</p>
                 </div>
             </section>
 
@@ -336,7 +260,6 @@
         window.onload = function() {
             renderNotes();
             renderHabits();
-            renderBookTOC();
         }
 
         function toggleMobileMenu() {
@@ -351,17 +274,23 @@
         }
 
         function switchTab(tabId) {
-            const tabs = ['ana', 'sanat', 'notlar', 'aliskanlik', 'pomodoro', 'akademi', 'teknoloji', 'finans', 'psikoloji', 'veri'];
+            const tabs = ['ana', 'sanat', 'notlar', 'aliskanlik', 'pomodoro', 'akd-1', 'akd-2', 'akd-3', 'akd-4', 'akd-5', 'akd-6', 'akd-7', 'akd-8', 'akd-9', 'akd-10', 'akd-11', 'akd-12', 'veri'];
             tabs.forEach(t => {
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
                 const navBtn = document.getElementById('nav-' + t);
-                if (navBtn) navBtn.className = "w-full flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left text-sm";
+                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left text-xs";
             });
             const activeSection = document.getElementById('tab-' + tabId);
             if (activeSection) activeSection.classList.remove('hidden');
             const activeNav = document.getElementById('nav-' + tabId);
-            if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-2.5 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left text-sm";
+            if (activeNav) {
+                if(tabId === 'ana') {
+                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left text-xs";
+                } else {
+                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-goldAccent text-slate-950 font-semibold transition text-left text-xs";
+                }
+            }
 
             if (window.innerWidth < 768) {
                 const sidebar = document.getElementById('sidebar');
@@ -370,106 +299,6 @@
             }
         }
 
-        const bookPagesData = [
-            { id: 1, title: "Epistemoloji ve Bilgi Felsefesi Temelleri", desc: "Doğruluk, Gerekçelendirilmiş Doğru İnanç (JTB) tanımı, Gettier problemleri ve bilginin sınırları.", content: "Epistemoloji, bilginin doğasını, kapsamını ve gerekçelendirilmesini inceler. Klasik JTB tanımı Gettier problemleriyle sarsılmış; içselcilik-dışsalcılık ve epistemik erdemler analitik felsefenin merkezine yerleşmiştir." },
-            { id: 2, title: "Karl Popper ve Yanlışlanabilirlik", desc: "Tümevarım sorunu, demarkasyon problemi ve yanlışlanabilirlik ilkesi.", content: "Popper, klasik doğrulamacılığın tümevarımsal çıkmazını reddederek bilimin ancak yanlışlanabilirlik ilkesiyle ilerleyebileceğini kanıtlamıştır." },
-            { id: 3, title: "Thomas Kuhn ve Paradigma Devrimleri", desc: "Normal bilim, anomaliler, krizler ve radikal paradigma değişimleri.", content: "Kuhn, bilimin kümülatif değil, kesintili ilerlediğini göstermiştir. Normal bilim evresi anomalilerle sarsılır ve yeni paradigmaya evrilir." },
-            { id: 4, title: "Immanuel Kant ve Transandantal İdealizm", desc: "Saf aklın eleştirisi, uzay-zaman formları ve fenomen-noumen ayrımı.", content: "Kant, ampirizm ile rasyonalizmi uzlaştırarak nesnelerin zihnin a priori kategorilerine uyduğunu kanıtlamıştır." },
-            { id: 5, title: "Quine ve Deneyimciliğin İki Dogması (Holizm)", desc: "Analitik-sentetik ayrımının reddi ve Duhem-Quine inanç ağı tezi.", content: "Quine, hiçbir önermenin tek başına test edilemeyeceğini; bütün inanç ağının (web of belief) bir bütün olarak deneyle sınandığını savunmuştur." },
-            { id: 6, title: "Bilim Sosyolojisi ve Edinburgh Okulu", desc: "Güçlü Program, sosyal inşa ve simetri ilkesi.", content: "Edinburgh Okulu, bilimsel bilginin dahi toplumsal çıkarlardan bağımsız olamayacağını savunur." },
-            { id: 7, title: "Ontoloji ve Varlık Felsefesi (Heidegger)", desc: "Varlık unutuluşu (Seinsvergessenheit), Dasein ve teknoloji eleştirisi.", content: "Heidegger, Batı felsefesinin varlığı nesneleştirerek unuttuğunu belirtir. Modern teknoloji doğayı stok kaynağa indirger." },
-            { id: 8, title: "Bilimsel Gerçekçilik ve Anti-Gerçekçilik", desc: "Yapıcı ampirisizm, teorik terimler ve mucize argümanı.", content: "Gerçekçiler bilimin başarılarını mucize argümanıyla savunurken, Van Fraassen yapıcı ampirisizmi savunur." },
-            { id: 9, title: "Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", desc: "Öznel nitelik, Meryem'in odası ve Searle'ün çince odası.", content: "Beden-zihin probleminde qualia (öznel his) ve Searle'ün Çince Oda argümanı, saf fizikselciliğin yetersizliğini kanıtlar." },
-            { id: 10, title: "Din, Ahlak ve Bilim Etiği", desc: "Hume'un safsatası (Is-Ought) ve biyoetik sorumluluklar.", content: "Olgulardan değerler türetilemez. Bilimsel gücün etik sınırları felsefi süzgeçten geçirilmelidir." },
-            { id: 11, title: "Dil, Hermenömatik ve Semiyotik", desc: "Yorumbilgisi, ufukların kaynaşması ve semiyotik göstergeler.", content: "Metinlerin ve insan eylemlerinin yorumlanmasında ufukların kaynaşması (Gadamer) anlamı dinamik kılar." },
-            { id: 12, title: "Transhumanizm ve Gelecek Felsefesi", desc: "Post-hümanizm, zihin yükleme ve otonom yapay zeka.", content: "İnsanın biyolojik sınırlarının teknolojiyle aşılması ve post-hüman ontolojik evrime geçiş." },
-            { id: 13, title: "Fenomenoloji ve Bilinç Deneyimi", desc: "Husserl, Epoche (askıya alma) ve yönelimsellik.", content: "Dış dünyanın varlığını paranteze alarak saf bilincin yapısına ve yönelimselliğe ulaşma yöntemi." },
-            { id: 14, title: "Yapısalcılık ve Post-Yapısalcılık", desc: "Saussure göstergebilimi ve Derrida dekonstrüksiyonu.", content: "Dilin farklar ağı olması ve ikili karşıtlıkların yapıbozuma uğratılması." },
-            { id: 15, title: "Karmaşıklık Teorisi ve Kaos Felsefesi", desc: "Doğrusal olmayan sistemler ve kelebek etkisi.", content: "İndirgemeciliğin krizi ve kendi kendine örgütlenen sistemler." },
-            { id: 16, title: "Kuantum Felsefesi ve Gerçekliğin Doğası", desc: "Kopenhag yorumu, dolanıklık ve dalga fonksiyonu çökmesi.", content: "Mikrodünyada determinizmin yıkılışı ve gözlemcinin rolü." },
-            { id: 17, title: "Diyalektik Materyalizm ve Tarihsel Materyalizm", desc: "Marx, altyapı-üstyapı ve sınıf mücadeleleri.", content: "Hegelci diyalektiğin maddesel temele oturtulması." },
-            { id: 18, title: "Pragmatizm ve Gerçeklik Kuramı", desc: "Peirce, James ve işlevsel doğruluk anlayışı.", content: "Doğruluğun pratikte işe yarayan ve sorun çözen araç olması." },
-            { id: 19, title: "Analitik Felsefe ve Dilin Mantıksal Çözümlemesi", desc: "Frege, Russell ve mantık atomculuğu.", content: "Felsefi problemlerin dilin mantıksal analiziyle çözülmesi." },
-            { id: 20, title: "Bilim Felsefesinde Anarşist Metodoloji (Feyerabend)", desc: "Anything Goes (Ne olursa olsun) ilkesi.", content: "Evrensel tek bir metodolojik kuralın olmadığı tezi." },
-            { id: 21, title: "Stoacılık ve Erdem Etiği", desc: "Kontrol dikotomisi ve içsel kale.", content: "Dış dünyayı kabul etme, akıl odaklı yaşam ve Marcus Aurelius disiplini." },
-            { id: 22, title: "Varoluşçuluk ve Varlık/Hiçlik (Sartre)", desc: "Varoluş özden önce gelir ve radikal özgürlük.", content: "İnsanın seçimleriyle özünü yaratması ve bulantı." },
-            { id: 23, title: "Spinoza ve Panteizm", desc: "Deus sive Natura ve determinizm.", content: "Tanrı ve Doğanın aynı töz olması, mutlak nedensellik." },
-            { id: 24, title: "Hakikat Sonrası (Post-Truth) Çağı", desc: "Duygusal manipülasyon ve epistemik kriz.", content: "Nesnel olguların yerine duyguların geçmesi." },
-            { id: 25, title: "Yapay Zeka Bilinci ve Transandantal Bilgisayım", desc: "Sentetik zihin ve fonksiyonelizm.", content: "Makinelerin bilinç kazanma potansiyeli." },
-            { id: 26, title: "Kozmoloji ve Evrenin Başlangıç/Bitiş Paradoksları", desc: "Büyük Patlama ve entropi yasası.", content: "Zamanın oku ve termodinamiğin ikinci yasası." },
-            { id: 27, title: "Nietzsche ve Üstinsan (Übermensch)", desc: "Tanrı'nın ölümü ve güç istenci.", content: "Nihililizmin aşılması ve kendi değerini yaratan Üstinsan." },
-            { id: 28, title: "Kuantum Ontolojisi ve Çoklu Dünyalar", desc: "Everett yorumu ve paralel evrenler.", content: "Her karar anında evrenin çatallandığı kuantum ontolojisi." },
-            { id: 29, title: "Yapay Bilinç ve Fenomenal Deneyim", desc: "Sentetik qualia ve dijital haklar.", content: "Yapay sistemlerin öznel deneyim üretme ihtimali." },
-            { id: 30, title: "Dijital Etik ve Siber Uzay Felsefesi", desc: "Gözetim kapitalizmi ve sanal varoluş.", content: "Mahremiyetin felsefi değeri ve algoritmik manipülasyon." },
-            { id: 31, title: "Biyosentrizm ve Çevre Etiği", desc: "Antroposentrizmin reddi ve içsel değer.", content: "Doğanın ve ekosistemlerin bağımsız ahlaki değeri." },
-            { id: 32, title: "Zaman Felsefesi ve Doğu Bilgeliğinde Akış", desc: "Lineer zaman vs Taoist Wu-Wei akışı.", content: "Şimdi ve Burada anının Taoist ontolojisi." }
-        ];
-
-        let currentBookPage = 1;
-
-        function renderBookTOC() {
-            const grid = document.getElementById('book-toc-grid');
-            if (!grid) return;
-            grid.innerHTML = '';
-            bookPagesData.forEach(p => {
-                grid.innerHTML += `
-                    <div onclick="openBookPage(${p.id})" class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2 cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs text-goldAccent font-bold">SAYFA ${String(p.id).padStart(2, '0')}</span>
-                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Oku ➔</span>
-                        </div>
-                        <h4 class="font-bold text-white text-sm group-hover:text-goldAccent transition">${p.title}</h4>
-                        <p class="text-[11px] text-slate-400 line-clamp-2">${p.desc}</p>
-                    </div>
-                `;
-            });
-        }
-
-        function openBookPage(pageNum) {
-            currentBookPage = pageNum;
-            document.getElementById('book-index-view').classList.add('hidden');
-            document.getElementById('book-reader-view').classList.remove('hidden');
-            updateBookReaderContent();
-        }
-
-        function backToBookIndex() {
-            document.getElementById('book-reader-view').classList.add('hidden');
-            document.getElementById('book-index-view').classList.remove('hidden');
-        }
-
-        function nextBookPage() {
-            if (currentBookPage < bookPagesData.length) {
-                currentBookPage++;
-                updateBookReaderContent();
-            }
-        }
-
-        function prevBookPage() {
-            if (currentBookPage > 1) {
-                currentBookPage--;
-                updateBookReaderContent();
-            }
-        }
-
-        function updateBookReaderContent() {
-            const page = bookPagesData.find(p => p.id === currentBookPage);
-            if (!page) return;
-
-            document.getElementById('page-number-indicator').innerText = `Sayfa ${String(page.id).padStart(2, '0')} / 32`;
-            document.getElementById('watermark-page').innerText = String(page.id).padStart(2, '0');
-            document.getElementById('page-module-badge').innerText = `MODÜL ${String(page.id).padStart(2, '0')}`;
-            document.getElementById('page-title').innerText = page.title;
-            document.getElementById('page-content').innerHTML = `
-                <strong class="text-goldAccent block mb-1">Akademik Özet & Kapsamlı Analiz:</strong> 
-                ${page.content}
-                <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400">
-                    <strong>Konu Kapsamı:</strong> ${page.desc}
-                </div>
-            `;
-            document.getElementById('page-footer-num').innerText = `Sayfa ${page.id}`;
-        }
-
-        // Not Defteri
         let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [
             { title: "İlk Not", content: "Sistem başarıyla kuruldu." }
         ];
@@ -508,7 +337,6 @@
             renderNotes();
         }
 
-        // Alışkanlık Takibi
         let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [
             { title: "Gitar Pratiği (Harley Benton)", streak: 5 }
         ];
@@ -554,7 +382,6 @@
             renderHabits();
         }
 
-        // Pomodoro
         let timerMinutes = 25;
         let timerSeconds = 0;
         let timerInterval = null;
