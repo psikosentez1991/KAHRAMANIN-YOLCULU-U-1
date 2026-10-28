@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Düşünce ve Bilim Sosyolojisi & Holizm</title>
+    <title>Kahramanın Yolculuğu 2.0 - Üniversite & Akademi Kütüphanesi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -48,27 +48,27 @@
         </div>
     </div>
 
-    <!-- ANA UYGULAMA İÇERİĞİ (BAŞLANGIÇTA GİZLİ) -->
+    <!-- ANA UYGULAMA İÇERİĞİ -->
     <div id="app-container" class="hidden w-full min-h-screen flex flex-col md:flex-row">
 
-        <!-- MOBİL ÜST BAR VE MENÜ BUTONU -->
+        <!-- MOBİL ÜST BAR -->
         <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
             <div>
                 <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Özel Alan)</p>
+                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Üniversite Kütüphanesi)</p>
             </div>
             <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg">
                 <span>☰</span> Menü
             </button>
         </header>
 
-        <!-- SOL YAN MENÜ (Hiyerarşik Yapı) -->
+        <!-- SOL YAN MENÜ -->
         <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-full md:w-72 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-0 z-50 overflow-y-auto">
             <div>
                 <div class="mb-8 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • Bilim Sosyolojisi Zirvesi</p>
+                        <p class="text-xs text-slate-400 mt-1">V2.0 • Üniversite & Akademi Üssü</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
                 </div>
@@ -90,7 +90,7 @@
                         <span>⏳</span> Derin Odak (Pomodoro)
                     </button>
                     <button onclick="switchTab('akademi')" id="nav-akademi" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>🏛️</span> Bilgi Akademisi & Leitner
+                        <span>🏛️</span> Üniversite & Bilgi Akademisi
                     </button>
                     <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>🛡️</span> Şifreli Güvenlik & Yedek
@@ -100,7 +100,7 @@
 
             <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-6">
                 <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
-                <p class="text-slate-400">Özel Kapalı Devre Sistem</p>
+                <p class="text-slate-400">Üniversite Düzeyi Kütüphane</p>
                 <button onclick="logout()" class="mt-2 w-full bg-red-500/20 text-red-400 hover:bg-red-500/30 py-1.5 rounded-lg text-center font-semibold transition">Oturumu Kapat 🔒</button>
             </div>
         </aside>
@@ -112,9 +112,9 @@
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Özel Komuta Merkezi</span>
+                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Üniversite Kütüphanesi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Düşünce ve Bilim Akademisi, bilim sosyolojisi ve holizm katmanlarıyla genişletildi.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm akademiler kitap mantığıyla giriş derslerinden doktora seviyesine kadar yapılandırıldı.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -124,19 +124,19 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Erişim Durumu</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">Güvenli</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Kapalı devre koruma</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Toplam Fakülte</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">12 Akademi</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Kitap ve Ders formatı</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Şifreleme & Güvenlik</h4>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Güvenlik Standardı</h4>
                         <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">AES-GCM</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Sıfır veri kaybı koruması</span>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Tam şifreli koruma</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Akademik Derinlik</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Bilim Sosyolojisi</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Holizm & Edinburgh Okulu</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Eğitim Düzeyi</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Üniversite & Zirve</p>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Girişten Doktora Seviyesine</span>
                     </div>
                 </div>
             </section>
@@ -147,37 +147,21 @@
                     <h2 class="text-2xl font-bold text-white">Sanat & Akustik (Gitar Pratik Laboratuvarı)</h2>
                     <p class="text-slate-400 text-sm mt-1">Harley Benton HB D-120CE Black ile icra, teknik ve parmak disiplini modülü.</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">ALT MENÜ 01</span>
-                        <h3 class="text-lg font-bold text-white">Parmek Egzersizleri</h3>
-                        <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                                <p class="font-semibold text-white">Konu: Örümcek Yürüyüşü</p>
-                                <p class="text-slate-400 mt-1">Kromatik geçişler ile sol el parmak bağımsızlığı.</p>
-                            </div>
-                        </div>
+                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 01</span>
+                        <h3 class="text-lg font-bold text-white">Parmak Egzersizleri</h3>
+                        <p class="text-xs text-slate-300">Örümcek yürüyüşü ve kromatik geçişler.</p>
                     </div>
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">ALT MENÜ 02</span>
+                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 02</span>
                         <h3 class="text-lg font-bold text-white">Akor ve Ritim Disiplini</h3>
-                        <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                                <p class="font-semibold text-white">Konu: Barre Akor Hakimiyeti</p>
-                                <p class="text-slate-400 mt-1">F ve Bm akorlarında baskı kalitesi.</p>
-                            </div>
-                        </div>
+                        <p class="text-xs text-slate-300">Barre akor hakimiyeti (F ve Bm).</p>
                     </div>
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">ALT MENÜ 03</span>
+                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 03</span>
                         <h3 class="text-lg font-bold text-white">Repertuvar & Şarkılar</h3>
-                        <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-800">
-                            <div class="p-2.5 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                                <p class="font-semibold text-white">Konu: Akustik Parça Analizi</p>
-                                <p class="text-slate-400 mt-1">Seçilen eserlerin akor şemaları.</p>
-                            </div>
-                        </div>
+                        <p class="text-xs text-slate-300">Akustik parça analizleri.</p>
                     </div>
                 </div>
             </section>
@@ -186,57 +170,38 @@
             <section id="tab-notlar" class="hidden space-y-6">
                 <div>
                     <h2 class="text-2xl font-bold text-white">Dinamik Kişisel Not Defteri</h2>
-                    <p class="text-slate-400 text-sm mt-1">Hızlı düşünceler, fikirler ve özel notlar katmanı.</p>
+                    <p class="text-slate-400 text-sm mt-1">Hızlı düşünceler ve çalışma notları.</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-1">
                         <h3 class="text-lg font-semibold text-goldAccent">Yeni Not Ekle</h3>
                         <div class="space-y-3">
-                            <div>
-                                <label class="text-xs text-slate-400 block mb-1">Not Başlığı / Konu</label>
-                                <input type="text" id="note-title" placeholder="Örn: Bilim Sosyolojisi Notu" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                            </div>
-                            <div>
-                                <label class="text-xs text-slate-400 block mb-1">Not İçeriği</label>
-                                <textarea id="note-content" rows="4" placeholder="Detayları buraya yazın..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent"></textarea>
-                            </div>
-                            <button onclick="addNote()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">
-                                Notu Kaydet ➕
-                            </button>
+                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent"></textarea>
+                            <button onclick="addNote()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Notu Kaydet ➕</button>
                         </div>
                     </div>
-
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Kayıtlı Notlar Arşivi</h3>
+                        <h3 class="text-lg font-semibold text-goldAccent">Arşiv</h3>
                         <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. ALIŞKANlık & SERİLER -->
+            <!-- 4. ALIŞKANLIK & SERİLER -->
             <section id="tab-aliskanlik" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Alışkanlık & Seri Takibi (Streak Tracker)</h2>
-                    <p class="text-slate-400 text-sm mt-1">Günlük disiplin, gitar pratiği ve zihinsel odak serileri.</p>
+                    <h2 class="text-2xl font-bold text-white">Alışkanlık & Seri Takibi</h2>
+                    <p class="text-slate-400 text-sm mt-1">Günlük disiplin ve çalışma serileri.</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Alışkanlık Tanımla</h3>
-                        <div class="space-y-3">
-                            <div>
-                                <label class="text-xs text-slate-400 block mb-1">Alışkanlık Adı</label>
-                                <input type="text" id="habit-title" placeholder="Örn: 1 Saat Bilim Felsefesi Okuması" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                            </div>
-                            <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">
-                                Alışkanlık Ekle ➕
-                            </button>
-                        </div>
+                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Alışkanlık</h3>
+                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                        <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Ekle ➕</button>
                     </div>
-
                     <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Aktif Seri Takibi</h3>
+                        <h3 class="text-lg font-semibold text-goldAccent">Seriler</h3>
                         <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
@@ -244,7 +209,7 @@
 
             <!-- 5. DERİN ODAK (POMODORO) -->
             <section id="tab-pomodoro" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">Derin Odak ve Çalışma Zamanlayıcısı</h2>
+                <h2 class="text-2xl font-bold text-white">Derin Odak ve Zamanlayıcı</h2>
                 <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
                     <div class="flex justify-center gap-3">
                         <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition">Odak (25 dk)</button>
@@ -253,7 +218,7 @@
                     </div>
                     <div class="py-8">
                         <span id="timer-display" class="text-6xl md:text-8xl font-black text-white tracking-wider">25:00</span>
-                        <p id="timer-status" class="text-goldAccent text-sm mt-2 font-medium">Odak Seansı İçin Hazır</p>
+                        <p id="timer-status" class="text-goldAccent text-sm mt-2 font-medium">Çalışmaya Hazır</p>
                     </div>
                     <div class="flex justify-center gap-4">
                         <button onclick="startTimer()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg">Başlat</button>
@@ -263,28 +228,26 @@
                 </div>
             </section>
 
-            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (DÜŞÜNCE VE BİLİM: BİLİM SOSYOLOJİSİ & HOLİZM) -->
+            <!-- 6. ÜNİVERSİTE & BİLGİ AKADEMİSİ (KİTAP & İÇİNDEKİLER MİMARİSİ) -->
             <section id="tab-akademi" class="hidden space-y-6">
-                <!-- GÖRÜNÜM 1: 12 AKADEMİ LİSTESİ -->
+                <!-- GÖRÜNÜM 1: 12 AKADEMİ KİTAP LİSTESİ -->
                 <div id="akademi-listesi-view" class="space-y-6">
                     <div>
-                        <h2 class="text-2xl font-bold text-white mb-2">Bilgi Akademisi & Leitner Hafıza Motoru</h2>
-                        <p class="text-slate-400 text-sm">İncelemek ve alt kategorilerine ulaşmak istediğiniz akademi disiplinine tıklayın.</p>
+                        <h2 class="text-2xl font-bold text-white mb-2">Üniversite Kütüphanesi & Akademiler</h2>
+                        <p class="text-slate-400 text-sm">Her biri birer ders kitabı ve araştırma üssü olan 12 fakülteden birini seçin.</p>
                     </div>
-                    
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="akademi-cards-container"></div>
                 </div>
 
-                <!-- GÖRÜNÜM 2: SEÇİLEN AKADEMİNİN ALT KATEGORİ DETAYI -->
+                <!-- GÖRÜNÜM 2: SEÇİLEN AKADEMİNİN KİTAP İÇİNDEKİLERİ VE SAYFALARI -->
                 <div id="akademi-detay-view" class="hidden space-y-6">
                     <div class="flex items-center justify-between border-b border-slate-800 pb-4">
                         <button onclick="geriAkademiListesineDon()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700 shadow-md">
-                            <span>←</span> Geri Dön (Akademi Listesi)
+                            <span>←</span> Kütüphaneye Dön (Akademi Listesi)
                         </button>
-                        <span id="detay-badge" class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Kategori</span>
+                        <span id="detay-badge" class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Kitap Modülü</span>
                     </div>
-
-                    <div id="akademi-detay-icerik" class="space-y-4"></div>
+                    <div id="akademi-detay-icerik" class="space-y-6"></div>
                 </div>
             </section>
 
@@ -303,7 +266,6 @@
         function checkLogin() {
             const pass = document.getElementById('login-password').value;
             const errorMsg = document.getElementById('login-error');
-            
             if (pass === 'aslankral1991') {
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('app-container').classList.remove('hidden');
@@ -328,7 +290,6 @@
             renderAkademiCards();
         }
 
-        // TELEFON / TABLET GERİ TUŞU KONTROLÜ (POPSTATE)
         window.addEventListener('popstate', function(event) {
             const detayView = document.getElementById('akademi-detay-view');
             if (detayView && !detayView.classList.contains('hidden')) {
@@ -353,14 +314,11 @@
             tabs.forEach(t => {
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
-
                 const navBtn = document.getElementById('nav-' + t);
                 if (navBtn) navBtn.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left";
             });
-
             const activeSection = document.getElementById('tab-' + tabId);
             if (activeSection) activeSection.classList.remove('hidden');
-
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
 
@@ -374,89 +332,145 @@
             }
         }
 
-        // BİLGİ AKADEMİSİ HİYERARŞİK VERİ YAPISI (DÜŞÜNCE VE BİLİM: BİLİM SOSYOLOJİSİ & HOLİZM)
+        // 12 FAKÜLTE VE KİTAP / ÜNİVERSİTE MÜFREDATI
         const akademilerVeri = [
             { 
                 id: 1, 
-                baslik: "Düşünce ve Bilim", 
-                aciklama: "Epistemoloji, bilim sosyolojisi, holizm (Quine) ve bilimsel bilginin sosyal inşası.", 
-                altKonular: [
-                    { 
-                        altBaslik: "Alt Konu 01: Popper & Yanlışlanabilirlik (Falsifiability)", 
-                        kutu: "Kutu 2 (3 Günde Bir Tekrar)", 
-                        not: "Karl Popper'a göre bir teorinin bilimsel statü kazanması doğrulanamaz olmasıyla değil, aksine yanlışlanabilir (test edilebilir ve çürütülebilir) olmasıyla mümkündür." 
-                    },
-                    { 
-                        altBaslik: "Alt Konu 02: Kuhn & Paradigma Değişimleri ve Bilim Devrimleri", 
-                        kutu: "Kutu 1 (Her Gün Tekrar)", 
-                        not: "Thomas Kuhn, bilimin kümülatif ilerlemediğini savunur. Normal bilim evresi anomalilerle tıkandığında kriz başlar ve radikal bir 'paradigma değişimi' gerçekleşir." 
-                    },
-                    { 
-                        altBaslik: "Alt Konu 03: Kant & Transandantal İdealizm (A Priori / A Posteriori)", 
-                        kutu: "Kutu 3 (Haftalık Tekrar)", 
-                        not: "Immanuel Kant'a göre bilgi deneyle başlar ancak deneyden doğmaz. Zihnin ampirik verileri işlemek için uzay, zaman ve nedensellik gibi a priori formları vardır." 
-                    },
-                    { 
-                        altBaslik: "Alt Konu 04: Quine & Deneyimciliğin İki Dogması (Holizm)", 
-                        kutu: "Kutu 2 (3 Günde Bir Tekrar)", 
-                        not: "W.V.O. Quine, analitik-sentetik ayrımını reddeder ve 'Duhem-Quine Tezi' ile holizmi savunur: Bilimsel önermeler tek başına test edilemez; bütün bir inanç ağı (web of belief) bir bütün olarak deneyle sınanır." 
-                    },
-                    { 
-                        altBaslik: "Alt Konu 05: Bilim Sosyolojisi & Edinburgh Okulu (Strong Programme)", 
-                        kutu: "Kutu 1 (Her Gün Tekrar)", 
-                        not: "David Bloor ve Edinburgh Sosyoloji Okulu öncülüğünde 'Güçlü Program'. Bilimsel bilginin sadece doğadan değil, sosyal çıkarlardan, iktidar ilişkilerinden ve kültürel bağlamdan bağımsız olamayacağı tezi." 
-                    },
-                    { 
-                        altBaslik: "Alt Konu 06: Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", 
-                        kutu: "Kutu 3 (Haftalık Tekrar)", 
-                        not: "Bilinç nedir? John Searle'ün Çince Oda deneyi ve Thomas Nagel'in 'Bir Yarasa Olmak Nasıl Bir Şeydir?' argümanı ile öznel deneyimlerin (qualia) fizikçi indirgemecilikle açıklanamaması." 
-                    }
+                baslik: "Düşünce ve Bilim Fakültesi", 
+                altBaslik: "Epistemoloji, Bilim Felsefesi ve Zihin Kuramı",
+                aciklama: "Giriş derslerinden doktora seviyesine; Popper, Kuhn, Kant, Holizm ve Bilim Sosyolojisi.", 
+                bolumler: [
+                    { ders: "Ders 1: Giriş ve Temel Kavramlar", icerik: "Bilim nedir? Bilimsel bilgi ile gündelik bilgi arasındaki ontolojik farklar. Tümevarım ve tümdengelim yöntemlerine giriş." },
+                    { ders: "Ders 2: Karl Popper ve Yanlışlanabilirlik", icerik: "Klasik doğrulamacılığın eleştirisi ve Popper'ın yanlışlanabilirlik (falsifiability) ilkesi. Bilimsel ilerlemenin sınanabilirlik üzerinden kurgulanması." },
+                    { ders: "Ders 3: Thomas Kuhn ve Paradigma Devrimleri", icerik: "Bilimin kümülatif değil, krizler ve devrimlerle ilerlemesi. Normal bilim, anomali ve paradigma değişimi (Gestalt dönüşümü) dinamikleri." },
+                    { ders: "Ders 4: Immanuel Kant ve Transandantal İdealizm", icerik: "A priori ve a posteriori bilgi sentezi. Uzay, zaman ve nedensellik kategorilerinin zihin tarafından ampirik veriye giydirilmesi." },
+                    { ders: "Ders 5: Quine ve Deneyimciliğin İki Dogması (Holizm)", icerik: "Analitik-sentetik ayrımının reddi. Duhem-Quine tezi: Bilimsel teorilerin tek başına değil, bütün bir inanç ağı (web of belief) olarak test edilmesi." },
+                    { ders: "Ders 6: Bilim Sosyolojisi ve Edinburgh Okulu", icerik: "Güçlü Program (Strong Programme). Bilimsel bilginin sosyal çıkarlardan, iktidar ağlarından ve kültürel bağlamdan bağımsız olamayışı." }
                 ]
             },
-            { id: 2, baslik: "Matematik & Soyut Mantık", aciklama: "Analitik düşünce, sayısal modelleme ve cebir.", altKonular: [
-                { altBaslik: "Alt Konu 01: Boole Cebri ve Mantık Devreleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "0 ve 1 mantıksal operatörlerinin dijital sistemlere uyarlanması." },
-                { altBaslik: "Alt Konu 02: Sayı Teorisi Temelleri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Asal sayılar ve kriptografik yansımaları." }
-            ]},
-            { id: 3, baslik: "Tarih & Medeniyetler", aciklama: "Stratejik kırılma noktaları ve sosyolojik evrim.", altKonular: [
-                { altBaslik: "Alt Konu 01: Antik Çağ & Akdeniz Havzası", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Ticaret yolları ve erken dönem devlet formasyonları." },
-                { altBaslik: "Alt Konu 02: Sanayi Devrimi ve Dönüşüm", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Sermaye, enerji ve üretim teknolojilerinin toplumsal etkileri." }
-            ]},
-            { id: 4, baslik: "Liderlik & Vizyon", aciklama: "Stratejik karar alma ve kişisel disiplin.", altKonular: [
-                { altBaslik: "Alt Konu 01: Zihinsel Dayanıklılık", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Kriz durumlarında karar alma mekanizmalarını koruma." },
-                { altBaslik: "Alt Konu 02: Ekip Yönetimi & Delegasyon", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Küçük ekiplerde verimlilik ve sorumluluk paylaşımı." }
-            ]},
-            { id: 5, baslik: "Ekonomi & Finans", aciklama: "Sermaye yönetimi ve varlık stratejileri.", altKonular: [
-                { altBaslik: "Alt Konu 01: Bileşik Getiri Dinamikleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Zaman ve sermaye büyüme eğrilerinin matematiksel analizi." },
-                { altBaslik: "Alt Konu 02: Nakit Akışı ve Bütçeleme", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Mikro işletmelerde likidite ve risk yönetimi." }
-            ]},
-            { id: 6, baslik: "Teknoloji & Yazılım", aciklama: "Dijital mimari ve yerel şifreleme sistemleri.", altKonular: [
-                { altBaslik: "Alt Konu 01: AES-GCM Veri Güvenliği", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "İstemci tarafında uçtan uca şifreleme ve bütünlük kontrolü." },
-                { altBaslik: "Alt Konu 02: Modüler Mimari Prensipleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Sürdürülebilir ve ölçeklenebilir kod yapıları." }
-            ]},
-            { id: 7, baslik: "Sanat & Estetik", aciklama: "Tasarım felsefesi ve akustiğin temel yasaları.", altKonular: [
-                { altBaslik: "Alt Konu 01: Akor Teorisi ve Armoni", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Gitar klavyesinde aralıklar ve akor geçiş formülleri." },
-                { altBaslik: "Alt Konu 02: Mekansal Estetik ve Oran", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Görsel ve fiziksel tasarımlarda oran dengesi." }
-            ]},
-            { id: 8, baslik: "Psikoloji & Nörobilim", aciklama: "Bilişsel işlevler ve hafıza mekanizmaları.", altKonular: [
-                { altBaslik: "Alt Konu 01: Nöroplastisite ve Öğrenme", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Beynin yeni beceriler edinirken oluşturduğu sinaptik bağlar." },
-                { altBaslik: "Alt Konu 02: Leitner Algoritma Mantığı", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Aralıklı tekrar ile uzun süreli hafızaya kayıt." }
-            ]},
-            { id: 9, baslik: "Mimari & Mekan", aciklama: "Form, fonksiyon ve mekan ergonomisi.", altKonular: [
-                { altBaslik: "Alt Konu 01: Mekansal Oran ve Geometri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Yaşam ve çalışma alanlarında ergonomik yerleşim." },
-                { altBaslik: "Alt Konu 02: Malzeme Bilimi & Dayanım", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Ahşap, metal ve kompozitlerin fiziksel özellikleri." }
-            ]},
-            { id: 10, baslik: "Strateji & Oyun Teorisi", aciklama: "Karar ağaçları ve rekabet analitiği.", altKonular: [
-                { altBaslik: "Alt Konu 01: Nash Dengesi & Karar Ağacı", kutu: "Kutu 3 (Haftalık Tekrar)", not: "Çok aktörlü senaryolarda en optimal stratejiyi seçme." },
-                { altBaslik: "Alt Konu 02: Kaynak Dağılım Stratejileri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Kısıtlı kaynaklarla maksimum etki elde etme." }
-            ]},
-            { id: 11, baslik: "Doğa & Çevre Bilimleri", aciklama: "Ekoloji, evrim ve sürdürülebilir sistemler.", altKonular: [
-                { altBaslik: "Alt Konu 01: Doğal Döngüler & Ekoloji", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Sistemlerin kendi kendine sürdürülebilirlik ilkeleri." },
-                { altBaslik: "Alt Konu 02: Enerji Dönüşümü", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Termodinamiğin temel yasalarının doğal sistemlerdeki yeri." }
-            ]},
-            { id: 12, baslik: "Dil & İletişim", aciklama: "Retorik ve etkili ifade biçimleri.", altKonular: [
-                { altBaslik: "Alt Konu 01: İkna Metotları & Retorik", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Argüman oluşturma ve net ifade teknikleri." },
-                { altBaslik: "Alt Konu 02: Kavramsal Çerçeve Kurulumu", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Karmaşık fikirleri sade ve anlaşılır dillere çevirme." }
-            ]}
+            { 
+                id: 2, 
+                baslik: "Matematik ve Soyut Mantık Fakültesi", 
+                altBaslik: "Analitik Düşünce, Cebir ve Kriptografi",
+                aciklama: "Sayı teorisinden boole cebrine, mantık devrelerinden soyut modellere üniversite düzeyi yolculuk.", 
+                bolumler: [
+                    { ders: "Ders 1: Mantığın Temelleri ve Önermeler", icerik: "Aristoteles mantığı, doğruluk değerleri ve temel çıkarım kuralları." },
+                    { ders: "Ders 2: Boole Cebri ve Mantık Devreleri", icerik: "0 ve 1 mantıksal operatörlerinin (VE, VEYA, DEĞİL) dijital sistemlere ve bilgisayar mimarisine uyarlanması." },
+                    { ders: "Ders 3: Sayı Teorisi ve Asal Sayılar", icerik: "Asal sayıların doğası, Euclid teoremi ve modern kriptografideki (RSA vb.) kritik rolleri." },
+                    { ders: "Ders 4: Sonsuzluk Kavramı ve Küme Teorisi", icerik: "Cantor'un köşegen yöntemi, farklı sonsuzluk dereceleri ve soyut matematiksel düşünce." }
+                ]
+            },
+            { 
+                id: 3, 
+                baslik: "Tarih ve Medeniyetler Fakültesi", 
+                altBaslik: "Stratejik Kırılma Noktaları ve Sosyolojik Evrim",
+                aciklama: "Antik çağlardan sanayi devrimine ve küresel medeniyet dönüşümlerine derinlemesine bakış.", 
+                bolumler: [
+                    { ders: "Ders 1: Antik Akdeniz ve Erken Devletler", icerik: "Mezopotamya, Mısır ve Yunan şehir devletlerinde ticaret yolları ve ilk yazılı hukuk sistemleri." },
+                    { ders: "Ders 2: Orta Çağ ve Bilgi Transferleri", icerik: "İslam Altın Çağı'nda tercüme faaliyetleri, matematik ve optik alanındaki devrimler." },
+                    { ders: "Ders 3: Sanayi Devrimi ve Sermaye Yapısı", icerik: "Buhar gücü, kömür, demiryolları ve üretim teknolojilerinin toplumsal sınıfları dönüştürmesi." },
+                    { ders: "Ders 4: Küreselleşme ve Dijital Çağ Kırılmaları", icerik: "Bilgi ekonomisinin ulus devletler ve bireyler üzerindeki jeopolitik etkileri." }
+                ]
+            },
+            { 
+                id: 4, 
+                baslik: "Liderlik ve Vizyon Fakültesi", 
+                altBaslik: "Stratejik Karar Alma ve Kişisel Disiplin",
+                aciklama: "Kriz yönetimi, zihinsel dayanıklılık, mikro ekip yönetimi ve vizyoner planlama.", 
+                bolumler: [
+                    { ders: "Ders 1: Vizyon Kurulumu ve Stratejik Yön", icerik: "Uzun vadeli hedefler belirleme ve kaynakları en verimli noktaya odaklama." },
+                    { ders: "Ders 2: Zihinsel Dayanıklılık (Resilience)", icerik: "Kaos ve kriz durumlarında rasyonel karar alma mekanizmalarını koruma disiplini." },
+                    { ders: "Ders 3: Mikro Ekip Yönetimi ve Delegasyon", icerik: "Küçük ölçekli işletmelerde ve ekiplerde sorumluluk paylaşımı, güven kültürü ve verimlilik." }
+                ]
+            },
+            { 
+                id: 5, 
+                baslik: "Ekonomi ve Finans Fakültesi", 
+                altBaslik: "Sermaye Yönetimi ve Varlık Stratejileri",
+                aciklama: "Bileşik getiri dinamikleri, likidite yönetimi, bütçeleme ve mikro-işletme finansı.", 
+                bolumler: [
+                    { ders: "Ders 1: Paranın Zaman Değeri ve Bileşik Getiri", icerik: "Zaman ve sermaye büyüme eğrilerinin matematiksel analizi, kartopu etkisi." },
+                    { ders: "Ders 2: Nakit Akışı ve Likidite Yönetimi", icerik: "Mikro işletmelerde dönemsel bütçeleme, risk yönetimi ve finansal tampon oluşturma." },
+                    { ders: "Ders 3: Varlık Dağılımı ve Yatırım Psikolojisi", icerik: "Piyasa dalgalanmalarında rasyonel kalabilme ve portföy çeşitlendirmesi." }
+                ]
+            },
+            { 
+                id: 6, 
+                baslik: "Teknoloji ve Yazılım Fakültesi", 
+                altBaslik: "Dijital Mimari ve Yerel Güvenlik Sistemleri",
+                aciklama: "AES-GCM şifreleme protokolleri, modüler mimari ve istemci tarafı veri bütünlüğü.", 
+                bolumler: [
+                    { ders: "Ders 1: Modüler Yazılım Mimarisi", icerik: "Sürdürülebilir, okunabilir ve ölçeklenebilir kod yazma prensipleri (SOLID ve temiz kod)." },
+                    { ders: "Ders 2: AES-GCM Şifreleme ve Kriptografi", icerik: "İstemci tarafında (Client-side) uçtan uca şifreleme, anahtar türetme ve veri güvenliği." },
+                    { ders: "Ders 3: Veri Bütünlüğü ve Zod Şema Kontrolleri", icerik: "Uygulama katmanında veri tiplerinin doğrulanması ve hata tolerans mekanizmaları." }
+                ]
+            },
+            { 
+                id: 7, 
+                baslik: "Sanat ve Estetik Fakültesi", 
+                altBaslik: "Tasarım Felsefesi ve Akustiğin Temelleri",
+                aciklama: "Akor teorisi, armoni, mekanik oranlar ve akustik enstrüman icra disiplini.", 
+                bolumler: [
+                    { ders: "Ders 1: Akor Teorisi ve Armoni", icerik: "Gitar klavyesinde aralıklar, majör-minör diziler ve akor geçiş formülleri." },
+                    { ders: "Ders 2: Mekansal Estetik ve Oran", icerik: "Görsel ve fiziksel tasarımlarda altın oran, denge ve form-fonksiyon ilişkisi." },
+                    { ders: "Ders 3: Akustik Rezonans ve Ses Fiziği", icerik: "Enstrüman gövde sesleri, titreşim dalgaları ve nota frekanslarının matematiksel temelleri." }
+                ]
+            },
+            { 
+                id: 8, 
+                baslik: "Psikoloji ve Nörobilim Fakültesi", 
+                altBaslik: "Bilişsel İşlevler ve Hafıza Algoritmaları",
+                aciklama: "Nöroplastisite, sinaptik bağlar, aralıklı tekrar ve bilişsel öğrenme modelleri.", 
+                bolumler: [
+                    { ders: "Ders 1: Nöroplastisite ve Öğrenme", icerik: "Beynin yeni beceriler edinirken sinaptik yolları yeniden yapılandırma kapasitesi." },
+                    { ders: "Ders 2: Leitner Hafıza Motoru Mantığı", icerik: "Aralıklı tekrar (spaced repetition) ile bilgiyi kısa süreli hafızadan uzun süreli kalıcılığa taşıma." },
+                    { ders: "Ders 3: Bilişsel Önyargılar ve Karar Hataları", icerik: "İnsan zihninin karar alma sürecinde düştüğü sezgisel tuzaklar." }
+                ]
+            },
+            { 
+                id: 9, 
+                baslik: "Mimari ve Mekan Fakültesi", 
+                altBaslik: "Form, Fonksiyon ve Malzeme Bilimi",
+                aciklama: "Ergonomi, mekan oranları, ahşap ve kompozit malzeme bilimi.", 
+                bolumler: [
+                    { ders: "Ders 1: Mekansal Ergonomi ve Oran", icerik: "Yaşam ve çalışma alanlarında insan ölçeğine uygun yerleşim ve hareket akışı." },
+                    { ders: "Ders 2: Malzeme Bilimi ve Dayanım", icerik: "Ahşap, metal ve kompozit malzemelerin fiziksel özellikleri, yük taşıma kapasiteleri." },
+                    { ders: "Ders 3: Üretim Tasarımı ve CNC Entegrasyonu", icerik: "Dijital tasarımların imalat çizimlerine dönüştürülmesi ve atölye optimizasyonu." }
+                ]
+            },
+            { 
+                id: 10, 
+                baslik: "Strateji ve Oyun Teorisi Fakültesi", 
+                altBaslik: "Karar Ağaçları ve Rekabet Analitiği",
+                aciklama: "Nash dengesi, çok aktörlü senaryolar ve kısıtlı kaynak optimizasyonu.", 
+                bolumler: [
+                    { ders: "Ders 1: Temel Oyun Teorisi ve Karar Ağaçları", icerik: "Rasyonel aktörlerin karşılıklı hamlelerinde en optimal stratejiyi seçme matematiği." },
+                    { ders: "Ders 2: Nash Dengesi ve İşbirliği Dinamikleri", icerik: "Tarafların birbirlerinin stratejilerini bildiği durumda ulaşılan denge noktaları." },
+                    { ders: "Ders 3: Kaynak Dağılımı ve Rekabet Stratejileri", icerik: "Kısıtlı zaman ve sermaye ile maksimum rekabet avantajı elde etme." }
+                ]
+            },
+            { 
+                id: 11, 
+                baslik: "Doğa ve Çevre Bilimleri Fakültesi", 
+                altBaslik: "Ekoloji, Evrim ve Sürdürülebilir Sistemler",
+                aciklama: "Doğal döngüler, termodinamiğin yasaları ve ekolojik denge mimarisi.", 
+                bolumler: [
+                    { ders: "Ders 1: Termodinamiğin Temel Yasaları", icerik: "Enerjinin korunumu ve entropi kavramının evrendeki ve kapalı sistemlerdeki karşılığı." },
+                    { ders: "Ders 2: Ekolojik Denge ve Sürdürülebilirlik", icerik: "Doğal döngülerin kendi kendine yeterlilik ilkeleri ve sıfır atık sistemleri." },
+                    { ders: "Ders 3: Evrimsel Süreçler ve Adaptasyon", icerik: "Canlı sistemlerin çevre değişimlerine karşı geliştirdiği hayatta kalma stratejileri." }
+                ]
+            },
+            { 
+                id: 12, 
+                baslik: "Dil ve İletişim Fakültesi", 
+                altBaslik: "Retorik, Argüman Kurulumu ve Anlam",
+                aciklama: "Etkili ifade biçimleri, mantıksal safsatalar ve kavramsal çerçeve inşası.", 
+                bolumler: [
+                    { ders: "Ders 1: Retorik ve İkna Sanatı", icerik: "Aristoteles'in Ethos, Pathos ve Logos üçlüsü ile etkili argüman oluşturma." },
+                    { ders: "Ders 2: Mantıksal Safsatalar (Fallacies)", icerik: "Düşünce ve tartışma süreçlerinde yapılan mantık hatalarını tespit etme." },
+                    { ders: "Ders 3: Kavramsal Çerçeve Kurulumu", icerik: "Karmaşık fikirleri ve soyut teorileri net, sade ve vurucu dillere çevirme becerisi." }
+                ]
+            }
         ];
 
         function renderAkademiCards() {
@@ -467,13 +481,13 @@
                 container.innerHTML += `
                     <div onclick="akademiDetayAc(${akademi.id})" class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-3 cursor-pointer group">
                         <div class="flex justify-between items-center">
-                            <span class="text-xs text-goldAccent font-bold">AKADEMİ ${String(akademi.id).padStart(2, '0')}</span>
-                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Tıkla & İncele ➔</span>
+                            <span class="text-xs text-goldAccent font-bold">FAKÜLTE ${String(akademi.id).padStart(2, '0')}</span>
+                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Kitabı Aç ➔</span>
                         </div>
                         <h3 class="font-bold text-white text-base group-hover:text-goldAccent transition">${akademi.baslik}</h3>
                         <p class="text-xs text-slate-400">${akademi.aciklama}</p>
                         <div class="pt-2 border-t border-slate-800 text-[11px] text-emerald-400 font-medium">
-                            📁 ${akademi.altKonular.length} Alt Kategori Mevcut
+                            📚 ${akademi.bolumler.length} Üniversite Dersi Mevcut
                         </div>
                     </div>
                 `;
@@ -488,34 +502,37 @@
 
             document.getElementById('akademi-listesi-view').classList.add('hidden');
             document.getElementById('akademi-detay-view').classList.remove('hidden');
-            document.getElementById('detay-badge').innerText = `AKADEMİ ${String(akademi.id).padStart(2, '0')} - SOSYOLOJİ & HOLİZM ZİRVESİ`;
+            document.getElementById('detay-badge').innerText = `FAKÜLTE ${String(akademi.id).padStart(2, '0')} - ÜNİVERSİTE KİTABI`;
 
             const icerikDiv = document.getElementById('akademi-detay-icerik');
             let html = `
-                <div class="bg-cardBg border border-goldAccent/30 p-6 rounded-2xl mb-6 space-y-2 shadow-xl">
-                    <h3 class="text-2xl font-extrabold text-white">${akademi.baslik}</h3>
+                <div class="bg-cardBg border border-goldAccent/30 p-6 rounded-2xl space-y-3 shadow-xl">
+                    <span class="text-xs text-goldAccent font-bold uppercase tracking-wider">${akademi.altBaslik}</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white">${akademi.baslik}</h3>
                     <p class="text-sm text-slate-300">${akademi.aciklama}</p>
                 </div>
-                <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-3">Bilim Sosyolojisi ve Holizm Konuları:</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div class="mt-6">
+                    <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-4">📖 Kitap İçindekiler ve Ders Modülleri:</h4>
+                    <div class="space-y-4">
             `;
 
-            akademi.altKonular.forEach((alt, idx) => {
+            akademi.bolumler.forEach((b, idx) => {
                 html += `
-                    <div class="bg-slate-900/90 border border-slate-800 p-5 rounded-xl space-y-3 hover:border-slate-700 transition">
+                    <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-slate-700 transition shadow-md">
                         <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-goldAccent">ALT BAŞLIK 0${idx+1}</span>
-                            <span class="text-[11px] px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🔁 ${alt.kutu}</span>
+                            <span class="text-xs font-bold text-goldAccent uppercase">MODÜL 0${idx+1}</span>
+                            <span class="text-[11px] px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🎓 Üniversite Seviyesi</span>
                         </div>
-                        <h5 class="font-bold text-white text-sm">${alt.altBaslik}</h5>
-                        <p class="text-xs text-slate-300 bg-slate-950 p-3.5 rounded-lg border border-slate-800/80 leading-relaxed">
-                            <strong class="text-goldAccent block mb-1">Akademik Analiz & Sosyolojik Sentez:</strong> ${alt.not}
+                        <h5 class="font-bold text-white text-base">${b.ders}</h5>
+                        <p class="text-xs md:text-sm text-slate-300 bg-slate-950 p-4 rounded-xl border border-slate-800/80 leading-relaxed">
+                            <strong class="text-goldAccent block mb-1">Ders İçeriği & Akademik Analiz:</strong> ${b.icerik}
                         </p>
                     </div>
                 `;
             });
 
-            html += `</div>`;
+            html += `</div></div>`;
             icerikDiv.innerHTML = html;
         }
 
@@ -526,7 +543,7 @@
 
         // Not Defteri
         let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [
-            { title: "İlk Not", content: "Sistem başarıyla kuruldu ve aktif hale getirildi." }
+            { title: "İlk Not", content: "Sistem başarıyla kuruldu." }
         ];
 
         function renderNotes() {
@@ -549,10 +566,7 @@
         function addNote() {
             const titleInput = document.getElementById('note-title');
             const contentInput = document.getElementById('note-content');
-            if (!titleInput.value.trim() || !contentInput.value.trim()) {
-                alert('Lütfen başlık ve içerik alanlarını doldurun.');
-                return;
-            }
+            if (!titleInput.value.trim() || !contentInput.value.trim()) return;
             notes.unshift({ title: titleInput.value.trim(), content: contentInput.value.trim() });
             localStorage.setItem('kahraman_notes', JSON.stringify(notes));
             titleInput.value = '';
@@ -566,7 +580,7 @@
             renderNotes();
         }
 
-        // Alışkanlık Takibi (Streak Tracker)
+        // Alışkanlık Takibi
         let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [
             { title: "Gitar Pratiği (Harley Benton)", streak: 5 }
         ];
@@ -583,8 +597,8 @@
                             <span class="text-xs text-goldAccent mt-1 inline-block">🔥 Seri: ${h.streak} Gün</span>
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="incrementStreak(${index})" class="text-emerald-400 hover:text-emerald-300 text-xs px-3 py-1.5 bg-emerald-500/10 rounded-lg font-semibold">+1 Gün Tamamla</button>
-                            <button onclick="deleteHabit(${index})" class="text-red-400 hover:text-red-300 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
+                            <button onclick="incrementStreak(${index})" class="text-emerald-400 text-xs px-3 py-1.5 bg-emerald-500/10 rounded-lg font-semibold">+1 Tamamla</button>
+                            <button onclick="deleteHabit(${index})" class="text-red-400 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
                         </div>
                     </div>
                 `;
@@ -593,10 +607,7 @@
 
         function addHabit() {
             const titleInput = document.getElementById('habit-title');
-            if (!titleInput.value.trim()) {
-                alert('Lütfen alışkanlık adı girin.');
-                return;
-            }
+            if (!titleInput.value.trim()) return;
             habits.push({ title: titleInput.value.trim(), streak: 1 });
             localStorage.setItem('kahraman_habits', JSON.stringify(habits));
             titleInput.value = '';
@@ -615,7 +626,7 @@
             renderHabits();
         }
 
-        // Pomodoro Zamanlayıcı
+        // Pomodoro
         let timerMinutes = 25;
         let timerSeconds = 0;
         let timerInterval = null;
@@ -624,9 +635,7 @@
         function updateDisplay() {
             const disp = document.getElementById('timer-display');
             if (!disp) return;
-            const mins = String(timerMinutes).padStart(2, '0');
-            const secs = String(timerSeconds).padStart(2, '0');
-            disp.innerText = `${mins}:${secs}`;
+            disp.innerText = `${String(timerMinutes).padStart(2, '0')}:${String(timerSeconds).padStart(2, '0')}`;
         }
 
         function setTimerMode(mins) {
@@ -634,35 +643,22 @@
             timerMinutes = mins;
             timerSeconds = 0;
             updateDisplay();
-            
             ['25', '5', '15'].forEach(m => {
                 const btn = document.getElementById('mode-' + m);
-                if (btn) {
-                    if (Number(m) === mins) {
-                        btn.className = "px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition";
-                    } else {
-                        btn.className = "px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition";
-                    }
-                }
+                if (btn) btn.className = Number(m) === mins ? "px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition" : "px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition";
             });
-
-            const status = document.getElementById('timer-status');
-            if (status) status.innerText = mins === 25 ? "Odak Seansı İçin Hazır" : "Dinlenme Molası İçin Hazır";
         }
 
         function startTimer() {
             if (isRunning) return;
             isRunning = true;
-            const status = document.getElementById('timer-status');
-            if (status) status.innerText = "Derin Odak Devam Ediyor...";
-            
+            document.getElementById('timer-status').innerText = "Çalışma Devam Ediyor...";
             timerInterval = setInterval(() => {
                 if (timerSeconds === 0) {
                     if (timerMinutes === 0) {
                         clearInterval(timerInterval);
                         isRunning = false;
-                        alert('Harika iş! Süre tamamlandı, mola verebilirsiniz.');
-                        if (status) status.innerText = "Seans Tamamlandı 🎉";
+                        alert('Süre tamamlandı!');
                         return;
                     }
                     timerMinutes--;
@@ -677,8 +673,7 @@
         function pauseTimer() {
             isRunning = false;
             clearInterval(timerInterval);
-            const status = document.getElementById('timer-status');
-            if (status) status.innerText = "Zamanlayıcı Duraklatıldı";
+            document.getElementById('timer-status').innerText = "Duraklatıldı";
         }
 
         function resetTimer() {
@@ -686,8 +681,7 @@
             timerMinutes = 25;
             timerSeconds = 0;
             updateDisplay();
-            const status = document.getElementById('timer-status');
-            if (status) status.innerText = "Sıfırlandı - Başlamaya Hazır";
+            document.getElementById('timer-status').innerText = "Sıfırlandı";
         }
     </script>
 </body>
