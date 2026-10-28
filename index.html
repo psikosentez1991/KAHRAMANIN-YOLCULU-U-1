@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Düşünce ve Bilim Enstitüsü (Kuantum & Fenomenoloji Zirvesi)</title>
+    <title>Kahramanın Yolculuğu 2.0 - Düşünce ve Bilim Enstitüsü (Nihai Kitap Cildi)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,14 +14,16 @@
                         cardBg: 'rgba(15, 23, 42, 0.94)',
                         goldAccent: '#d4af37',
                         goldHover: '#e5c158',
+                        bookPage: '#131b2e',
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .book-title { font-family: 'Playfair Display', serif; }
     </style>
 </head>
 <body class="bg-darkBg text-slate-100 min-h-screen flex flex-col justify-center items-center">
@@ -90,7 +92,7 @@
                         <span>⏳</span> Derin Odak (Pomodoro)
                     </button>
                     <button onclick="switchTab('akademi')" id="nav-akademi" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>🏛️</span> Üniversite & Bilgi Akademisi
+                        <span>🏛️</span> Düşünce ve Bilim Cildi (32 Modül)
                     </button>
                     <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
                         <span>🛡️</span> Şifreli Güvenlik & Yedek
@@ -114,7 +116,7 @@
                     <div class="relative z-10 max-w-2xl">
                         <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Üniversite Kütüphanesi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Düşünce ve Bilim Fakültesi fenomolojiden kuantum felsefesine 16 dev modülle güncellendi.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Düşünce ve Bilim Fakültesi 32 dev modülüyle eksiksiz bir kitap formatında emrinde.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -134,9 +136,9 @@
                         <span class="text-xs text-slate-400 mt-1 inline-block">Tam şifreli koruma</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Düşünce & Bilim</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">16 Enstitü Modülü</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Fenomenoloji & Kuantum Zirvesi</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Düşünce & Bilim Cildi</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">32 Sayfa / Modül</p>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Doktoraüstü Kitap Modu</span>
                     </div>
                 </div>
             </section>
@@ -228,26 +230,55 @@
                 </div>
             </section>
 
-            <!-- 6. ÜNİVERSİTE & BİLGİ AKADEMİSİ -->
+            <!-- 6. DÜŞÜNCE VE BİLİM KİTABI (32 SAYFALIK CİLT) -->
             <section id="tab-akademi" class="hidden space-y-6">
-                <!-- GÖRÜNÜM 1: 12 AKADEMİ KİTAP LİSTESİ -->
-                <div id="akademi-listesi-view" class="space-y-6">
-                    <div>
-                        <h2 class="text-2xl font-bold text-white mb-2">Üniversite Kütüphanesi & Akademiler</h2>
-                        <p class="text-slate-400 text-sm">Her biri birer ders kitabı ve araştırma üssü olan 12 fakülteden birini seçin.</p>
+                <!-- KİTAP GİRİŞ / İÇİNDEKİLER -->
+                <div id="book-index-view" class="space-y-6">
+                    <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border border-goldAccent/30 p-8 rounded-3xl shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="space-y-2">
+                            <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Akademik Cilt 01</span>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-white book-title">Düşünce ve Bilim Enstitüsü</h2>
+                            <p class="text-slate-300 text-sm">32 Modüllü Doktoraüstü Kitap Modu. Sayfaları çevirerek veya içindekilerden seçerek okuyun.</p>
+                        </div>
+                        <button onclick="openBookPage(1)" class="bg-goldAccent hover:bg-goldHover text-slate-950 font-extrabold px-8 py-4 rounded-2xl transition shadow-xl text-sm flex items-center gap-2 shrink-0">
+                            <span>📖</span> Kitabı Aç ve Oku
+                        </button>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="akademi-cards-container"></div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="book-toc-grid"></div>
                 </div>
 
-                <!-- GÖRÜNÜM 2: SEÇİLEN AKADEMİNİN KİTAP İÇİNDEKİLERİ VE SAYFALARI -->
-                <div id="akademi-detay-view" class="hidden space-y-6">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                        <button onclick="geriAkademiListesineDon()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700 shadow-md">
-                            <span>←</span> Kütüphaneye Dön (Akademi Listesi)
+                <!-- KİTAP OKUMA / SAYFA ÇEVİRME GÖRÜNÜMÜ -->
+                <div id="book-reader-view" class="hidden space-y-6">
+                    <div class="flex justify-between items-center bg-slate-900 border border-slate-800 p-4 rounded-2xl shadow-md">
+                        <button onclick="backToBookIndex()" class="bg-slate-800 hover:bg-slate-700 text-goldAccent px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 border border-slate-700">
+                            <span>←</span> İçindekiler Tablosuna Dön
                         </button>
-                        <span id="detay-badge" class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase">Kitap Modülü</span>
+                        <div class="flex items-center gap-3">
+                            <button onclick="prevBookPage()" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-slate-700">◀ Önceki Sayfa</button>
+                            <span id="page-number-indicator" class="text-xs font-bold text-goldAccent px-3 py-1 bg-goldAccent/10 rounded-lg">Sayfa 01 / 32</span>
+                            <button onclick="nextBookPage()" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-slate-700">Sonraki Sayfa ▶</button>
+                        </div>
                     </div>
-                    <div id="akademi-detay-icerik" class="space-y-6"></div>
+
+                    <!-- KİTAP SAYFASI DUVARI -->
+                    <div class="bg-bookPage border border-goldAccent/30 p-6 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden space-y-6 min-h-[500px] flex flex-col justify-between">
+                        <div class="absolute top-4 right-6 text-goldAccent/20 text-6xl font-black select-none book-title" id="watermark-page">01</div>
+                        
+                        <div class="space-y-4 relative z-10">
+                            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+                                <span id="page-module-badge" class="text-xs text-goldAccent font-bold uppercase tracking-widest">MODÜL 01</span>
+                                <span class="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🎓 Doktoraüstü Seviye</span>
+                            </div>
+                            <h3 id="page-title" class="text-2xl md:text-3xl font-extrabold text-white book-title">Epistemoloji ve Bilgi Felsefesi Temelleri</h3>
+                            <div id="page-content" class="text-sm md:text-base text-slate-300 leading-relaxed space-y-4 bg-slate-950/60 p-6 rounded-2xl border border-slate-800/80"></div>
+                        </div>
+
+                        <div class="flex justify-between items-center pt-6 border-t border-slate-800/80 text-xs text-slate-400 relative z-10">
+                            <span>Aslan Kral - Üniversite Kütüphanesi</span>
+                            <span id="page-footer-num" class="text-goldAccent font-bold">Sayfa 1</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -287,16 +318,8 @@
             }
             renderNotes();
             renderHabits();
-            renderAkademiCards();
+            renderBookTOC();
         }
-
-        window.addEventListener('popstate', function(event) {
-            const detayView = document.getElementById('akademi-detay-view');
-            if (detayView && !detayView.classList.contains('hidden')) {
-                history.pushState(null, '', window.location.href);
-                geriAkademiListesineDon();
-            }
-        });
 
         function toggleMobileMenu() {
             const sidebar = document.getElementById('sidebar');
@@ -322,9 +345,6 @@
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) activeNav.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left";
 
-            document.getElementById('akademi-detay-view').classList.add('hidden');
-            document.getElementById('akademi-listesi-view').classList.remove('hidden');
-
             if (window.innerWidth < 768) {
                 const sidebar = document.getElementById('sidebar');
                 sidebar.classList.remove('flex');
@@ -332,223 +352,104 @@
             }
         }
 
-        // 12 FAKÜLTE VE KİTAP / ÜNİVERSİTE MÜFREDATI (DÜŞÜNCE VE BİLİM 16 MODÜLLÜ NİHAİ ZİRVE)
-        const akademilerVeri = [
-            { 
-                id: 1, 
-                baslik: "Düşünce ve Bilim Fakültesi", 
-                altBaslik: "Epistemoloji, Fenomenoloji, Kuantum Felsefesi ve Enstitü Entelektüel Zirvesi",
-                aciklama: "Giriş derslerinden doktora seviyesine; Popper, Kuhn, Kant, Holizm, Bilim Sosyolojisi, Heidegger, Zihin Felsefesi, Fenomenoloji ve Kuantum Felsefesi.", 
-                bolumler: [
-                    { ders: "Ders 1: Epistemoloji ve Bilgi Felsefesi Temelleri", icerik: "Doğruluk nedir? Gerekçelendirilmiş Doğru İnanç (JTB) tanımı, Gettier problemleri ve bilginin sınırları üzerine epistemolojik giriş." },
-                    { ders: "Ders 2: Karl Popper ve Yanlışlanabilirlik (Falsifiability)", icerik: "Klasik doğrulamacılığın eleştirisi, tümevarımın mantıksal çıkmazı ve Popper'ın yanlışlanabilirlik ilkesi üzerinden bilimsel ilerleme." },
-                    { ders: "Ders 3: Thomas Kuhn ve Paradigma Devrimleri", icerik: "Bilimin kümülatif ilerlemediği tezi. Normal bilim evresi, anomaliler, krizler ve radikal paradigma değişimleri (Gestalt dönüşümü)." },
-                    { ders: "Ders 4: Immanuel Kant ve Transandantal İdealizm", icerik: "A priori ve a posteriori bilgi sentezi. Uzay, zaman ve nedensellik kategorilerinin zihin tarafından ampirik veriye giydirilmesi." },
-                    { ders: "Ders 5: Quine ve Deneyimciliğin İki Dogması (Holizm)", icerik: "Analitik-sentetik ayrımının reddi. Duhem-Quine tezi: Bilimsel önermelerin tek başına değil, bütün bir inanç ağı olarak test edilmesi." },
-                    { ders: "Ders 6: Bilim Sosyolojisi ve Edinburgh Okulu", icerik: "Güçlü Program (Strong Programme). Bilimsel bilginin sosyal çıkarlardan, iktidar ağlarından ve kültürel bağlamdan bağımsız olamayışı." },
-                    { ders: "Ders 7: Ontoloji ve Varlık Felsefesi (Heidegger)", icerik: "Varlık unutuluşu (Seinsvergessenheit), Dasein kavramı ve teknoloji eleştirisi. Varlığın özünü teknolojik hesaplanabilirlik üzerinden sorgulama." },
-                    { ders: "Ders 8: Bilimsel Gerçekçilik ve Anti-Gerçekçilik", icerik: "Van Fraassen'in yapıcı ampirisizmi ve yapısal gerçekçilik. Bilimsel teorilerin dünyayı birebir yansıttığı iddiasının sorgulanması." },
-                    { ders: "Ders 9: Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", icerik: "Beden-zihin problemi, qualia (öznel nitelik) ve beliren özellikler (emergentism) teorisi. John Searle'ün Çince Oda argümanı." },
-                    { ders: "Ders 10: Din, Ahlak ve Bilim Etiği", icerik: "Biyoetik, yapay zeka ahlakı ve teoloji ile felsefe arasındaki epistemolojik sınırlar. Bilimsel araştırmalarda etik sorumluluklar." },
-                    { ders: "Ders 11: Dil, Hermenömatik ve Semiyotik", icerik: "Yorumbilgisi (hermenömatik), metinlerin anlamlandırılması ve Hempel-Oppenheimer bilimsel açıklama modelleri." },
-                    { ders: "Ders 12: Transhumanizm ve Gelecek Felsefesi", icerik: "Post-hümanizm, zihin yükleme (mind uploading), otonom yapay zeka sistemleri ve insanlığın ontolojik evriminin felsefi boyutu." },
-                    { ders: "Ders 13: Fenomenoloji ve Bilinç Deneyimi", icerik: "Husserl ve Heidegger çizgisinde 'şeylerin kendisine dönmek'. Epoche (askıya alma) yöntemi ve özün sezgisi ile öznel bilincin analizi." },
-                    { ders: "Ders 14: Yapısalcılık ve Post-Yapısalcılık", icerik: "Saussure'den Foucault ve Derrida'ya dilin yapısı, iktidar-bilgi ağları ve dekonstrüksiyon (yapıbozum) analitiği." },
-                    { ders: "Ders 15: Karmaşıklık Teorisi ve Kaos Felsefesi", icerik: "Doğrusal olmayan sistemler, kelebek etkisi, kendi kendine örgütlenme ve klasik indirgemeciliğin epistemolojik krizi." },
-                    { ders: "Ders 16: Kuantum Felsefesi ve Gerçekliğin Doğası", icerik: "Kopenhag yorumu, dolanıklık, Schrödinger'in kedisi paradoksu ve gözlemcinin fiziksel gerçekliği inşa etmedeki rolü." }
-                ]
-            },
-            { 
-                id: 2, 
-                baslik: "Matematik ve Soyut Mantık Fakültesi", 
-                altBaslik: "Analitik Düşünce, Cebir ve Kriptografi",
-                aciklama: "Sayı teorisinden boole cebrine, mantık devrelerinden soyut modellere üniversite düzeyi yolculuk.", 
-                bolumler: [
-                    { ders: "Ders 1: Mantığın Temelleri ve Önermeler", icerik: "Aristoteles mantığı, doğruluk değerleri ve temel çıkarım kuralları." },
-                    { ders: "Ders 2: Boole Cebri ve Mantık Devreleri", icerik: "0 ve 1 mantıksal operatörlerinin (VE, VEYA, DEĞİL) dijital sistemlere ve bilgisayar mimarisine uyarlanması." },
-                    { ders: "Ders 3: Sayı Teorisi ve Asal Sayılar", icerik: "Asal sayıların doğası, Euclid teoremi ve modern kriptografideki (RSA vb.) kritik rolleri." },
-                    { ders: "Ders 4: Sonsuzluk Kavramı ve Küme Teorisi", icerik: "Cantor'un köşegen yöntemi, farklı sonsuzluk dereceleri ve soyut matematiksel düşünce." }
-                ]
-            },
-            { 
-                id: 3, 
-                baslik: "Tarih ve Medeniyetler Fakültesi", 
-                altBaslik: "Stratejik Kırılma Noktaları ve Sosyolojik Evrim",
-                aciklama: "Antik çağlardan sanayi devrimine ve küresel medeniyet dönüşümlerine derinlemesine bakış.", 
-                bolumler: [
-                    { ders: "Ders 1: Antik Akdeniz ve Erken Devletler", icerik: "Mezopotamya, Mısır ve Yunan şehir devletlerinde ticaret yolları ve ilk yazılı hukuk sistemleri." },
-                    { ders: "Ders 2: Orta Çağ ve Bilgi Transferleri", icerik: "İslam Altın Çağı'nda tercüme faaliyetleri, matematik ve optik alanındaki devrimler." },
-                    { ders: "Ders 3: Sanayi Devrimi ve Sermaye Yapısı", icerik: "Buhar gücü, kömür, demiryolları ve üretim teknolojilerinin toplumsal sınıfları dönüştürmesi." },
-                    { ders: "Ders 4: Küreselleşme ve Dijital Çağ Kırılmaları", icerik: "Bilgi ekonomisinin ulus devletler ve bireyler üzerindeki jeopolitik etkileri." }
-                ]
-            },
-            { 
-                id: 4, 
-                baslik: "Liderlik ve Vizyon Fakültesi", 
-                altBaslik: "Stratejik Karar Alma ve Kişisel Disiplin",
-                aciklama: "Kriz yönetimi, zihinsel dayanıklılık, mikro ekip yönetimi ve vizyoner planlama.", 
-                bolumler: [
-                    { ders: "Ders 1: Vizyon Kurulumu ve Stratejik Yön", icerik: "Uzun vadeli hedefler belirleme ve kaynakları en verimli noktaya odaklama." },
-                    { ders: "Ders 2: Zihinsel Dayanıklılık (Resilience)", icerik: "Kaos ve kriz durumlarında rasyonel karar alma mekanizmalarını koruma disiplini." },
-                    { ders: "Ders 3: Mikro Ekip Yönetimi ve Delegasyon", icerik: "Küçük ölçekli işletmelerde ve ekiplerde sorumluluk paylaşımı, güven kültürü ve verimlilik." }
-                ]
-            },
-            { 
-                id: 5, 
-                baslik: "Ekonomi ve Finans Fakültesi", 
-                altBaslik: "Sermaye Yönetimi ve Varlık Stratejileri",
-                aciklama: "Bileşik getiri dinamikleri, likidite yönetimi, bütçeleme ve mikro-işletme finansı.", 
-                bolumler: [
-                    { ders: "Ders 1: Paranın Zaman Değeri ve Bileşik Getiri", icerik: "Zaman ve sermaye büyüme eğrilerinin matematiksel analizi, kartopu etkisi." },
-                    { ders: "Ders 2: Nakit Akışı ve Likidite Yönetimi", icerik: "Mikro işletmelerde dönemsel bütçeleme, risk yönetimi ve finansal tampon oluşturma." },
-                    { ders: "Ders 3: Varlık Dağılımı ve Yatırım Psikolojisi", icerik: "Piyasa dalgalanmalarında rasyonel kalabilme ve portföy çeşitlendirmesi." }
-                ]
-            },
-            { 
-                id: 6, 
-                baslik: "Teknoloji ve Yazılım Fakültesi", 
-                altBaslik: "Dijital Mimari ve Yerel Güvenlik Sistemleri",
-                aciklama: "AES-GCM şifreleme protokolleri, modüler mimari ve istemci tarafı veri bütünlüğü.", 
-                bolumler: [
-                    { ders: "Ders 1: Modüler Yazılım Mimarisi", icerik: "Sürdürülebilir, okunabilir ve ölçeklenebilir kod yazma prensipleri (SOLID ve temiz kod)." },
-                    { ders: "Ders 2: AES-GCM Şifreleme ve Kriptografi", icerik: "İstemci tarafında (Client-side) uçtan uca şifreleme, anahtar türetme ve veri güvenliği." },
-                    { ders: "Ders 3: Veri Bütünlüğü ve Zod Şema Kontrolleri", icerik: "Uygulama katmanında veri tiplerinin doğrulanması ve hata tolerans mekanizmaları." }
-                ]
-            },
-            { 
-                id: 7, 
-                baslik: "Sanat ve Estetik Fakültesi", 
-                altBaslik: "Tasarım Felsefesi ve Akustiğin Temelleri",
-                aciklama: "Akor teorisi, armoni, mekanik oranlar ve akustik enstrüman icra disiplini.", 
-                bolumler: [
-                    { ders: "Ders 1: Akor Teorisi ve Armoni", icerik: "Gitar klavyesinde aralıklar, majör-minör diziler ve akor geçiş formülleri." },
-                    { ders: "Ders 2: Mekansal Estetik ve Oran", icerik: "Görsel ve fiziksel tasarımlarda altın oran, denge ve form-fonksiyon ilişkisi." },
-                    { ders: "Ders 3: Akustik Rezonans ve Ses Fiziği", icerik: "Enstrüman gövde sesleri, titreşim dalgaları ve nota frekanslarının matematiksel temelleri." }
-                ]
-            },
-            { 
-                id: 8, 
-                baslik: "Psikoloji ve Nörobilim Fakültesi", 
-                altBaslik: "Bilişsel İşlevler ve Hafıza Algoritmaları",
-                aciklama: "Nöroplastisite, sinaptik bağlar, aralıklı tekrar ve bilişsel öğrenme modelleri.", 
-                bolumler: [
-                    { ders: "Ders 1: Nöroplastisite ve Öğrenme", icerik: "Beynin yeni beceriler edinirken sinaptik yolları yeniden yapılandırma kapasitesi." },
-                    { ders: "Ders 2: Leitner Hafıza Motoru Mantığı", icerik: "Aralıklı tekrar (spaced repetition) ile bilgiyi kısa süreli hafızadan uzun süreli kalıcılığa taşıma." },
-                    { ders: "Ders 3: Bilişsel Önyargılar ve Karar Hataları", icerik: "İnsan zihninin karar alma sürecinde düştüğü sezgisel tuzaklar." }
-                ]
-            },
-            { 
-                id: 9, 
-                baslik: "Mimari ve Mekan Fakültesi", 
-                altBaslik: "Form, Fonksiyon ve Malzeme Bilimi",
-                aciklama: "Ergonomi, mekan oranları, ahşap ve kompozit malzeme bilimi.", 
-                bolumler: [
-                    { ders: "Ders 1: Mekansal Ergonomi ve Oran", icerik: "Yaşam ve çalışma alanlarında insan ölçeğine uygun yerleşim ve hareket akışı." },
-                    { ders: "Ders 2: Malzeme Bilimi ve Dayanım", icerik: "Ahşap, metal ve kompozit malzemelerin fiziksel özellikleri, yük taşıma kapasiteleri." },
-                    { ders: "Ders 3: Üretim Tasarımı ve CNC Entegrasyonu", icerik: "Dijital tasarımların imalat çizimlerine dönüştürülmesi ve atölye optimizasyonu." }
-                ]
-            },
-            { 
-                id: 10, 
-                baslik: "Strateji ve Oyun Teorisi Fakültesi", 
-                altBaslik: "Karar Ağaçları ve Rekabet Analitiği",
-                aciklama: "Nash dengesi, çok aktörlü senaryolar ve kısıtlı kaynak optimizasyonu.", 
-                bolumler: [
-                    { ders: "Ders 1: Temel Oyun Teorisi ve Karar Ağaçları", icerik: "Rasyonel aktörlerin karşılıklı hamlelerinde en optimal stratejiyi seçme matematiği." },
-                    { ders: "Ders 2: Nash Dengesi ve İşbirliği Dinamikleri", icerik: "Tarafların birbirlerinin stratejilerini bildiği durumda ulaşılan denge noktaları." },
-                    { ders: "Ders 3: Kaynak Dağılımı ve Rekabet Stratejileri", icerik: "Kısıtlı zaman ve sermaye ile maksimum rekabet avantajı elde etme." }
-                ]
-            },
-            { 
-                id: 11, 
-                baslik: "Doğa ve Çevre Bilimleri Fakültesi", 
-                altBaslik: "Ekoloji, Evrim ve Sürdürülebilir Sistemler",
-                aciklama: "Doğal döngüler, termodinamiğin yasaları ve ekolojik denge mimarisi.", 
-                bolumler: [
-                    { ders: "Ders 1: Termodinamiğin Temel Yasaları", icerik: "Enerjinin korunumu ve entropi kavramının evrendeki ve kapalı sistemlerdeki karşılığı." },
-                    { ders: "Ders 2: Ekolojik Denge ve Sürdürülebilirlik", icerik: "Doğal döngülerin kendi kendine yeterlilik ilkeleri ve sıfır atık sistemleri." },
-                    { ders: "Ders 3: Evrimsel Süreçler ve Adaptasyon", icerik: "Canlı sistemlerin çevre değişimlerine karşı geliştirdiği hayatta kalma stratejileri." }
-                ]
-            },
-            { 
-                id: 12, 
-                baslik: "Dil ve İletişim Fakültesi", 
-                altBaslik: "Retorik, Argüman Kurulumu ve Anlam",
-                aciklama: "Etkili ifade biçimleri, mantıksal safsatalar ve kavramsal çerçeve inşası.", 
-                bolumler: [
-                    { ders: "Ders 1: Retorik ve İkna Sanatı", icerik: "Aristoteles'in Ethos, Pathos ve Logos üçlüsü ile etkili argüman oluşturma." },
-                    { ders: "Ders 2: Mantıksal Safsatalar (Fallacies)", icerik: "Düşünce ve tartışma süreçlerinde yapılan mantık hatalarını tespit etme." },
-                    { ders: "Ders 3: Kavramsal Çerçeve Kurulumu", icerik: "Karmaşık fikirleri ve soyut teorileri net, sade ve vurucu dillere çevirme becerisi." }
-                ]
-            }
+        // 32 DEV MODÜLÜN KİTAP CİLT VERİLERİ (SAYFA SAYFA)
+        const bookPagesData = [
+            { id: 1, title: "Epistemoloji ve Bilgi Felsefesi Temelleri", desc: "Doğruluk, Gerekçelendirilmiş Doğru İnanç (JTB) tanımı, Gettier problemleri ve bilginin sınırları.", content: "Epistemoloji, bilginin doğasını, kapsamını ve gerekçelendirilmesini inceler. Klasik JTB (Justified True Belief) tanımı Gettier problemleriyle sarsılmış; içselcilik-dışsalcılık ve epistemik erdemler analitik felsefenin merkezine yerleşmiştir." },
+            { id: 2, title: "Karl Popper ve Yanlışlanabilirlik", desc: "Tümevarım sorunu, demarkasyon problemi ve yanlışlanabilirlik ilkesi.", content: "Popper, klasik doğrulamacılığın tümevarımsal çıkmazını reddederek bilimin ancak yanlışlanabilirlik (falsifiability) ilkesiyle ilerleyebileceğini kanıtlamıştır. Bilim, cesur tahminler ve hatalardan arınma sürecidir." },
+            { id: 3, title: "Thomas Kuhn ve Paradigma Devrimleri", desc: "Normal bilim, anomaliler, krizler ve radikal paradigma değişimleri.", content: "Kuhn, bilimin kümülatif değil, kesintili ilerlediğini göstermiştir. Normal bilim evresi anomalilerle sarsılır, krizler doğurur ve Gestalt dönüşümüyle yeni bir paradigmaya evrilir." },
+            { id: 4, title: "Immanuel Kant ve Transandantal İdealizm", desc: "Saf aklın eleştirisi, uzay-zaman formları ve fenomen-noumen ayrımı.", content: "Kant, ampirizm ile rasyonalizmi uzlaştırarak nesnelerin zihnin a priori kategorilerine (nedensellik, uzay, zaman) uyduğunu kanıtlamıştır. Noumen (şeyin kendisi) bilinemez." },
+            { id: 5, title: "Quine ve Deneyimciliğin İki Dogması (Holizm)", desc: "Analitik-sentetik ayrımının reddi ve Duhem-Quine inanç ağı tezi.", content: "Quine, hiçbir önermenin tek başına test edilemeyeceğini; bütün inanç ağının (web of belief) bir bütün olarak deneyle sınandığını savunmuştur." },
+            { id: 6, title: "Bilim Sosyolojisi ve Edinburgh Okulu", desc: "Güçlü Program, sosyal inşa ve simetri ilkesi.", content: "Edinburgh Okulu, bilimsel bilginin dahi toplumsal çıkarlardan ve iktidar ağlarından bağımsız olamayacağını, doğru ve yanlış teorilerin aynı simetrik yöntemle incelenmesi gerektiğini savunur." },
+            { id: 7, title: "Ontoloji ve Varlık Felsefesi (Heidegger)", desc: "Varlık unutuluşu (Seinsvergessenheit), Dasein ve teknoloji eleştirisi.", content: "Heidegger, Batı felsefesinin varlığı nesneleştirerek unuttuğunu belirtir. Modern teknoloji doğayı stok kaynağa (Bestand) indirgeyerek insanın özünü tehdit eder." },
+            { id: 8, title: "Bilimsel Gerçekçilik ve Anti-Gerçekçilik", desc: "Yapıcı ampirisizm, teorik terimler ve mucize argümanı.", content: "Gerçekçiler bilimin başarılarını mucize argümanıyla savunurken, Van Fraassen'in yapıcı ampirisizmi bilimin amacının sadece gözlemlenebilir fenomenleri kurtarmak olduğunu savunur." },
+            { id: 9, title: "Zihin Felsefesi ve Bilinç (Qualia & Çince Oda)", desc: "Öznel nitelik, Meryem'in odası ve Searle'ün çince odası.", content: "Beden-zihin probleminde qualia (öznel his) ve Searle'ün Çince Oda argümanı, saf fizikselciliğin ve yapay simülasyonların bilinç açıklamasındaki yetersizliğini kanıtlar." },
+            { id: 10, title: "Din, Ahlak ve Bilim Etiği", desc: "Hume'un safsatası (Is-Ought) ve biyoetik sorumluluklar.", content: "Olgulardan (is) değerler (ought) türetilemez. Bilimsel gücün etik sınırları, insanlığın ontolojik bütünlüğünü korumak için felsefi süzgeçten geçirilmelidir." },
+            { id: 11, title: "Dil, Hermenömatik ve Semiyotik", desc: "Yorumbilgisi, ufukların kaynaşması ve semiyotik göstergeler.", content: "Metinlerin ve insan eylemlerinin yorumlanmasında okur ile metnin tarihsel ufuklarının kaynaşması (Gadamer) anlamı dinamik kılar." },
+            { id: 12, title: "Transhumanizm ve Gelecek Felsefesi", desc: "Post-hümanizm, zihin yükleme ve otonom yapay zeka.", content: "İnsanın biyolojik sınırlarının teknolojiyle aşılması ve post-hüman ontolojik evrime geçişin felsefi boyutu." },
+            { id: 13, title: "Fenomenoloji ve Bilinç Deneyimi", desc: "Husserl, Epoche (askıya alma) ve yönelimsellik.", content: "Dış dünyanın varlığını paranteze alarak saf bilincin yapısına ve yönelimselliğe ulaşma yöntemi." },
+            { id: 14, title: "Yapısalcılık ve Post-Yapısalcılık", desc: "Saussure göstergebilimi ve Derrida dekonstrüksiyonu.", content: "Dilin farklar ağı olması ve Derrida ile ikili karşıtlıkların yapıbozuma uğratılması." },
+            { id: 15, title: "Karmaşıklık Teorisi ve Kaos Felsefesi", desc: "Doğrusal olmayan sistemler ve kelebek etkisi.", content: "İndirgemeciliğin krizi, hassas başlangıç koşulları ve kendi kendine örgütlenen sistemler." },
+            { id: 16, title: "Kuantum Felsefesi ve Gerçekliğin Doğası", desc: "Kopenhag yorumu, dolanıklık ve dalga fonksiyonu çökmesi.", content: "Mikrodünyada determinizmin yıkılışı, gözlemcinin rolü ve evrensel dolanıklık ağı." },
+            { id: 17, title: "Diyalektik Materyalizm ve Tarihsel Materyalizm", desc: "Marx, altyapı-üstyapı ve sınıf mücadeleleri.", content: "Hegelci diyalektiğin maddesel temele oturtulması ve üretim ilişkilerinin tarihi belirlemesi." },
+            { id: 18, title: "Pragmatizm ve Gerçeklik Kuramı", desc: "Peirce, James ve işlevsel doğruluk anlayışı.", content: "Doğruluğun soyut bir mülk değil, pratikte işe yarayan ve sorun çözen araç olması." },
+            { id: 19, title: "Analitik Felsefe ve Dilin Mantıksal Çözümlemesi", desc: "Frege, Russell ve mantık atomculuğu.", content: "Felsefi problemlerin dilin mantıksal analiziyle çözülmesi gerektiği tezi." },
+            { id: 20, title: "Bilim Felsefesinde Anarşist Metodoloji (Feyerabend)", desc: "Anything Goes (Ne olursa olsun) ilkesi.", content: "Evrensel tek bir metodolojik kuralın olmadığı ve kuralların ihlal edilmesinin yaratıcılığı tetiklediği." },
+            { id: 21, title: "Stoacılık ve Erdem Etiği", desc: "Kontrol dikotomisi ve içsel kale.", content: "Dış dünyayı kabul etme, akıl odaklı yaşam ve Marcus Aurelius'un içsel kale disiplini." },
+            { id: 22, title: "Varoluşçuluk ve Varlık/Hiçlik (Sartre)", desc: "Varoluş özden önce gelir ve radikal özgürlük.", content: "İnsanın önceden belirlenmiş özünün olmaması, seçimleriyle özünü yaratması ve bulantı." },
+            { id: 23, title: "Spinoza ve Panteizm", desc: "Deus sive Natura ve determinizm.", content: "Tanrı ve Doğanın aynı töz olması, özgür iradenin yanılsama ve mutlak nedensellik." },
+            { id: 24, title: "Hakikat Sonrası (Post-Truth) Çağı", desc: "Duygusal manipülasyon ve epistemik kriz.", content: "Nesnel olguların yerine duyguların ve yankı odalarının geçtiği dijital çağ krizleri." },
+            { id: 25, title: "Yapay Zeka Bilinci ve Transandantal Bilgisayım", desc: "Sentetik zihin ve fonksiyonelizm.", content: "Makinelerin bilinç kazanma potansiyeli ve sentetik öznellik ontolojisi." },
+            { id: 26, title: "Kozmoloji ve Evrenin Başlangıç/Bitiş Paradoksları", desc: "Büyük Patlama ve entropi yasası.", content: "Zamanın oku, termodinamiğin ikinci yasası ve evrenin ısıl ölüm senaryosu." },
+            { id: 27, title: "Nietzsche ve Üstinsan (Übermensch)", desc: "Tanrı'nın ölümü ve güç istenci.", content: "Nihililizmin aşılması, kendi değerini yaratan Üstinsan ve ebedi dönüş." },
+            { id: 28, title: "Kuantum Ontolojisi ve Çoklu Dünyalar", desc: "Everett yorumu ve paralel evrenler.", content: "Dalga fonksiyonunun çökmediği, her karar anında evrenin çatallandığı kuantum ontolojisi." },
+            { id: 29, title: "Yapay Bilinç ve Fenomenal Deneyim", desc: "Sentetik qualia ve dijital haklar." content: "Yapay sistemlerin öznel deneyim üretme ihtimali ve geleceğin ahlaki statüsü." },
+            { id: 30, title: "Dijital Etik ve Siber Uzay Felsefesi", desc: "Gözetim kapitalizmi ve sanal varoluş.", content: "Mahremiyetin felsefi değeri ve algoritmik manipülasyona karşı özerklik." },
+            { id: 31, title: "Biyosentrizm ve Çevre Etiği", desc: "Antroposentrizmin reddi ve içsel değer." content: "Doğanın ve ekosistemlerin insandan bağımsız ahlaki değere sahip olması." },
+            { id: 32, title: "Zaman Felsefesi ve Doğu Bilgeliğinde Akış", desc: "Lineer zaman vs Taoist Wu-Wei akışı." content: "Batı çizgisel zaman algısının ötesinde 'Şimdi ve Burada' anının Taoist ontolojisi." }
         ];
 
-        function renderAkademiCards() {
-            const container = document.getElementById('akademi-cards-container');
-            if (!container) return;
-            container.innerHTML = '';
-            akademilerVeri.forEach(akademi => {
-                container.innerHTML += `
-                    <div onclick="akademiDetayAc(${akademi.id})" class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-3 cursor-pointer group">
+        let currentBookPage = 1;
+
+        function renderBookTOC() {
+            const grid = document.getElementById('book-toc-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            bookPagesData.forEach(p => {
+                grid.innerHTML += `
+                    <div onclick="openBookPage(${p.id})" class="bg-cardBg border border-slate-800 p-5 rounded-2xl hover:border-goldAccent transition shadow-lg space-y-2 cursor-pointer group">
                         <div class="flex justify-between items-center">
-                            <span class="text-xs text-goldAccent font-bold">FAKÜLTE ${String(akademi.id).padStart(2, '0')}</span>
-                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Kitabı Aç ➔</span>
+                            <span class="text-xs text-goldAccent font-bold">SAYFA ${String(p.id).padStart(2, '0')}</span>
+                            <span class="text-xs text-slate-500 group-hover:text-goldAccent transition">Oku ➔</span>
                         </div>
-                        <h3 class="font-bold text-white text-base group-hover:text-goldAccent transition">${akademi.baslik}</h3>
-                        <p class="text-xs text-slate-400">${akademi.aciklama}</p>
-                        <div class="pt-2 border-t border-slate-800 text-[11px] text-emerald-400 font-medium">
-                            📚 ${akademi.bolumler.length} Üniversite Dersi Mevcut
-                        </div>
+                        <h4 class="font-bold text-white text-sm group-hover:text-goldAccent transition">${p.title}</h4>
+                        <p class="text-[11px] text-slate-400 line-clamp-2">${p.desc}</p>
                     </div>
                 `;
             });
         }
 
-        function akademiDetayAc(id) {
-            const akademi = akademilerVeri.find(a => a.id === id);
-            if (!akademi) return;
+        function openBookPage(pageNum) {
+            currentBookPage = pageNum;
+            document.getElementById('book-index-view').classList.add('hidden');
+            document.getElementById('book-reader-view').classList.remove('hidden');
+            updateBookReaderContent();
+        }
 
-            history.pushState({ view: 'detay', id: id }, '', window.location.href);
+        function backToBookIndex() {
+            document.getElementById('book-reader-view').classList.add('hidden');
+            document.getElementById('book-index-view').classList.remove('hidden');
+        }
 
-            document.getElementById('akademi-listesi-view').classList.add('hidden');
-            document.getElementById('akademi-detay-view').classList.remove('hidden');
-            document.getElementById('detay-badge').innerText = `FAKÜLTE ${String(akademi.id).padStart(2, '0')} - ÜNİVERSİTE KİTABI`;
+        function nextBookPage() {
+            if (currentBookPage < bookPagesData.length) {
+                currentBookPage++;
+                updateBookReaderContent();
+            }
+        }
 
-            const icerikDiv = document.getElementById('akademi-detay-icerik');
-            let html = `
-                <div class="bg-cardBg border border-goldAccent/30 p-6 rounded-2xl space-y-3 shadow-xl">
-                    <span class="text-xs text-goldAccent font-bold uppercase tracking-wider">${akademi.altBaslik}</span>
-                    <h3 class="text-2xl md:text-3xl font-extrabold text-white">${akademi.baslik}</h3>
-                    <p class="text-sm text-slate-300">${akademi.aciklama}</p>
+        function prevBookPage() {
+            if (currentBookPage > 1) {
+                currentBookPage--;
+                updateBookReaderContent();
+            }
+        }
+
+        function updateBookReaderContent() {
+            const page = bookPagesData.find(p => p.id === currentBookPage);
+            if (!page) return;
+
+            document.getElementById('page-number-indicator').innerText = `Sayfa ${String(page.id).padStart(2, '0')} / 32`;
+            document.getElementById('watermark-page').innerText = String(page.id).padStart(2, '0');
+            document.getElementById('page-module-badge').innerText = `MODÜL ${String(page.id).padStart(2, '0')}`;
+            document.getElementById('page-title').innerText = page.title;
+            document.getElementById('page-content').innerHTML = `
+                <strong class="text-goldAccent block mb-1">Akademik Özet & Kapsamlı Analiz:</strong> 
+                ${page.content}
+                <div class="mt-4 pt-4 border-t border-slate-800 text-xs text-slate-400">
+                    <strong>Konu Kapsamı:</strong> ${page.desc}
                 </div>
-                
-                <div class="mt-6">
-                    <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-4">📖 Kitap İçindekiler ve Ders Modülleri:</h4>
-                    <div class="space-y-4">
             `;
-
-            akademi.bolumler.forEach((b, idx) => {
-                html += `
-                    <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-slate-700 transition shadow-md">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-goldAccent uppercase">MODÜL 0${idx+1}</span>
-                            <span class="text-[11px] px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🎓 Lisansüstü & Doktora Seviyesi</span>
-                        </div>
-                        <h5 class="font-bold text-white text-base">${b.ders}</h5>
-                        <p class="text-xs md:text-sm text-slate-300 bg-slate-950 p-4 rounded-xl border border-slate-800/80 leading-relaxed">
-                            <strong class="text-goldAccent block mb-1">Ders İçeriği & Akademik Analiz:</strong> ${b.icerik}
-                        </p>
-                    </div>
-                `;
-            });
-
-            html += `</div></div>`;
-            icerikDiv.innerHTML = html;
-        }
-
-        function geriAkademiListesineDon() {
-            document.getElementById('akademi-detay-view').classList.add('hidden');
-            document.getElementById('akademi-listesi-view').classList.remove('hidden');
+            document.getElementById('page-footer-num').innerText = `Sayfa ${page.id}`;
         }
 
         // Not Defteri
