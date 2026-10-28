@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - Mobil Geri Tuşu Korumalı Sürüm</title>
+    <title>Kahramanın Yolculuğu 2.0 - Düşünce ve Bilim Zihin & Bilgi Zirvesi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -68,7 +68,7 @@
                 <div class="mb-8 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • Mobil Korumalı Sürüm</p>
+                        <p class="text-xs text-slate-400 mt-1">V2.0 • Zihin & Bilgi Zirvesi</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕ Kapat</button>
                 </div>
@@ -114,7 +114,7 @@
                     <div class="relative z-10 max-w-2xl">
                         <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Özel Komuta Merkezi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Tüm hiyerarşik modüller ve mobil geri tuşu koruması aktif.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Düşünce ve Bilim Akademisi zihin felsefesi ve yapay zeka epistemolojisiyle genişletildi.</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -134,9 +134,9 @@
                         <span class="text-xs text-slate-400 mt-1 inline-block">Sıfır veri kaybı koruması</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Hiyerarşik Mimari</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Seviye 3</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Mobil Geri Tuşu Uyumlu</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Akademik Derinlik</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Zihin Felsefesi</p>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Bilinç ve Yapay Zeka</span>
                     </div>
                 </div>
             </section>
@@ -195,7 +195,7 @@
                         <div class="space-y-3">
                             <div>
                                 <label class="text-xs text-slate-400 block mb-1">Not Başlığı / Konu</label>
-                                <input type="text" id="note-title" placeholder="Örn: Gitar Akor Çalışma Notu" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                                <input type="text" id="note-title" placeholder="Örn: Zihin Felsefesi Notu" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
                             </div>
                             <div>
                                 <label class="text-xs text-slate-400 block mb-1">Not İçeriği</label>
@@ -227,7 +227,7 @@
                         <div class="space-y-3">
                             <div>
                                 <label class="text-xs text-slate-400 block mb-1">Alışkanlık Adı</label>
-                                <input type="text" id="habit-title" placeholder="Örn: 30 Dk Gitar Pratiği" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                                <input type="text" id="habit-title" placeholder="Örn: 45 Dk Felsefe Okuması" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
                             </div>
                             <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">
                                 Alışkanlık Ekle ➕
@@ -263,7 +263,7 @@
                 </div>
             </section>
 
-            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (MOBİL GERİ TUŞU UYUMLU) -->
+            <!-- 6. BİLGİ AKADEMİSİ & LEİTNER (DÜŞÜNCE VE BİLİM: ZİHİN FELSEFESİ VE YAPAY ZEKA) -->
             <section id="tab-akademi" class="hidden space-y-6">
                 <!-- GÖRÜNÜM 1: 12 AKADEMİ LİSTESİ -->
                 <div id="akademi-listesi-view" class="space-y-6">
@@ -331,9 +331,8 @@
         // TELEFON / TABLET GERİ TUŞU KONTROLÜ (POPSTATE)
         window.addEventListener('popstate', function(event) {
             const detayView = document.getElementById('akademi-detay-view');
-            // Eğer akademi detay ekranı açıksa, geri tuşuna basıldığında ana listeye dön ve siteden atmasını engelle
             if (detayView && !detayView.classList.contains('hidden')) {
-                history.pushState(null, '', window.location.href); // State'i koru
+                history.pushState(null, '', window.location.href);
                 geriAkademiListesineDon();
             }
         });
@@ -375,12 +374,45 @@
             }
         }
 
-        // BİLGİ AKADEMİSİ HİYERARŞİK VERİ YAPISI
+        // BİLGİ AKADEMİSİ HİYERARŞİK VERİ YAPISI (DÜŞÜNCE VE BİLİM: ZİHİN FELSEFESİ VE YAPAY ZEKA)
         const akademilerVeri = [
-            { id: 1, baslik: "Düşünce ve Bilim", aciklama: "Bilimsel metot, felsefi temeller ve yanlışlanabilirlik.", altKonular: [
-                { altBaslik: "Alt Konu 01: Popper & Yanlışlanabilirlik", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Bilimsel teorilerin test edilebilir ve çürütülebilir olması gerekir." },
-                { altBaslik: "Alt Konu 02: Bilimsel Devrimler Yapısı (Kuhn)", kutu: "Kutu 1 (Her Gün Tekrar)", not: "Normal bilim dönemleri ile paradigma değişim döngüleri." }
-            ]},
+            { 
+                id: 1, 
+                baslik: "Düşünce ve Bilim", 
+                aciklama: "Epistemoloji, zihin felsefesi, yapay zeka epistemolojisi ve bilimsel metodoloji.", 
+                altKonular: [
+                    { 
+                        altBaslik: "Alt Konu 01: Popper & Yanlışlanabilirlik (Falsifiability)", 
+                        kutu: "Kutu 2 (3 Günde Bir Tekrar)", 
+                        not: "Karl Popper'a göre bir teorinin bilimsel statü kazanması doğrulanamaz olmasıyla değil, aksine yanlışlanabilir (test edilebilir ve çürütülebilir) olmasıyla mümkündür." 
+                    },
+                    { 
+                        altBaslik: "Alt Konu 02: Kuhn & Paradigma Değişimleri ve Bilim Devrimleri", 
+                        kutu: "Kutu 1 (Her Gün Tekrar)", 
+                        not: "Thomas Kuhn, bilimin kümülatif ilerlemediğini savunur. Normal bilim evresi anomalilerle tıkandığında kriz başlar ve radikal bir 'paradigma değişimi' gerçekleşir." 
+                    },
+                    { 
+                        altBaslik: "Alt Konu 03: Kant & Transandantal İdealizm (A Priori / A Posteriori)", 
+                        kutu: "Kutu 3 (Haftalık Tekrar)", 
+                        not: "Immanuel Kant'a göre bilgi deneyle başlar ancak deneyden doğmaz. Zihnin ampirik verileri işlemek için uzay, zaman ve nedensellik gibi a priori formları vardır." 
+                    },
+                    { 
+                        altBaslik: "Alt Konu 04: Zihin Felsefesi & Bilinç (Beden-Zihin Problemi)", 
+                        kutu: "Kutu 2 (3 Günde Bir Tekrar)", 
+                        not: "Descartes'ın düalizminden günümüz nörofelsefesine kadar uzanan süreçte zihnin (bilincin) fiziksel beyinle olan ontolojik bağı. Thomas Nagel'in 'Bir Yarasa Olmak Nasıl Bir Şeydir?' sorusu ve Qualia (öznel nitelik) kavramı." 
+                    },
+                    { 
+                        altBaslik: "Alt Konu 05: Yapay Zeka Epistemolojisi (Çince Oda Deneyi)", 
+                        kutu: "Kutu 1 (Her Gün Tekrar)", 
+                        not: "John Searle'ün Çince Oda (Chinese Room) argümanı. Makinelerin simülasyon yoluyla sembol işlemesi ile gerçekten 'anlaması' (intentionality) arasındaki epistemolojik fark." 
+                    },
+                    { 
+                        altBaslik: "Alt Konu 06: Hermenömatik (Yorumbilgisi) ve Bilimsel Açıklama", 
+                        kutu: "Kutu 3 (Haftalık Tekrar)", 
+                        not: "Dilaydı, metinlerin ve olguların yorumlanması. Hempel-Oppenheim'ın Tümevarımsal-Nomolojik (D-N) açıklama modeli ile insani bilimlerde anlamlandırma süreçleri." 
+                    }
+                ]
+            },
             { id: 2, baslik: "Matematik & Soyut Mantık", aciklama: "Analitik düşünce, sayısal modelleme ve cebir.", altKonular: [
                 { altBaslik: "Alt Konu 01: Boole Cebri ve Mantık Devreleri", kutu: "Kutu 1 (Her Gün Tekrar)", not: "0 ve 1 mantıksal operatörlerinin dijital sistemlere uyarlanması." },
                 { altBaslik: "Alt Konu 02: Sayı Teorisi Temelleri", kutu: "Kutu 2 (3 Günde Bir Tekrar)", not: "Asal sayılar ve kriptografik yansımaları." }
@@ -452,12 +484,11 @@
             const akademi = akademilerVeri.find(a => a.id === id);
             if (!akademi) return;
 
-            // Tarayıcı geçmişine detay durumu ekle (telefon geri tuşu yakalamak için)
             history.pushState({ view: 'detay', id: id }, '', window.location.href);
 
             document.getElementById('akademi-listesi-view').classList.add('hidden');
             document.getElementById('akademi-detay-view').classList.remove('hidden');
-            document.getElementById('detay-badge').innerText = `AKADEMİ ${String(akademi.id).padStart(2, '0')} - HİYERARŞİK GÖRÜNÜM`;
+            document.getElementById('detay-badge').innerText = `AKADEMİ ${String(akademi.id).padStart(2, '0')} - ZİHİN & BİLİM ZİRVESİ`;
 
             const icerikDiv = document.getElementById('akademi-detay-icerik');
             let html = `
@@ -465,7 +496,7 @@
                     <h3 class="text-2xl font-extrabold text-white">${akademi.baslik}</h3>
                     <p class="text-sm text-slate-300">${akademi.aciklama}</p>
                 </div>
-                <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-3">Alt Menü & Konu Başlıkları:</h4>
+                <h4 class="text-sm font-bold text-goldAccent uppercase tracking-wider mb-3">Zihin Felsefesi ve Bilimsel Metot Konuları:</h4>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             `;
 
@@ -477,8 +508,8 @@
                             <span class="text-[11px] px-2.5 py-0.5 bg-emerald-500/20 text-emerald-400 rounded-full font-medium">🔁 ${alt.kutu}</span>
                         </div>
                         <h5 class="font-bold text-white text-sm">${alt.altBaslik}</h5>
-                        <p class="text-xs text-slate-400 bg-slate-950 p-3 rounded-lg border border-slate-800/80">
-                            <strong class="text-slate-300">Çalışma Notu:</strong> ${alt.not}
+                        <p class="text-xs text-slate-300 bg-slate-950 p-3.5 rounded-lg border border-slate-800/80 leading-relaxed">
+                            <strong class="text-goldAccent block mb-1">Akademik Analiz & Felsefi Açılım:</strong> ${alt.not}
                         </p>
                     </div>
                 `;
