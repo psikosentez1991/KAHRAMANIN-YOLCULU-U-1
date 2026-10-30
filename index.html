@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu 2.0 - 12 Orijinal Ana Akademi</title>
+    <title>Kahramanın Yolculuğu - Yaşam İşletim Sistemi (Life OS)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -35,20 +35,20 @@
         <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
             <div>
                 <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (12 Ana Akademi)</p>
+                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Life OS)</p>
             </div>
             <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg active:scale-95 transition">
                 <span>☰</span> Menü
             </button>
         </header>
 
-        <!-- SOL YAN MENÜ (12 ORİJİNAL ANA AKADEMİ) -->
+        <!-- SOL YAN MENÜ (MİMARİ KATMANLAR) -->
         <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-72 md:w-80 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-y-0 left-0 z-50 overflow-y-auto shadow-2xl transition-all">
             <div>
                 <div class="mb-6 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">V2.0 • 12 Orijinal Ana Akademi</p>
+                        <p class="text-xs text-slate-400 mt-1">Yaşam İşletim Sistemi (Life OS)</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕</button>
                 </div>
@@ -57,56 +57,47 @@
                     <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left">
                         <span>⚡</span> Komuta Merkezi
                     </button>
-                    <button onclick="switchTab('sanat')" id="nav-sanat" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>🎸</span> Sanat & Akustik (Gitar)
-                    </button>
-                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>📝</span> Dinamik Not Defteri
-                    </button>
-                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>🔥</span> Alışkanlık & Seriler
-                    </button>
-                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left">
-                        <span>⏳</span> Derin Odak (Pomodoro)
-                    </button>
 
-                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">12 Orijinal Ana Akademi</div>
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">1. Yaşam Yönü</div>
+                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🧭</span> Değerler ve Amaçlar</button>
 
-                    <button onclick="switchTab('akd-1')" id="nav-akd-1" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 1. Düşünce ve Bilim Akademisi</button>
-                    <button onclick="switchTab('akd-2')" id="nav-akd-2" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 2. Teknoloji & Mühendislik</button>
-                    <button onclick="switchTab('akd-3')" id="nav-akd-3" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 3. İşletme & Finans Akademisi</button>
-                    <button onclick="switchTab('akd-4')" id="nav-akd-4" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 4. Psikoloji & Zihin Akademisi</button>
-                    <button onclick="switchTab('akd-5')" id="nav-akd-5" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 5. Sanat, Estetik & Edebiyat</button>
-                    <button onclick="switchTab('akd-6')" id="nav-akd-6" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 6. Mimari, Tasarım & Üretim</button>
-                    <button onclick="switchTab('akd-7')" id="nav-akd-7" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 7. Strateji & Liderlik Akademisi</button>
-                    <button onclick="switchTab('akd-8')" id="nav-akd-8" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 8. Doğa, Tarım & Ekoloji</button>
-                    <button onclick="switchTab('akd-9')" id="nav-akd-9" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 9. Sağlık, Beden & Fiziksel Zindelik</button>
-                    <button onclick="switchTab('akd-10')" id="nav-akd-10" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 10. Tarih, Kültür & Medeniyet</button>
-                    <button onclick="switchTab('akd-11')" id="nav-akd-11" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 11. Dil, İletişim & Retorik</button>
-                    <button onclick="switchTab('akd-12')" id="nav-akd-12" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🏛️</span> 12. Gelecekbilim & İnovasyon</button>
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">2. Yönetim</div>
+                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
 
-                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-slate-800 text-slate-300 transition text-left mt-3">
-                        <span>🛡️</span> Sistem Durumu
-                    </button>
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">3. Uygulama</div>
+                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📅</span> Görevler ve Zaman</button>
+                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
+
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">4. Öğrenme (Akademi)</div>
+                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📚</span> 12 Ana Fakülte & Kitap</button>
+
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">5. Alışkanlık</div>
+                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
+
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">6. Yaşam Verisi</div>
+                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
+
+                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">7. Güvenlik Altyapısı</div>
+                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🛡️</span> Kimlik & Yedekleme</button>
                 </nav>
             </div>
 
             <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-4">
                 <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
-                <p class="text-slate-400">12 Orijinal Ana Akademi</p>
+                <p class="text-slate-400">Life OS Aktif</p>
             </div>
         </aside>
 
         <!-- ANA İÇERİK ALANI -->
         <main class="flex-1 p-4 md:p-10 overflow-y-auto">
             
-            <!-- 1. KOMUTA MERKEZİ -->
+            <!-- KOMUTA MERKEZİ -->
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Komuta Merkezi</span>
+                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Yaşam İşletim Sistemi</span>
                         <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">12 Orijinal Ana Akademi sol menüde eksiksiz olarak emrinde.</p>
+                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Mimari şemana tam uygun olarak yapılandırılmış 7 katmanlı Life OS ekosistemindesin[span_1](start_span)[span_1](end_span).</p>
                         
                         <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
                             <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
@@ -116,90 +107,60 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Akademi Mimarisi</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">12 Ana Enstitü</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Orijinal Yapı</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Mimari Katmanlar</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">7 Temel Modül</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Görsel Şemaya Uygun</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
                         <h4 class="text-xs md:text-sm font-semibold text-slate-400">Sistem Durumu</h4>
                         <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">Aktif 🛡️</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Kesintisiz erişim</span>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Güvenli Altyapı</span>
                     </div>
                     <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Disiplin</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Tam Kapsam</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Kişisel Ekosistem</span>
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Öğrenme & Disiplin</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Tam Entegre</p>
+                        <span class="text-xs text-goldAccent mt-1 inline-block">Akademi & Alışkanlık</span>
                     </div>
                 </div>
             </section>
 
-            <!-- 2. SANAT & AKUSTİK -->
-            <section id="tab-sanat" class="hidden space-y-6">
+            <!-- 1. YAŞAM YÖNÜ -->
+            <section id="tab-yon" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Sanat & Akustik (Gitar Pratik Laboratuvarı)</h2>
-                    <p class="text-slate-400 text-sm mt-1">Harley Benton HB D-120CE Black ile icra, teknik ve parmak disiplini modülü.</p>
+                    <h2 class="text-2xl font-bold text-white">1. Yaşam Yönü: Değerler ve Amaçlar</h2>
+                    <p class="text-slate-400 text-sm mt-1">Hayatının pusulası, temel değerlerin ve ana yaşam amacın.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 01</span>
-                        <h3 class="text-lg font-bold text-white">Parmek Egzersizleri</h3>
-                        <p class="text-xs text-slate-300">Örümcek yürüyüşü ve kromatik geçişler.</p>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 02</span>
-                        <h3 class="text-lg font-bold text-white">Akor ve Ritim Disiplini</h3>
-                        <p class="text-xs text-slate-300">Barre akor hakimiyeti (F ve Bm).</p>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-3">
-                        <span class="text-xs text-goldAccent font-bold">BÖLÜM 03</span>
-                        <h3 class="text-lg font-bold text-white">Repertuvar & Şarkılar</h3>
-                        <p class="text-xs text-slate-300">Akustik parça analizleri.</p>
-                    </div>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Temel Pusula</h3>
+                    <p class="text-slate-300 text-sm">Zanaatkarlık, bilimsel rigor, aile bağı ve yaşam boyu öğrenme üzerine kurulu kişisel vizyon merkezi.</p>
                 </div>
             </section>
 
-            <!-- 3. DİNAMİK NOT DEFTERİ -->
-            <section id="tab-notlar" class="hidden space-y-6">
+            <!-- 2. YÖNETİM -->
+            <section id="tab-yonetim" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Dinamik Kişisel Not Defteri</h2>
-                    <p class="text-slate-400 text-sm mt-1">Hızlı düşünceler ve çalışma notları.</p>
+                    <h2 class="text-2xl font-bold text-white">2. Yönetim: Hedefler ve Kararlar</h2>
+                    <p class="text-slate-400 text-sm mt-1">Stratejik kararlar, yıllık ve aylık vizyon hedefleri.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-1">
-                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Not Ekle</h3>
-                        <div class="space-y-3">
-                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent"></textarea>
-                            <button onclick="addNote()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Notu Kaydet ➕</button>
-                        </div>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Arşiv</h3>
-                        <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
-                    </div>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Stratejik Planlama</h3>
+                    <p class="text-slate-300 text-sm">Atölye ve imalat büyüme hedefleri, aile seyahat planları ve akademik çalışma takvimi.</p>
                 </div>
             </section>
 
-            <!-- 4. ALIŞKANLIK & SERİLER -->
-            <section id="tab-aliskanlik" class="hidden space-y-6">
+            <!-- 3. UYGULAMA -->
+            <section id="tab-uygulama" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">Alışkanlık & Seri Takibi</h2>
-                    <p class="text-slate-400 text-sm mt-1">Günlük disiplin ve çalışma serileri.</p>
+                    <h2 class="text-2xl font-bold text-white">3. Uygulama: Görevler ve Zaman</h2>
+                    <p class="text-slate-400 text-sm mt-1">Günlük operasyonlar, görevler ve zaman yönetimi.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Alışkanlık</h3>
-                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                        <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Ekle ➕</button>
-                    </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Seriler</h3>
-                        <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
-                    </div>
+                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <h3 class="text-lg font-semibold text-goldAccent">Günlük Görev Çizelgesi</h3>
+                    <p class="text-slate-300 text-sm">Günün öncelikli işleri ve pratik zaman dağılımı.</p>
                 </div>
             </section>
 
-            <!-- 5. DERİN ODAK (POMODORO) -->
+            <!-- POMODORO -->
             <section id="tab-pomodoro" class="hidden space-y-6">
                 <h2 class="text-2xl font-bold text-white">Derin Odak ve Zamanlayıcı</h2>
                 <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
@@ -220,36 +181,78 @@
                 </div>
             </section>
 
-            <!-- 12 ORİJİNAL ANA AKADEMİ İÇERİK KAPSÜLLERİ -->
-            <section id="tab-akd-1" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 01</span><h2 class="text-3xl font-extrabold text-white">Düşünce ve Bilim Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Epistemoloji, Popperian yanlışlanabilirlik, Kuhn paradigma devrimleri, ontoloji ve bilim felsefesinin en üst düzey analitik temelleri.</p></div></section>
-            
-            <section id="tab-akd-2" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 02</span><h2 class="text-3xl font-extrabold text-white">Teknoloji & Mühendislik</h2><p class="text-slate-300 text-sm leading-relaxed">ERP sistem mimarileri, yazılım geliştirme ekosistemleri, veritabanı denetimi, donanım optimizasyonları ve dijital altyapılar.</p></div></section>
+            <!-- 4. ÖĞRENME -->
+            <section id="tab-ogrenme" class="hidden space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">4. Öğrenme: 12 Ana Fakülte ve Kitap Arşivi</h2>
+                    <p class="text-slate-400 text-sm mt-1">Yaşam boyu eğitim ve doktoraüstü bilgi enstitüsü.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
+                        <h4 class="font-bold text-goldAccent text-sm">Felsefe ve Ontoloji</h4>
+                        <p class="text-xs text-slate-300 mt-1">Epistemoloji, etik ve varlık felsefesi temelleri.</p>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
+                        <h4 class="font-bold text-goldAccent text-sm">Teknoloji & Mühendislik</h4>
+                        <p class="text-xs text-slate-300 mt-1">Yazılım mimarileri, ERP sistemleri ve otomasyon.</p>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
+                        <h4 class="font-bold text-goldAccent text-sm">İşletme & Finans</h4>
+                        <p class="text-xs text-slate-300 mt-1">Maliyet muhasebesi, bütçeleme ve kurumsal denetim.</p>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
+                        <h4 class="font-bold text-goldAccent text-sm">Psikoloji & Zihin</h4>
+                        <p class="text-xs text-slate-300 mt-1">Psikosentez, arketipler ve bilişsel önyargılar.</p>
+                    </div>
+                </div>
+            </section>
 
-            <section id="tab-akd-3" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 03</span><h2 class="text-3xl font-extrabold text-white">İşletme & Finans Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Maliyet muhasebesi, malzeme bütçeleme (Kronospan/Kastamonu levha maliyetleri), karlılık analizleri ve kurumsal finansal denetim.</p></div></section>
+            <!-- 5. ALIŞKANLIK -->
+            <section id="tab-aliskanlik" class="hidden space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">5. Alışkanlık: Disiplin ve Seriler</h2>
+                    <p class="text-slate-400 text-sm mt-1">Günlük rutinler, gitar pratiği ve seri (streak) takibi.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
+                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Alışkanlık</h3>
+                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                        <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Ekle ➕</button>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
+                        <h3 class="text-lg font-semibold text-goldAccent">Seriler</h3>
+                        <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
+                    </div>
+                </div>
+            </section>
 
-            <section id="tab-akd-4" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 04</span><h2 class="text-3xl font-extrabold text-white">Psikoloji & Zihin Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Psikosentez, arketipler, kahramanın yolculuğu psikolojisi, bilişsel önyargılar ve zihinsel denge dinamikleri.</p></div></section>
+            <!-- 6. YAŞAM VERİSİ -->
+            <section id="tab-notlar" class="hidden space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">6. Yaşam Verisi: Dinamik Not Defteri</h2>
+                    <p class="text-slate-400 text-sm mt-1">Kişisel kayıtlar, fikirler ve çalışma notları arşivi.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-1">
+                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Not Ekle</h3>
+                        <div class="space-y-3">
+                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
+                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent"></textarea>
+                            <button onclick="addNote()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Notu Kaydet ➕</button>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
+                        <h3 class="text-lg font-semibold text-goldAccent">Arşiv</h3>
+                        <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
+                    </div>
+                </div>
+            </section>
 
-            <section id="tab-akd-5" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 05</span><h2 class="text-3xl font-extrabold text-white">Sanat, Estetik & Edebiyat</h2><p class="text-slate-300 text-sm leading-relaxed">Şiir yazımı, seslendirme, karakter yaratımı, akustik müzik teorisi ve estetik felsefe.</p></div></section>
-
-            <section id="tab-akd-6" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 06</span><h2 class="text-3xl font-extrabold text-white">Mimari, Tasarım & Üretim</h2><p class="text-slate-300 text-sm leading-relaxed">Özel mobilya imalatı, mutfak dolapları ve gardırop tasarımı, ahşap işçiliği, atölye otomasyonu ve CNC sistemleri.</p></div></section>
-
-            <section id="tab-akd-7" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 07</span><h2 class="text-3xl font-extrabold text-white">Strateji & Liderlik Akademisi</h2><p class="text-slate-300 text-sm leading-relaxed">Kurumsal yönetim, proje müzakereleri, müşteri ilişkileri yönetimi ve operasyonel verimlilik stratejileri.</p></div></section>
-
-            <section id="tab-akd-8" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 08</span><h2 class="text-3xl font-extrabold text-white">Doğa, Tarım & Ekoloji</h2><p class="text-slate-300 text-sm leading-relaxed">Toprakla çalışma, bahçe düzenlemesi, doğa elementleri ve ekolojik dengenin felsefi boyutu.</p></div></section>
-
-            <section id="tab-akd-9" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 09</span><h2 class="text-3xl font-extrabold text-white">Sağlık, Beden & Fiziksel Zindelik</h2><p class="text-slate-300 text-sm leading-relaxed">Düzenli fitness rutinleri, fiziksel dayanıklılık, beslenme disiplini ve zihin-beden bütünlüğü.</p></div></section>
-
-            <section id="tab-akd-10" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 10</span><h2 class="text-3xl font-extrabold text-white">Tarih, Kültür & Medeniyet</h2><p class="text-slate-300 text-sm leading-relaxed">Medeniyetlerin evrimi, tarihi kırılma noktaları ve kültürel miras analizleri.</p></div></section>
-
-            <section id="tab-akd-11" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 11</span><h2 class="text-3xl font-extrabold text-white">Dil, İletişim & Retorik</h2><p class="text-slate-300 text-sm leading-relaxed">Etkili sözleşme müzakereleri, retorik sanatları ve dilbilimsel yapı analizleri.</p></div></section>
-
-            <section id="tab-akd-12" class="hidden space-y-6"><div class="bg-cardBg border border-goldAccent/30 p-8 rounded-3xl space-y-4"><span class="text-xs text-goldAccent font-bold uppercase">AKADEMİ 12</span><h2 class="text-3xl font-extrabold text-white">Gelecekbilim & İnovasyon</h2><p class="text-slate-300 text-sm leading-relaxed">Teknolojik öngörüler, yapay zeka entegrasyonları, fabrika otomasyon projeleri ve vizyoner gelecek tasarımları.</p></div></section>
-
-            <!-- GÜVENLİK -->
+            <!-- 7. GÜVENLİK ALTYAPISI -->
             <section id="tab-veri" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">Sistem Durumu</h2>
+                <h2 class="text-2xl font-bold text-white">7. Ortak Veri ve Güvenlik Altyapısı</h2>
                 <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <p class="text-slate-300 text-sm">12 Orijinal Ana Akademi ve kişisel modüller tam kapasite aktif durumda.</p>
+                    <p class="text-slate-300 text-sm">Kimlik doğrulama, veri bütünlüğü, yedekleme ve kurtarma protokolleri aktif.</p>
                 </div>
             </section>
 
@@ -274,7 +277,7 @@
         }
 
         function switchTab(tabId) {
-            const tabs = ['ana', 'sanat', 'notlar', 'aliskanlik', 'pomodoro', 'akd-1', 'akd-2', 'akd-3', 'akd-4', 'akd-5', 'akd-6', 'akd-7', 'akd-8', 'akd-9', 'akd-10', 'akd-11', 'akd-12', 'veri'];
+            const tabs = ['ana', 'yon', 'yonetim', 'uygulama', 'pomodoro', 'ogrenme', 'aliskanlik', 'notlar', 'veri'];
             tabs.forEach(t => {
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
