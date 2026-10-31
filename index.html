@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu - Yaşam İşletim Sistemi (Life OS)</title>
+    <title>Kahramanın Yolculuğu - Kurumsal Yaşam İşletim Sistemi (Life OS)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0b0f19',
-                        cardBg: 'rgba(15, 23, 42, 0.94)',
-                        goldAccent: '#d4af37',
-                        goldHover: '#e5c158',
-                        bookPage: '#131b2e',
+                        lightBg: '#f8fafc',
+                        cardBg: '#ffffff',
+                        corporateBorder: '#e2e8f0',
+                        corporatePrimary: '#0f172a',
+                        corporateAccent: '#2563eb',
+                        corporateHover: '#1d4ed8',
                     }
                 }
             }
@@ -26,65 +27,65 @@
         .book-title { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col justify-center items-center">
+<body class="bg-lightBg text-slate-800 min-h-screen flex flex-col justify-center items-center">
 
     <!-- ANA UYGULAMA İÇERİĞİ -->
     <div id="app-container" class="w-full min-h-screen flex flex-col md:flex-row relative">
 
         <!-- MOBİL ÜST BAR -->
-        <header class="md:hidden bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center sticky top-0 z-50">
+        <header class="md:hidden bg-cardBg border-b border-corporateBorder p-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
             <div>
-                <h1 class="font-bold text-goldAccent text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-400">Aslan Kral 🛡️ (Life OS)</p>
+                <h1 class="font-bold text-corporatePrimary text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
+                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (Kurumsal Life OS)</p>
             </div>
-            <button onclick="toggleMobileMenu()" class="bg-goldAccent text-slate-950 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-lg active:scale-95 transition">
+            <button onclick="toggleMobileMenu()" class="bg-corporateAccent text-white px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm active:scale-95 transition">
                 <span>☰</span> Menü
             </button>
         </header>
 
-        <!-- SOL YAN MENÜ (MİMARİ KATMANLAR) -->
-        <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-72 md:w-80 bg-slate-950 md:bg-slate-900/95 md:border-r md:border-slate-800 fixed md:static inset-y-0 left-0 z-50 overflow-y-auto shadow-2xl transition-all">
+        <!-- SOL YAN MENÜ (KURUMSAL AÇIK TEMA) -->
+        <aside id="sidebar" class="hidden md:flex flex-col justify-between p-6 shrink-0 w-72 md:w-80 bg-cardBg border-r border-corporateBorder fixed md:static inset-y-0 left-0 z-50 overflow-y-auto shadow-sm transition-all">
             <div>
                 <div class="mb-6 flex justify-between items-center">
                     <div>
-                        <h1 class="text-xl font-bold text-goldAccent tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-400 mt-1">Yaşam İşletim Sistemi (Life OS)</p>
+                        <h1 class="text-xl font-bold text-corporatePrimary tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
+                        <p class="text-xs text-slate-500 mt-1">Kurumsal Yaşam İşletim Sistemi</p>
                     </div>
-                    <button onclick="toggleMobileMenu()" class="md:hidden text-goldAccent text-xl font-bold px-3 py-1 bg-slate-800 rounded-lg">✕</button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-xl font-bold px-3 py-1 bg-slate-100 rounded-lg">✕</button>
                 </div>
                 
                 <nav class="space-y-1.5 text-xs">
-                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left">
+                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left">
                         <span>⚡</span> Komuta Merkezi
                     </button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">1. Yaşam Yönü</div>
-                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🧭</span> Değerler ve Amaçlar</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">1. Yaşam Yönü</div>
+                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Amaçlar</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">2. Yönetim</div>
-                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. Yönetim</div>
+                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">3. Uygulama</div>
-                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📅</span> Görevler ve Zaman</button>
-                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Uygulama</div>
+                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
+                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">4. Öğrenme (Akademi)</div>
-                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📚</span> 12 Ana Fakülte & Kitap</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">4. Öğrenme (Akademi)</div>
+                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Ana Fakülte & Kitap</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">5. Alışkanlık</div>
-                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">5. Alışkanlık</div>
+                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">6. Yaşam Verisi</div>
-                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">6. Yaşam Verisi</div>
+                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
 
-                    <div class="pt-2 pb-1 text-[10px] uppercase tracking-wider text-goldAccent font-bold">7. Güvenlik Altyapısı</div>
-                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left"><span>🛡️</span> Kimlik & Yedekleme</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">7. Güvenlik Altyapısı</div>
+                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> Kimlik & Yedekleme</button>
                 </nav>
             </div>
 
-            <div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs space-y-1 mt-4">
-                <p class="font-semibold text-goldAccent">Aslan Kral 🛡️</p>
-                <p class="text-slate-400">Life OS Aktif</p>
+            <div class="p-3 rounded-xl bg-slate-50 border border-corporateBorder text-xs space-y-1 mt-4">
+                <p class="font-semibold text-corporatePrimary">Aslan Kral 🛡️</p>
+                <p class="text-slate-500">Kurumsal Life OS Aktif</p>
             </div>
         </aside>
 
@@ -93,33 +94,33 @@
             
             <!-- KOMUTA MERKEZİ -->
             <section id="tab-ana" class="space-y-6">
-                <div class="bg-gradient-to-br from-slate-900 to-slate-950 rounded-3xl p-6 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
+                <div class="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-6 md:p-12 border border-corporateBorder shadow-sm relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-goldAccent/20 text-goldAccent text-xs font-bold rounded-full uppercase tracking-wider">Yaşam İşletim Sistemi</span>
-                        <h2 class="text-2xl md:text-5xl font-extrabold text-white mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-300 mt-2 text-sm md:text-lg">Mimari şemana tam uygun olarak yapılandırılmış 7 katmanlı Life OS ekosistemindesin[span_1](start_span)[span_1](end_span).</p>
+                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">Kurumsal Yönetim Paneli</span>
+                        <h2 class="text-2xl md:text-5xl font-extrabold text-corporatePrimary mt-3">Hoş geldin, Aslan Kral</h2>
+                        <p class="text-slate-600 mt-2 text-sm md:text-lg">Kurumsal ve açık temalı 7 katmanlı Life OS ekosistemi emrinde.</p>
                         
-                        <div class="mt-6 w-full bg-slate-800/80 h-2.5 rounded-full overflow-hidden border border-slate-700">
-                            <div class="bg-gradient-to-r from-goldAccent to-emerald-400 h-full w-[100%]"></div>
+                        <div class="mt-6 w-full bg-slate-200 h-2.5 rounded-full overflow-hidden border border-slate-300">
+                            <div class="bg-gradient-to-r from-corporateAccent to-emerald-500 h-full w-[100%]"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                    <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Mimari Katmanlar</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-emerald-400 mt-1">7 Temel Modül</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Görsel Şemaya Uygun</span>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">Mimari Katmanlar</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-emerald-600 mt-1">7 Temel Modül</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Kurumsal Tasarım</span>
                     </div>
-                    <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Sistem Durumu</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-goldAccent mt-1">Aktif 🛡️</p>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">Sistem Durumu</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">Aktif 🛡️</p>
                         <span class="text-xs text-slate-400 mt-1 inline-block">Güvenli Altyapı</span>
                     </div>
-                    <div class="bg-cardBg backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-lg">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-400">Öğrenme & Disiplin</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-white mt-1">Tam Entegre</p>
-                        <span class="text-xs text-goldAccent mt-1 inline-block">Akademi & Alışkanlık</span>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm">
+                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">Tema Standardı</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">Light / Clean</p>
+                        <span class="text-xs text-corporateAccent mt-1 inline-block">Profesyonel Görünüm</span>
                     </div>
                 </div>
             </section>
@@ -127,56 +128,56 @@
             <!-- 1. YAŞAM YÖNÜ -->
             <section id="tab-yon" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">1. Yaşam Yönü: Değerler ve Amaçlar</h2>
-                    <p class="text-slate-400 text-sm mt-1">Hayatının pusulası, temel değerlerin ve ana yaşam amacın.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">1. Yaşam Yönü: Değerler ve Amaçlar</h2>
+                    <p class="text-slate-500 text-sm mt-1">Hayatının pusulası, temel değerlerin ve ana yaşam amacın.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <h3 class="text-lg font-semibold text-goldAccent">Temel Pusula</h3>
-                    <p class="text-slate-300 text-sm">Zanaatkarlık, bilimsel rigor, aile bağı ve yaşam boyu öğrenme üzerine kurulu kişisel vizyon merkezi.</p>
+                <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
+                    <h3 class="text-lg font-semibold text-corporateAccent">Temel Pusula</h3>
+                    <p class="text-slate-600 text-sm">Zanaatkarlık, bilimsel rigor, aile bağı ve yaşam boyu öğrenme üzerine kurulu kişisel vizyon merkezi.</p>
                 </div>
             </section>
 
             <!-- 2. YÖNETİM -->
             <section id="tab-yonetim" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">2. Yönetim: Hedefler ve Kararlar</h2>
-                    <p class="text-slate-400 text-sm mt-1">Stratejik kararlar, yıllık ve aylık vizyon hedefleri.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">2. Yönetim: Hedefler ve Kararlar</h2>
+                    <p class="text-slate-500 text-sm mt-1">Stratejik kararlar, yıllık ve aylık vizyon hedefleri.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <h3 class="text-lg font-semibold text-goldAccent">Stratejik Planlama</h3>
-                    <p class="text-slate-300 text-sm">Atölye ve imalat büyüme hedefleri, aile seyahat planları ve akademik çalışma takvimi.</p>
+                <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
+                    <h3 class="text-lg font-semibold text-corporateAccent">Stratejik Planlama</h3>
+                    <p class="text-slate-600 text-sm">Atölye ve imalat büyüme hedefleri, aile seyahat planları ve akademik çalışma takvimi.</p>
                 </div>
             </section>
 
             <!-- 3. UYGULAMA -->
             <section id="tab-uygulama" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">3. Uygulama: Görevler ve Zaman</h2>
-                    <p class="text-slate-400 text-sm mt-1">Günlük operasyonlar, görevler ve zaman yönetimi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">3. Uygulama: Görevler ve Zaman</h2>
+                    <p class="text-slate-500 text-sm mt-1">Günlük operasyonlar, görevler ve zaman yönetimi.</p>
                 </div>
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <h3 class="text-lg font-semibold text-goldAccent">Günlük Görev Çizelgesi</h3>
-                    <p class="text-slate-300 text-sm">Günün öncelikli işleri ve pratik zaman dağılımı.</p>
+                <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
+                    <h3 class="text-lg font-semibold text-corporateAccent">Günlük Görev Çizelgesi</h3>
+                    <p class="text-slate-600 text-sm">Günün öncelikli işleri ve pratik zaman dağılımı.</p>
                 </div>
             </section>
 
             <!-- POMODORO -->
             <section id="tab-pomodoro" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">Derin Odak ve Zamanlayıcı</h2>
-                <div class="bg-cardBg border border-goldAccent/30 rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-2xl">
+                <h2 class="text-2xl font-bold text-corporatePrimary">Derin Odak ve Zamanlayıcı</h2>
+                <div class="bg-cardBg border border-corporateBorder rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-sm">
                     <div class="flex justify-center gap-3">
-                        <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition">Odak (25 dk)</button>
-                        <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Kısa Mola (5 dk)</button>
-                        <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition">Uzun Mola (15 dk)</button>
+                        <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-corporateAccent text-white font-bold text-xs transition">Odak (25 dk)</button>
+                        <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Kısa Mola (5 dk)</button>
+                        <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Uzun Mola (15 dk)</button>
                     </div>
                     <div class="py-8">
-                        <span id="timer-display" class="text-6xl md:text-8xl font-black text-white tracking-wider">25:00</span>
-                        <p id="timer-status" class="text-goldAccent text-sm mt-2 font-medium">Çalışmaya Hazır</p>
+                        <span id="timer-display" class="text-6xl md:text-8xl font-black text-corporatePrimary tracking-wider">25:00</span>
+                        <p id="timer-status" class="text-corporateAccent text-sm mt-2 font-medium">Çalışmaya Hazır</p>
                     </div>
                     <div class="flex justify-center gap-4">
-                        <button onclick="startTimer()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg">Başlat</button>
-                        <button onclick="pauseTimer()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-3.5 rounded-xl transition border border-slate-700">Duraklat</button>
-                        <button onclick="resetTimer()" class="bg-slate-800 hover:bg-slate-700 text-slate-400 font-bold px-4 py-3.5 rounded-xl transition border border-slate-700">Sıfırla</button>
+                        <button onclick="startTimer()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-sm">Başlat</button>
+                        <button onclick="pauseTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-8 py-3.5 rounded-xl transition border border-corporateBorder">Duraklat</button>
+                        <button onclick="resetTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold px-4 py-3.5 rounded-xl transition border border-corporateBorder">Sıfırla</button>
                     </div>
                 </div>
             </section>
@@ -184,25 +185,25 @@
             <!-- 4. ÖĞRENME -->
             <section id="tab-ogrenme" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">4. Öğrenme: 12 Ana Fakülte ve Kitap Arşivi</h2>
-                    <p class="text-slate-400 text-sm mt-1">Yaşam boyu eğitim ve doktoraüstü bilgi enstitüsü.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">4. Öğrenme: 12 Ana Fakülte ve Kitap Arşivi</h2>
+                    <p class="text-slate-500 text-sm mt-1">Yaşam boyu eğitim ve doktoraüstü bilgi enstitüsü.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
-                        <h4 class="font-bold text-goldAccent text-sm">Felsefe ve Ontoloji</h4>
-                        <p class="text-xs text-slate-300 mt-1">Epistemoloji, etik ve varlık felsefesi temelleri.</p>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-bold text-corporateAccent text-sm">Felsefe ve Ontoloji</h4>
+                        <p class="text-xs text-slate-600 mt-1">Epistemoloji, etik ve varlık felsefesi temelleri.</p>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
-                        <h4 class="font-bold text-goldAccent text-sm">Teknoloji & Mühendislik</h4>
-                        <p class="text-xs text-slate-300 mt-1">Yazılım mimarileri, ERP sistemleri ve otomasyon.</p>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-bold text-corporateAccent text-sm">Teknoloji & Mühendislik</h4>
+                        <p class="text-xs text-slate-600 mt-1">Yazılım mimarileri, ERP sistemleri ve otomasyon.</p>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
-                        <h4 class="font-bold text-goldAccent text-sm">İşletme & Finans</h4>
-                        <p class="text-xs text-slate-300 mt-1">Maliyet muhasebesi, bütçeleme ve kurumsal denetim.</p>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-bold text-corporateAccent text-sm">İşletme & Finans</h4>
+                        <p class="text-xs text-slate-600 mt-1">Maliyet muhasebesi, bütçeleme ve kurumsal denetim.</p>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 p-5 rounded-2xl">
-                        <h4 class="font-bold text-goldAccent text-sm">Psikoloji & Zihin</h4>
-                        <p class="text-xs text-slate-300 mt-1">Psikosentez, arketipler ve bilişsel önyargılar.</p>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-bold text-corporateAccent text-sm">Psikoloji & Zihin</h4>
+                        <p class="text-xs text-slate-600 mt-1">Psikosentez, arketipler ve bilişsel önyargılar.</p>
                     </div>
                 </div>
             </section>
@@ -210,17 +211,17 @@
             <!-- 5. ALIŞKANLIK -->
             <section id="tab-aliskanlik" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">5. Alışkanlık: Disiplin ve Seriler</h2>
-                    <p class="text-slate-400 text-sm mt-1">Günlük rutinler, gitar pratiği ve seri (streak) takibi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">5. Alışkanlık: Disiplin ve Seriler</h2>
+                    <p class="text-slate-500 text-sm mt-1">Günlük rutinler, gitar pratiği ve seri (streak) takibi.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Alışkanlık</h3>
-                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                        <button onclick="addHabit()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Ekle ➕</button>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
+                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Alışkanlık</h3>
+                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
+                        <button onclick="addHabit()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Ekle ➕</button>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Seriler</h3>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-2">
+                        <h3 class="text-lg font-semibold text-corporateAccent">Seriler</h3>
                         <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
@@ -229,20 +230,20 @@
             <!-- 6. YAŞAM VERİSİ -->
             <section id="tab-notlar" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-white">6. Yaşam Verisi: Dinamik Not Defteri</h2>
-                    <p class="text-slate-400 text-sm mt-1">Kişisel kayıtlar, fikirler ve çalışma notları arşivi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">6. Yaşam Verisi: Dinamik Not Defteri</h2>
+                    <p class="text-slate-500 text-sm mt-1">Kişisel kayıtlar, fikirler ve çalışma notları arşivi.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-1">
-                        <h3 class="text-lg font-semibold text-goldAccent">Yeni Not Ekle</h3>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-1">
+                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Not Ekle</h3>
                         <div class="space-y-3">
-                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent">
-                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-goldAccent"></textarea>
-                            <button onclick="addNote()" class="w-full bg-goldAccent hover:bg-goldHover text-slate-950 font-bold py-3 rounded-xl transition shadow-lg text-sm">Notu Kaydet ➕</button>
+                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
+                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent"></textarea>
+                            <button onclick="addNote()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Notu Kaydet ➕</button>
                         </div>
                     </div>
-                    <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4 md:col-span-2">
-                        <h3 class="text-lg font-semibold text-goldAccent">Arşiv</h3>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-2">
+                        <h3 class="text-lg font-semibold text-corporateAccent">Arşiv</h3>
                         <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
@@ -250,9 +251,9 @@
 
             <!-- 7. GÜVENLİK ALTYAPISI -->
             <section id="tab-veri" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-white">7. Ortak Veri ve Güvenlik Altyapısı</h2>
-                <div class="bg-cardBg border border-slate-800 rounded-2xl p-6 space-y-4">
-                    <p class="text-slate-300 text-sm">Kimlik doğrulama, veri bütünlüğü, yedekleme ve kurtarma protokolleri aktif.</p>
+                <h2 class="text-2xl font-bold text-corporatePrimary">7. Ortak Veri ve Güvenlik Altyapısı</h2>
+                <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
+                    <p class="text-slate-600 text-sm">Kimlik doğrulama, veri bütünlüğü, yedekleme ve kurtarma protokolleri aktif.</p>
                 </div>
             </section>
 
@@ -282,16 +283,16 @@
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
                 const navBtn = document.getElementById('nav-' + t);
-                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 transition text-left text-xs";
+                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left text-xs";
             });
             const activeSection = document.getElementById('tab-' + tabId);
             if (activeSection) activeSection.classList.remove('hidden');
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) {
                 if(tabId === 'ana') {
-                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-2 rounded-xl bg-goldAccent text-slate-950 font-semibold transition shadow-lg text-left text-xs";
+                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left text-xs";
                 } else {
-                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-goldAccent text-slate-950 font-semibold transition text-left text-xs";
+                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-corporateAccent text-white font-semibold transition text-left text-xs";
                 }
             }
 
@@ -312,12 +313,12 @@
             listEl.innerHTML = '';
             notes.forEach((n, index) => {
                 listEl.innerHTML += `
-                    <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800 flex justify-between items-start gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex justify-between items-start gap-4 shadow-sm">
                         <div>
-                            <h4 class="font-bold text-goldAccent text-sm">${n.title}</h4>
-                            <p class="text-xs text-slate-300 mt-1">${n.content}</p>
+                            <h4 class="font-bold text-corporateAccent text-sm">${n.title}</h4>
+                            <p class="text-xs text-slate-600 mt-1">${n.content}</p>
                         </div>
-                        <button onclick="deleteNote(${index})" class="text-red-400 hover:text-red-300 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
+                        <button onclick="deleteNote(${index})" class="text-red-600 hover:text-red-700 text-xs px-2 py-1 bg-red-50 rounded-lg">Sil</button>
                     </div>
                 `;
             });
@@ -350,14 +351,14 @@
             listEl.innerHTML = '';
             habits.forEach((h, index) => {
                 listEl.innerHTML += `
-                    <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800 flex justify-between items-center">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex justify-between items-center shadow-sm">
                         <div>
-                            <h4 class="font-bold text-white text-sm">${h.title}</h4>
-                            <span class="text-xs text-goldAccent mt-1 inline-block">🔥 Seri: ${h.streak} Gün</span>
+                            <h4 class="font-bold text-slate-800 text-sm">${h.title}</h4>
+                            <span class="text-xs text-corporateAccent font-semibold mt-1 inline-block">🔥 Seri: ${h.streak} Gün</span>
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="incrementStreak(${index})" class="text-emerald-400 text-xs px-3 py-1.5 bg-emerald-500/10 rounded-lg font-semibold">+1 Tamamla</button>
-                            <button onclick="deleteHabit(${index})" class="text-red-400 text-xs px-2 py-1 bg-red-500/10 rounded-lg">Sil</button>
+                            <button onclick="incrementStreak(${index})" class="text-emerald-700 text-xs px-3 py-1.5 bg-emerald-50 rounded-lg font-semibold">+1 Tamamla</button>
+                            <button onclick="deleteHabit(${index})" class="text-red-600 text-xs px-2 py-1 bg-red-50 rounded-lg">Sil</button>
                         </div>
                     </div>
                 `;
@@ -403,7 +404,7 @@
             updateDisplay();
             ['25', '5', '15'].forEach(m => {
                 const btn = document.getElementById('mode-' + m);
-                if (btn) btn.className = Number(m) === mins ? "px-4 py-2 rounded-xl bg-goldAccent text-slate-950 font-bold text-xs transition" : "px-4 py-2 rounded-xl bg-slate-800 text-slate-300 font-bold text-xs transition";
+                if (btn) btn.className = Number(m) === mins ? "px-4 py-2 rounded-xl bg-corporateAccent text-white font-bold text-xs transition" : "px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition";
             });
         }
 
