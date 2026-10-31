@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu - Kurumsal Life OS (V19.2 Varlık Pusulası)</title>
+    <title>Kahramanın Yolculuğu - Kurumsal Life OS (V19.3 Router Mührü)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,7 +37,7 @@
         <header class="md:hidden bg-cardBg border-b border-corporateBorder p-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
             <div>
                 <h1 class="font-bold text-corporatePrimary text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V19.2 Pusula)</p>
+                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V19.3 Router)</p>
             </div>
             <button onclick="toggleMobileMenu()" class="bg-corporateAccent text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm active:scale-95 transition">
                 <span>☰</span> Menü
@@ -50,43 +50,43 @@
                 <div class="mb-6 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-corporatePrimary tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-500 mt-1">V19.2 • İçsel Mabet Aktif</p>
+                        <p class="text-xs text-slate-500 mt-1">V19.3 • Akıllı Router Aktif</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-xl font-bold px-3 py-1.5 bg-slate-100 rounded-lg">✕</button>
                 </div>
                 
                 <nav class="space-y-1.5 text-xs">
-                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left">
+                    <button onclick="switchTab('ana', true)" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left">
                         <span>⚡</span> Komuta Merkezi & AI
                     </button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">1. Yaşam Yönü</div>
-                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Varlık Pusulası</button>
+                    <button onclick="switchTab('yon', true)" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Varlık Pusulası</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. Yönetim</div>
-                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
+                    <button onclick="switchTab('yonetim', true)" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Uygulama</div>
-                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
-                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
+                    <button onclick="switchTab('uygulama', true)" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
+                    <button onclick="switchTab('pomodoro', true)" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">4. Öğrenme (Akademi)</div>
-                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Ana Fakülte Enstitüsü</button>
+                    <button onclick="switchTab('ogrenme', true)" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Ana Fakülte Enstitüsü</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">5. Alışkanlık</div>
-                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
+                    <button onclick="switchTab('aliskanlik', true)" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">6. Yaşam Verisi</div>
-                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
+                    <button onclick="switchTab('notlar', true)" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">7. Güvenlik & Bulut</div>
-                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> V19.2 GitHub & Veri Kasası</button>
+                    <button onclick="switchTab('veri', true)" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> V19.3 GitHub & Veri Kasası</button>
                 </nav>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-50 border border-corporateBorder text-xs space-y-1 mt-4">
                 <p class="font-semibold text-corporatePrimary">Aslan Kral 🛡️</p>
-                <p class="text-slate-500">Varlık Pusulası V19.2</p>
+                <p class="text-slate-500">Router V19.3 Aktif</p>
             </div>
         </aside>
 
@@ -97,9 +97,9 @@
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-6 md:p-12 border border-corporateBorder shadow-sm relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">V19.2 İçsel Mabet Mimarisi</span>
+                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">V19.3 Akıllı Router Mimarisi</span>
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-corporatePrimary mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-600 mt-2 text-sm sm:text-base md:text-lg">Yaşam Yönü modülüne Stoacı zaman bilinci ve içsel mabet protokolleri eklenerek zihinsel sığınak katmanı mühürlendi.</p>
+                        <p class="text-slate-600 mt-2 text-sm sm:text-base md:text-lg">Sayfa yenileme ve tarayıcı geri/ileri tuşları artık URL hash (hash router) sistemi ile kusursuz senkronize çalışmaktadır.</p>
                         
                         <div class="mt-6 w-full bg-slate-200 h-2.5 rounded-full overflow-hidden border border-slate-300">
                             <div id="analytics-progress-bar" class="bg-gradient-to-r from-corporateAccent to-emerald-500 h-full w-[100%] transition-all"></div>
@@ -114,13 +114,13 @@
                         <span class="text-xs text-slate-400 mt-1 inline-block">Saf Varlık Uyumlu</span>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
-                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Pusula Derinliği</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">V19.2 Mabet</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">İçsel Kale & Zaman Bilinci</span>
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Router Mimarisi</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">Hash State</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Yenileme ve Geri Tuşu Korumalı</span>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm sm:col-span-2 md:col-span-1">
                         <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Sistem Sürümü</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">V19.2 Pusula</p>
+                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">V19.3 Router</p>
                         <span class="text-xs text-corporateAccent mt-1 inline-block">GitHub Uyumlu</span>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                         <span>🤖</span> AI Günlük İçgörü ve Varlık Raporu
                     </h3>
                     <p id="ai-insight-text" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Üstün bir sükûnet, Aslan Kral! Yaşam Yönü modülüne entegre edilen "İçsel Mabet" ve zaman bilinci ile dış dünyanın gürültüsünden arınmış mutlak bir zihinsel sığınak inşa edildi.
+                        Kusursuz navigasyon, Aslan Kral! Artık sekmeler arası geçişlerin URL hash yapısıyla eşleşti; sayfayı yenilediğinde veya tarayıcıda "Geri" tuşuna bastığında doğrudan ilgili sekmede kalırsın.
                     </p>
                 </div>
             </section>
@@ -302,16 +302,16 @@
                 </div>
             </section>
 
-            <!-- 7. V19.2 VERİ KASASI -->
+            <!-- 7. V19.3 VERİ KASASI -->
             <section id="tab-veri" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V19.2 Varlık Veri Kasası</h2>
-                    <p class="text-slate-500 text-sm mt-1">GitHub uyumlu bulut yedekleme, V19.2 Pusulası ve atomik veri kasası.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V19.3 Varlık Veri Kasası</h2>
+                    <p class="text-slate-500 text-sm mt-1">GitHub uyumlu bulut yedekleme, V19.3 Akıllı Router ve atomik veri kasası.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
                         <h3 class="text-lg font-semibold text-corporateAccent">GitHub Bulut Paketi (Export)</h3>
-                        <p class="text-xs text-slate-600">Sistem verilerini doğrudan GitHub deposuna commit edilebilir V19.2 JSON formatında indir.</p>
+                        <p class="text-xs text-slate-600">Sistem verilerini doğrudan GitHub deposuna commit edilebilir V19.3 JSON formatında indir.</p>
                         <button onclick="exportDataVault()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">GitHub Paketi İndir ☁️📥</button>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
@@ -322,8 +322,8 @@
                     </div>
                 </div>
                 <div id="vault-status-log" class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-2 text-xs font-mono text-slate-600">
-                    <p class="font-bold text-corporatePrimary font-sans">V19.2 Pusula Günlüğü:</p>
-                    <p>🔹 Life Direction (Değerler ve Varlık Pusulası V19.2): İçsel Mabet Protokolü ile Mühürlendi.</p>
+                    <p class="font-bold text-corporatePrimary font-sans">V19.3 Router Günlüğü:</p>
+                    <p>🔹 Hash Router & Back History State: Aktif ve Geri Tuşu Korumalı.</p>
                 </div>
             </section>
 
@@ -340,10 +340,68 @@
             });
         }
 
+        // ==========================================
+        // V19.3 AKILLI ROUTER & SAYFA KORUMA MOTORU
+        // ==========================================
+        const validTabs = ['ana', 'yon', 'yonetim', 'uygulama', 'pomodoro', 'ogrenme', 'aliskanlik', 'notlar', 'veri'];
+
         window.onload = function() {
+            handleRouteFromHash(false);
             renderNotes();
             renderHabits();
             runAIAnalytics();
+        }
+
+        // Tarayıcı geri/ileri tuşlarına basıldığında tetiklenir
+        window.onpopstate = function(event) {
+            handleRouteFromHash(false);
+        };
+
+        function handleRouteFromHash(pushHistory = true) {
+            let hash = window.location.hash.replace('#', '');
+            if (!validTabs.includes(hash)) {
+                hash = 'ana';
+            }
+            if (pushHistory && window.location.hash !== '#' + hash) {
+                history.pushState({ tab: hash }, '', '#' + hash);
+            }
+            renderActiveTabUI(hash);
+        }
+
+        function switchTab(tabId, pushHistory = true) {
+            if (!validTabs.includes(tabId)) tabId = 'ana';
+            
+            if (pushHistory) {
+                history.pushState({ tab: tabId }, '', '#' + tabId);
+            }
+            renderActiveTabUI(tabId);
+
+            if (window.innerWidth < 768) {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('flex');
+                sidebar.classList.add('hidden');
+            }
+        }
+
+        function renderActiveTabUI(tabId) {
+            validTabs.forEach(t => {
+                const section = document.getElementById('tab-' + t);
+                if (section) section.classList.add('hidden');
+                const navBtn = document.getElementById('nav-' + t);
+                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left text-xs";
+            });
+
+            const activeSection = document.getElementById('tab-' + tabId);
+            if (activeSection) activeSection.classList.remove('hidden');
+
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) {
+                if(tabId === 'ana') {
+                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left text-xs";
+                } else {
+                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg bg-corporateAccent text-white font-semibold transition text-left text-xs";
+                }
+            }
         }
 
         function toggleMobileMenu() {
@@ -357,38 +415,12 @@
             }
         }
 
-        function switchTab(tabId) {
-            const tabs = ['ana', 'yon', 'yonetim', 'uygulama', 'pomodoro', 'ogrenme', 'aliskanlik', 'notlar', 'veri'];
-            tabs.forEach(t => {
-                const section = document.getElementById('tab-' + t);
-                if (section) section.classList.add('hidden');
-                const navBtn = document.getElementById('nav-' + t);
-                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left text-xs";
-            });
-            const activeSection = document.getElementById('tab-' + tabId);
-            if (activeSection) activeSection.classList.remove('hidden');
-            const activeNav = document.getElementById('nav-' + tabId);
-            if (activeNav) {
-                if(tabId === 'ana') {
-                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left text-xs";
-                } else {
-                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg bg-corporateAccent text-white font-semibold transition text-left text-xs";
-                }
-            }
-
-            if (window.innerWidth < 768) {
-                const sidebar = document.getElementById('sidebar');
-                sidebar.classList.remove('flex');
-                sidebar.classList.add('hidden');
-            }
-        }
-
         function triggerFileInput() {
             document.getElementById('import-file').click();
         }
 
         // ==========================================
-        // V19.2 ANALİTİK & ATOMİK MOTORU
+        // V19.3 ANALİTİK & ATOMİK MOTORU
         // ==========================================
         function runAIAnalytics() {
             try {
@@ -407,7 +439,7 @@
 
                 const insightEl = document.getElementById('ai-insight-text');
                 if (insightEl) {
-                    insightEl.innerHTML = `V19.2 Varlık Pusulası aktif, Aslan Kral! İçsel mabet ve Stoacı zaman bilinci protokolü üzerinden yapılan değerlendirmede disiplin ve ontolojik uyum skorun <b>${calculatedScore}/100</b> olarak tescillendi.`;
+                    insightEl.innerHTML = `V19.3 Akıllı Router aktif, Aslan Kral! Sayfa yenileme ve geri tuşu koruması devreye alındı. Disiplin ve ontolojik uyum skorun <b>${calculatedScore}/100</b> olarak korunuyor.`;
                 }
             } catch (err) {
                 console.error("AI Analytics Error:", err);
@@ -421,7 +453,7 @@
             try {
                 transactionFn();
                 runAIAnalytics();
-                logVaultStatus(`✅ [V19.2 PUSULA]: ${successMsg}`);
+                logVaultStatus(`✅ [V19.3 ROUTER]: ${successMsg}`);
             } catch (err) {
                 if (snapshotNotes !== null) localStorage.setItem('kahraman_notes', snapshotNotes);
                 if (snapshotHabits !== null) localStorage.setItem('kahraman_habits', snapshotHabits);
@@ -437,7 +469,7 @@
             if (eventType === 'HABIT_STREAK_INCREMENTED') {
                 let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
                 notes.unshift({
-                    title: `[Pusula Köprüsü] ${payload.title} Serisi Güncellendi`,
+                    title: `[Router Köprüsü] ${payload.title} Serisi Güncellendi`,
                     content: `Seri ${payload.streak} güne ulaştı, varlık kayıtlarına işlendi.`
                 });
                 localStorage.setItem('kahraman_notes', JSON.stringify(notes));
@@ -507,7 +539,7 @@
 
         function exportDataVault() {
             const vaultData = {
-                version: "V19.2",
+                version: "V19.3",
                 repository: "kahramanin-yolculugu",
                 timestamp: new Date().toISOString(),
                 owner: "Aslan Kral",
@@ -517,11 +549,11 @@
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(vaultData, null, 2));
             const downloadAnchor = document.createElement('a');
             downloadAnchor.setAttribute("href", dataStr);
-            downloadAnchor.setAttribute("download", `kahraman_life_os_v19.2_compass_${Date.now()}.json`);
+            downloadAnchor.setAttribute("download", `kahraman_life_os_v19.3_router_${Date.now()}.json`);
             document.body.appendChild(downloadAnchor);
             downloadAnchor.click();
             downloadAnchor.remove();
-            logVaultStatus("☁️📥 Başarılı: V19.2 Varlık Pusulası bulut paketi indirildi.");
+            logVaultStatus("☁️📥 Başarılı: V19.3 Akıllı Router bulut paketi indirildi.");
         }
 
         function importDataVaultAtomic() {
@@ -543,7 +575,7 @@
                     renderNotes();
                     renderHabits();
                     runAIAnalytics();
-                }, "V19.2 Bulut yedeği başarıyla geri yüklendi.");
+                }, "V19.3 Bulut yedeği başarıyla geri yüklendi.");
                 alert("Bulut yedeği başarıyla geri yüklendi!");
             };
             reader.readAsText(file);
@@ -588,7 +620,7 @@
                     <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 shadow-sm">
                         <div>
                             <h4 class="font-bold text-slate-800 text-sm">${h.title}</h4>
-                            <span class="text-xs text-corporateAccent font-semibold mt-0.5 inline-block">🔥 Seri: ${h.streak} Gün (Varlık Pusulası)</span>
+                            <span class="text-xs text-corporateAccent font-semibold mt-0.5 inline-block">🔥 Seri: ${h.streak} Gün (Akıllı Router)</span>
                         </div>
                         <div class="flex gap-2 w-full sm:w-auto justify-end">
                             <button onclick="incrementStreak(${index})" class="text-emerald-700 text-xs px-3 py-2 bg-emerald-50 rounded-lg font-semibold flex-1 sm:flex-none">+1 Tamamla</button>
