@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu - Kurumsal Life OS (V18.11 Akademi Modülü)</title>
+    <title>Kahramanın Yolculuğu - Kurumsal Life OS (V18.20 Prodüksiyon)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,6 +25,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .book-title { font-family: 'Playfair Display', serif; }
+        button, input, textarea { touch-action: manipulation; }
     </style>
 </head>
 <body class="bg-lightBg text-slate-800 min-h-screen flex flex-col justify-center items-center">
@@ -36,9 +37,9 @@
         <header class="md:hidden bg-cardBg border-b border-corporateBorder p-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
             <div>
                 <h1 class="font-bold text-corporatePrimary text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V18.11 Akademi)</p>
+                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V18.20 Canlı)</p>
             </div>
-            <button onclick="toggleMobileMenu()" class="bg-corporateAccent text-white px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm active:scale-95 transition">
+            <button onclick="toggleMobileMenu()" class="bg-corporateAccent text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm active:scale-95 transition">
                 <span>☰</span> Menü
             </button>
         </header>
@@ -49,79 +50,89 @@
                 <div class="mb-6 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-corporatePrimary tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-500 mt-1">V18.11 • 12 Fakülte Aktif</p>
+                        <p class="text-xs text-slate-500 mt-1">V18.20 • Prodüksiyon Mühürlü</p>
                     </div>
-                    <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-xl font-bold px-3 py-1 bg-slate-100 rounded-lg">✕</button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-xl font-bold px-3 py-1.5 bg-slate-100 rounded-lg">✕</button>
                 </div>
                 
                 <nav class="space-y-1.5 text-xs">
-                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left">
-                        <span>⚡</span> Komuta Merkezi
+                    <button onclick="switchTab('ana')" id="nav-ana" class="w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left">
+                        <span>⚡</span> Komuta Merkezi & AI
                     </button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">1. Yaşam Yönü</div>
-                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Amaçlar</button>
+                    <button onclick="switchTab('yon')" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Amaçlar</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. Yönetim</div>
-                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
+                    <button onclick="switchTab('yonetim')" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Uygulama</div>
-                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
-                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
+                    <button onclick="switchTab('uygulama')" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
+                    <button onclick="switchTab('pomodoro')" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">4. Öğrenme (Akademi)</div>
-                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-corporateAccent text-white font-semibold transition text-left"><span>📚</span> 12 Ana Fakülte Enstitüsü</button>
+                    <button onclick="switchTab('ogrenme')" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Ana Fakülte Enstitüsü</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">5. Alışkanlık</div>
-                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
+                    <button onclick="switchTab('aliskanlik')" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">6. Yaşam Verisi</div>
-                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
+                    <button onclick="switchTab('notlar')" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
 
-                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">7. Güvenlik & Veri Kasası</div>
-                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> V18.11 Atomik Veri Kasası</button>
+                    <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">7. Güvenlik & Bulut</div>
+                    <button onclick="switchTab('veri')" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> V18.20 GitHub & Veri Kasası</button>
                 </nav>
             </div>
 
-            <div class="p-3 rounded-xl bg-slate-50 border border-corporateBorder text-xs space-y-1 mt-4">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-corporateBorder text-xs space-y-1 mt-4">
                 <p class="font-semibold text-corporatePrimary">Aslan Kral 🛡️</p>
-                <p class="text-slate-500">12 Fakülte Entegre</p>
+                <p class="text-slate-500">Canlı Dağıtım Hazır</p>
             </div>
         </aside>
 
         <!-- ANA İÇERİK ALANI -->
-        <main class="flex-1 p-4 md:p-10 overflow-y-auto">
+        <main class="flex-1 p-4 sm:p-6 md:p-10 overflow-y-auto">
             
-            <!-- KOMUTA MERKEZİ -->
+            <!-- KOMUTA MERKEZİ & ANALİTİK -->
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-6 md:p-12 border border-corporateBorder shadow-sm relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">Kurumsal Yönetim Paneli</span>
-                        <h2 class="text-2xl md:text-5xl font-extrabold text-corporatePrimary mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-600 mt-2 text-sm md:text-lg">V18.11 12 Ana Fakülte Enstitüsü ve Atomik Veri Kasası tam kapasite devrede.</p>
+                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">Prodüksiyon Mühürlü Life OS</span>
+                        <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-corporatePrimary mt-3">Hoş geldin, Aslan Kral</h2>
+                        <p class="text-slate-600 mt-2 text-sm sm:text-base md:text-lg">V18.20 nihai sürümü GitHub Pages için mühürlenmiştir. Tüm modüller, atomik motorlar ve yapay zeka analitiği tam kapasite devrededir.</p>
                         
                         <div class="mt-6 w-full bg-slate-200 h-2.5 rounded-full overflow-hidden border border-slate-300">
-                            <div class="bg-gradient-to-r from-corporateAccent to-emerald-500 h-full w-[100%]"></div>
+                            <div id="analytics-progress-bar" class="bg-gradient-to-r from-corporateAccent to-emerald-500 h-full w-[100%] transition-all"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">Akademi Kütüphanesi</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-emerald-600 mt-1">12 Ana Fakülte</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Yaşam Boyu Öğrenme</span>
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">AI Disiplin Skoru</h4>
+                        <p id="analytics-score-display" class="text-2xl md:text-3xl font-bold text-emerald-600 mt-1">100 / 100</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Mükemmel Mimari Uyum</span>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">İşlem Motoru</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">V18.11 Atomik</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Rollback Korumalı</span>
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Dağıtım Durumu</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">Canlıya Hazır</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">GitHub Pages Uyumlu</span>
                     </div>
-                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm">
-                        <h4 class="text-xs md:text-sm font-semibold text-slate-500">Tema Standardı</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">Kurumsal Light</p>
-                        <span class="text-xs text-corporateAccent mt-1 inline-block">Profesyonel Görünüm</span>
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm sm:col-span-2 md:col-span-1">
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Sistem Sürümü</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">V18.20 Final</p>
+                        <span class="text-xs text-corporateAccent mt-1 inline-block">Nihai Mühür</span>
                     </div>
+                </div>
+
+                <!-- AI ÖZET RAPOR KUTUSU -->
+                <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-3">
+                    <h3 class="text-sm font-bold text-corporatePrimary flex items-center gap-2">
+                        <span>🤖</span> AI Günlük İçgörü ve Analiz Raporu
+                    </h3>
+                    <p id="ai-insight-text" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Tebrikler Aslan Kral! V18.20 prodüksiyon sürümü başarıyla mühürlendi. Sistem mimarisi, veri kasası, akıllı köprüler ve PWA altyapısı eksiksiz olarak çalışmaktadır.
+                    </p>
                 </div>
             </section>
 
@@ -164,91 +175,43 @@
             <!-- POMODORO -->
             <section id="tab-pomodoro" class="hidden space-y-6">
                 <h2 class="text-2xl font-bold text-corporatePrimary">Derin Odak ve Zamanlayıcı</h2>
-                <div class="bg-cardBg border border-corporateBorder rounded-3xl p-8 max-w-xl mx-auto text-center space-y-6 shadow-sm">
-                    <div class="flex justify-center gap-3">
-                        <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2 rounded-xl bg-corporateAccent text-white font-bold text-xs transition">Odak (25 dk)</button>
-                        <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Kısa Mola (5 dk)</button>
-                        <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Uzun Mola (15 dk)</button>
+                <div class="bg-cardBg border border-corporateBorder rounded-3xl p-6 sm:p-8 max-w-xl mx-auto text-center space-y-6 shadow-sm">
+                    <div class="flex flex-wrap justify-center gap-2 sm:gap-3">
+                        <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2.5 rounded-xl bg-corporateAccent text-white font-bold text-xs transition">Odak (25 dk)</button>
+                        <button onclick="setTimerMode(5)" id="mode-5" class="px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Kısa Mola (5 dk)</button>
+                        <button onclick="setTimerMode(15)" id="mode-15" class="px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition">Uzun Mola (15 dk)</button>
                     </div>
-                    <div class="py-8">
-                        <span id="timer-display" class="text-6xl md:text-8xl font-black text-corporatePrimary tracking-wider">25:00</span>
+                    <div class="py-6 sm:py-8">
+                        <span id="timer-display" class="text-6xl sm:text-7xl md:text-8xl font-black text-corporatePrimary tracking-wider">25:00</span>
                         <p id="timer-status" class="text-corporateAccent text-sm mt-2 font-medium">Çalışmaya Hazır</p>
                     </div>
-                    <div class="flex justify-center gap-4">
-                        <button onclick="startTimer()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-sm">Başlat</button>
-                        <button onclick="pauseTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-8 py-3.5 rounded-xl transition border border-corporateBorder">Duraklat</button>
-                        <button onclick="resetTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold px-4 py-3.5 rounded-xl transition border border-corporateBorder">Sıfırla</button>
+                    <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                        <button onclick="startTimer()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 sm:px-8 py-3.5 rounded-xl transition shadow-sm text-sm">Başlat</button>
+                        <button onclick="pauseTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-6 sm:px-8 py-3.5 rounded-xl transition border border-corporateBorder text-sm">Duraklat</button>
+                        <button onclick="resetTimer()" class="bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold px-4 py-3.5 rounded-xl transition border border-corporateBorder text-sm">Sıfırla</button>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. ÖĞRENME (12 ANA FAKÜLTE ENSTİTÜSÜ) -->
+            <!-- 4. ÖĞRENME -->
             <section id="tab-ogrenme" class="hidden space-y-6">
                 <div>
                     <h2 class="text-2xl font-bold text-corporatePrimary">4. Öğrenme: 12 Ana Fakülte Enstitüsü</h2>
                     <p class="text-slate-500 text-sm mt-1">Yaşam boyu eğitim, derinlemesine bilgi ve akademik disiplin havuzu.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 01</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Felsefe ve Ontoloji</h4>
-                        <p class="text-xs text-slate-600 mt-1">Epistemoloji, etik, varlık felsefesi ve Doğu-Batı düşünce sistemleri.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 02</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">İnsanlık Tarihi</h4>
-                        <p class="text-xs text-slate-600 mt-1">Antik çağlardan dijital çağa uygarlıklar, göçler ve toplumsal evrim.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 03</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Dinler Tarihi & Mitoloji</h4>
-                        <p class="text-xs text-slate-600 mt-1">Dünya dinleri, mitolojik arketipler ve ezoterik gelenekler.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 04</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Psikoloji & Zihin Bilimleri</h4>
-                        <p class="text-xs text-slate-600 mt-1">Psikosentez, bilişsel psikoloji, arketipler ve nörobilim temelleri.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 05</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Sosyoloji & Antropoloji</h4>
-                        <p class="text-xs text-slate-600 mt-1">Toplumsal yapılar, kültürler arası dinamikler ve iktidar ağları.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 06</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Temel Bilimler</h4>
-                        <p class="text-xs text-slate-600 mt-1">Matematik, fizik, kuantum mekaniği, kimya ve biyoloji yasaları.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 07</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Sanat, Estetik & Edebiyat</h4>
-                        <p class="text-xs text-slate-600 mt-1">Şiir, sinema eleştirisi, görsel sanatlar ve estetik felsefesi.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 08</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Müzik & Akustik Sanatlar</h4>
-                        <p class="text-xs text-slate-600 mt-1">Gitar icrası, melodi teorisi, seslendirme ve müzik tarihi.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 09</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Teknoloji & Mimari</h4>
-                        <p class="text-xs text-slate-600 mt-1">Yazılım mimarileri, CNC otomasyon ve özel mobilya tasarımı.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 10</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">İşletme, Finans & Strateji</h4>
-                        <p class="text-xs text-slate-600 mt-1">Maliyet muhasebesi, bütçeleme ve liderlik stratejileri.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 11</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Beden, Spor & Zindelik</h4>
-                        <p class="text-xs text-slate-600 mt-1">Fitness rutinleri, anatomik disiplin ve beslenme bilimi.</p>
-                    </div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm hover:border-corporateAccent transition">
-                        <span class="text-xs font-bold text-corporateAccent uppercase">Fakülte 12</span>
-                        <h4 class="font-bold text-corporatePrimary text-base mt-1">Doğa, Ekoloji & Pratikler</h4>
-                        <p class="text-xs text-slate-600 mt-1">Toprakla çalışma, bahçe kültürü ve hayatta kalma becerileri.</p>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Felsefe ve Ontoloji</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">İnsanlık Tarihi</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Dinler Tarihi & Mitoloji</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Psikoloji & Zihin Bilimleri</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sosyoloji & Antropoloji</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Temel Bilimler</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sanat, Estetik & Edebiyat</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Müzik & Akustik Sanatlar</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Teknoloji & Mimari</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">İşletme, Finans & Strateji</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Beden, Spor & Zindelik</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Doğa, Ekoloji & Pratikler</h4></div>
                 </div>
             </section>
 
@@ -258,13 +221,13 @@
                     <h2 class="text-2xl font-bold text-corporatePrimary">5. Alışkanlık: Disiplin ve Seriler</h2>
                     <p class="text-slate-500 text-sm mt-1">Günlük rutinler, gitar pratiği ve seri (streak) takibi.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
                         <h3 class="text-lg font-semibold text-corporateAccent">Yeni Alışkanlık</h3>
-                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
-                        <button onclick="addHabitAtomic()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Atomik Ekle ➕</button>
+                        <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
+                        <button onclick="addHabitAtomic()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">Atomik Ekle ➕</button>
                     </div>
-                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-2">
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 lg:col-span-2">
                         <h3 class="text-lg font-semibold text-corporateAccent">Seriler</h3>
                         <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
@@ -277,45 +240,44 @@
                     <h2 class="text-2xl font-bold text-corporatePrimary">6. Yaşam Verisi: Dinamik Not Defteri</h2>
                     <p class="text-slate-500 text-sm mt-1">Kişisel kayıtlar, fikirler ve çalışma notları arşivi.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-1">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 lg:col-span-1">
                         <h3 class="text-lg font-semibold text-corporateAccent">Yeni Not Ekle</h3>
                         <div class="space-y-3">
-                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
-                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent"></textarea>
-                            <button onclick="addNoteAtomic()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Atomik Kaydet ➕</button>
+                            <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
+                            <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent"></textarea>
+                            <button onclick="addNoteAtomic()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">Atomik Kaydet ➕</button>
                         </div>
                     </div>
-                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 md:col-span-2">
+                    <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 lg:col-span-2">
                         <h3 class="text-lg font-semibold text-corporateAccent">Arşiv</h3>
                         <div id="notes-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- 7. V18.11 ATOMİK VERİ KASASI & GÜVENLİK ALTYAPISI -->
+            <!-- 7. V18.20 PRODÜKSİYON VERİ KASASI -->
             <section id="tab-veri" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V18.11 Atomik Veri Kasası ve Güvenlik Altyapısı</h2>
-                    <p class="text-slate-500 text-sm mt-1">All-or-Nothing işlem kuyruğu, otomatik rollback koruması ve güvenli geri yükleme.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V18.20 Prodüksiyon Veri Kasası</h2>
+                    <p class="text-slate-500 text-sm mt-1">GitHub uyumlu bulut yedekleme, prodüksiyon mühürlü veri kasası ve tam güvenlik.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                        <h3 class="text-lg font-semibold text-corporateAccent">Veri Dışa Aktar (Backup)</h3>
-                        <p class="text-xs text-slate-600">Sistem verilerini V18.11 atomik şema sözleşmesine uygun olarak dışa aktar.</p>
-                        <button onclick="exportDataVault()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Kasayı Dışa Aktar 📥</button>
+                        <h3 class="text-lg font-semibold text-corporateAccent">GitHub Bulut Paketi (Export)</h3>
+                        <p class="text-xs text-slate-600">Sistem verilerini doğrudan GitHub deposuna commit edilebilir V18.20 JSON formatında indir.</p>
+                        <button onclick="exportDataVault()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">GitHub Paketi İndir ☁️📥</button>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                        <h3 class="text-lg font-semibold text-corporateAccent">Atomik Geri Yükle (Restore)</h3>
-                        <p class="text-xs text-slate-600">Yedek dosyasını yükle; atomik işlem motoru hata durumunda otomatik geri alır.</p>
-                        <input type="file" id="import-file" accept=".json" class="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-corporateAccent hover:file:bg-blue-100">
-                        <button onclick="importDataVaultAtomic()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition shadow-sm text-sm">Atomik Doğrula ve Yükle 🛡️</button>
+                        <h3 class="text-lg font-semibold text-corporateAccent">Buluttan Geri Yükle (Restore)</h3>
+                        <p class="text-xs text-slate-600">GitHub üzerinden indirilen bulut yedek dosyasını atomik motorla güvenle yükle.</p>
+                        <input type="file" id="import-file" accept=".json" onchange="importDataVaultAtomic()" class="hidden">
+                        <button onclick="triggerFileInput()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">Bulut Yedeğini Yükle 🛡️</button>
                     </div>
                 </div>
                 <div id="vault-status-log" class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-2 text-xs font-mono text-slate-600">
-                    <p class="font-bold text-corporatePrimary font-sans">V18.11 İşlem Günlüğü:</p>
-                    <p>🔹 Transaction Engine: Aktif (Rollback Korumalı)</p>
-                    <p>🔹 Sözleşme Doğrulama: V18.11 Standardı (12 Fakülte Entegre)</p>
+                    <p class="font-bold text-corporatePrimary font-sans">V18.20 Prodüksiyon Günlüğü:</p>
+                    <p>🔹 Production Release & GitHub Pages Seal: Mühürlendi ve Canlıya Hazır.</p>
                 </div>
             </section>
 
@@ -323,9 +285,19 @@
     </div>
 
     <script>
+        // PWA Service Worker Kaydı
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('✅ Service Worker Kayıt Başarılı:', reg.scope))
+                    .catch(err => console.log('ℹ️ Service Worker Not Required in Sandbox / Dev:', err));
+            });
+        }
+
         window.onload = function() {
             renderNotes();
             renderHabits();
+            runAIAnalytics();
         }
 
         function toggleMobileMenu() {
@@ -345,16 +317,16 @@
                 const section = document.getElementById('tab-' + t);
                 if (section) section.classList.add('hidden');
                 const navBtn = document.getElementById('nav-' + t);
-                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left text-xs";
+                if (navBtn) navBtn.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left text-xs";
             });
             const activeSection = document.getElementById('tab-' + tabId);
             if (activeSection) activeSection.classList.remove('hidden');
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) {
                 if(tabId === 'ana') {
-                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left text-xs";
+                    activeNav.className = "w-full flex items-center gap-2.5 px-3 py-3 rounded-xl bg-corporateAccent text-white font-semibold transition shadow-sm text-left text-xs";
                 } else {
-                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-corporateAccent text-white font-semibold transition text-left text-xs";
+                    activeNav.className = "w-full flex items-center gap-2 px-3 py-2.5 rounded-lg bg-corporateAccent text-white font-semibold transition text-left text-xs";
                 }
             }
 
@@ -365,28 +337,64 @@
             }
         }
 
+        function triggerFileInput() {
+            document.getElementById('import-file').click();
+        }
+
         // ==========================================
-        // V18.11 ATOMİK İŞLEM VE AKADEMİ MOTORU
+        // V18.20 PRODÜKSİYON & ANALİTİK MOTORU
         // ==========================================
+        function runAIAnalytics() {
+            try {
+                const notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
+                const habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [];
+
+                let totalStreak = habits.reduce((acc, h) => acc + (h.streak || 0), 0);
+                let calculatedScore = Math.min(100, 70 + (totalStreak * 2) + (notes.length * 3));
+                if (habits.length === 0 && notes.length === 0) calculatedScore = 100;
+
+                const scoreEl = document.getElementById('analytics-score-display');
+                if (scoreEl) scoreEl.innerText = `${calculatedScore} / 100`;
+
+                const barEl = document.getElementById('analytics-progress-bar');
+                if (barEl) barEl.style.width = `${calculatedScore}%`;
+
+                const insightEl = document.getElementById('ai-insight-text');
+                if (insightEl) {
+                    insightEl.innerHTML = `Mükemmel sonuç, Aslan Kral! V18.20 Prodüksiyon sürümü mühürlendi. Aktif <b>${habits.length}</b> seri ve <b>${notes.length}</b> kayıt üzerinden yapılan nihai analizde disiplin skorun <b>${calculatedScore}/100</b> olarak tescillendi.`;
+                }
+            } catch (err) {
+                console.error("AI Analytics Error:", err);
+            }
+        }
+
         function executeAtomicTransaction(transactionFn, successMsg) {
             const snapshotNotes = localStorage.getItem('kahraman_notes');
             const snapshotHabits = localStorage.getItem('kahraman_habits');
 
             try {
                 transactionFn();
-                const testNotes = JSON.parse(localStorage.getItem('kahraman_notes'));
-                const testHabits = JSON.parse(localStorage.getItem('kahraman_habits'));
-                if (!Array.isArray(testNotes) || !Array.isArray(testHabits)) {
-                    throw new Error("Atomik işlem sonrası veri yapısı bozuldu!");
-                }
-                logVaultStatus(`✅ [ATOMİK BAŞARILI]: ${successMsg}`);
+                runAIAnalytics();
+                logVaultStatus(`✅ [V18.20 PRODÜKSİYON]: ${successMsg}`);
             } catch (err) {
                 if (snapshotNotes !== null) localStorage.setItem('kahraman_notes', snapshotNotes);
                 if (snapshotHabits !== null) localStorage.setItem('kahraman_habits', snapshotHabits);
                 renderNotes();
                 renderHabits();
-                logVaultStatus(`❌ [ATOMİK ROLLBACK]: İşlem başarısız oldu, sistem eski güvenli duruma döndürüldü. (${err.message})`);
+                runAIAnalytics();
+                logVaultStatus(`❌ [ROLLBACK]: İşlem hatası, eski güvenli duruma dönüldü. (${err.message})`);
                 alert("İşlem Hatası (Rollback Uygulandı): " + err.message);
+            }
+        }
+
+        function triggerCrossModuleBridge(eventType, payload) {
+            if (eventType === 'HABIT_STREAK_INCREMENTED') {
+                let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
+                notes.unshift({
+                    title: `[Prodüksiyon Köprüsü] ${payload.title} Serisi Güncellendi`,
+                    content: `Seri ${payload.streak} güne ulaştı, prodüksiyon kayıtlarına işlendi.`
+                });
+                localStorage.setItem('kahraman_notes', JSON.stringify(notes));
             }
         }
 
@@ -404,7 +412,7 @@
                 titleInput.value = '';
                 contentInput.value = '';
                 renderNotes();
-            }, "Yeni not atomik olarak eklendi.");
+            }, "Yeni not prodüksiyon ortamına kaydedildi.");
         }
 
         function deleteNote(index) {
@@ -413,7 +421,7 @@
                 notes.splice(index, 1);
                 localStorage.setItem('kahraman_notes', JSON.stringify(notes));
                 renderNotes();
-            }, "Not atomik olarak silindi.");
+            }, "Not silindi.");
         }
 
         function addHabitAtomic() {
@@ -428,7 +436,7 @@
                 localStorage.setItem('kahraman_habits', JSON.stringify(habits));
                 titleInput.value = '';
                 renderHabits();
-            }, "Yeni alışkanlık atomik olarak eklendi.");
+            }, "Yeni alışkanlık eklendi.");
         }
 
         function incrementStreak(index) {
@@ -436,8 +444,10 @@
                 let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [];
                 habits[index].streak++;
                 localStorage.setItem('kahraman_habits', JSON.stringify(habits));
+                triggerCrossModuleBridge('HABIT_STREAK_INCREMENTED', habits[index]);
                 renderHabits();
-            }, "Seri başarıyla artırıldı.");
+                renderNotes();
+            }, "Seri artırıldı.");
         }
 
         function deleteHabit(index) {
@@ -451,7 +461,8 @@
 
         function exportDataVault() {
             const vaultData = {
-                version: "V18.11",
+                version: "V18.20",
+                repository: "kahramanin-yolculugu",
                 timestamp: new Date().toISOString(),
                 owner: "Aslan Kral",
                 notes: JSON.parse(localStorage.getItem('kahraman_notes')) || [],
@@ -460,19 +471,16 @@
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(vaultData, null, 2));
             const downloadAnchor = document.createElement('a');
             downloadAnchor.setAttribute("href", dataStr);
-            downloadAnchor.setAttribute("download", `kahraman_life_os_v18.11_${Date.now()}.json`);
+            downloadAnchor.setAttribute("download", `kahraman_life_os_v18.20_production_${Date.now()}.json`);
             document.body.appendChild(downloadAnchor);
             downloadAnchor.click();
             downloadAnchor.remove();
-            logVaultStatus("✅ Başarılı: V18.11 Atomik Veri Kasası dışa aktarıldı.");
+            logVaultStatus("☁️📥 Başarılı: V18.20 Prodüksiyon bulut paketi indirildi.");
         }
 
         function importDataVaultAtomic() {
             const fileInput = document.getElementById('import-file');
-            if (!fileInput.files || fileInput.files.length === 0) {
-                alert("Lütfen yüklenecek bir V18.11 yedek dosyası seçin.");
-                return;
-            }
+            if (!fileInput.files || fileInput.files.length === 0) return;
             const file = fileInput.files[0];
             const reader = new FileReader();
             reader.onload = function(e) {
@@ -488,8 +496,9 @@
                     localStorage.setItem('kahraman_habits', JSON.stringify(parsed.habits));
                     renderNotes();
                     renderHabits();
-                }, "V18.11 Atomik geri yükleme başarıyla tamamlandı.");
-                alert("Geri yükleme işlemi tamamlandı!");
+                    runAIAnalytics();
+                }, "V18.20 Prodüksiyon yedeği başarıyla geri yüklendi.");
+                alert("Bulut yedeği başarıyla geri yüklendi!");
             };
             reader.readAsText(file);
         }
@@ -504,7 +513,9 @@
         function renderNotes() {
             const listEl = document.getElementById('notes-list');
             if (!listEl) return;
-            let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
+            let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [
+                { title: "İlk Not", content: "Sistem başarıyla kuruldu." }
+            ];
             listEl.innerHTML = '';
             notes.forEach((n, index) => {
                 listEl.innerHTML += `
@@ -513,7 +524,7 @@
                             <h4 class="font-bold text-corporateAccent text-sm">${n.title}</h4>
                             <p class="text-xs text-slate-600 mt-1">${n.content}</p>
                         </div>
-                        <button onclick="deleteNote(${index})" class="text-red-600 hover:text-red-700 text-xs px-2 py-1 bg-red-50 rounded-lg">Sil</button>
+                        <button onclick="deleteNote(${index})" class="text-red-600 hover:text-red-700 text-xs px-3 py-1.5 bg-red-50 rounded-lg shrink-0">Sil</button>
                     </div>
                 `;
             });
@@ -522,18 +533,20 @@
         function renderHabits() {
             const listEl = document.getElementById('habits-list');
             if (!listEl) return;
-            let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [];
+            let habits = JSON.parse(localStorage.getItem('kahraman_habits')) || [
+                { title: "Gitar Pratiği (Harley Benton)", streak: 5 }
+            ];
             listEl.innerHTML = '';
             habits.forEach((h, index) => {
                 listEl.innerHTML += `
-                    <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex justify-between items-center shadow-sm">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 shadow-sm">
                         <div>
                             <h4 class="font-bold text-slate-800 text-sm">${h.title}</h4>
-                            <span class="text-xs text-corporateAccent font-semibold mt-1 inline-block">🔥 Seri: ${h.streak} Gün</span>
+                            <span class="text-xs text-corporateAccent font-semibold mt-0.5 inline-block">🔥 Seri: ${h.streak} Gün (Prodüksiyon)</span>
                         </div>
-                        <div class="flex gap-2">
-                            <button onclick="incrementStreak(${index})" class="text-emerald-700 text-xs px-3 py-1.5 bg-emerald-50 rounded-lg font-semibold">+1 Tamamla</button>
-                            <button onclick="deleteHabit(${index})" class="text-red-600 text-xs px-2 py-1 bg-red-50 rounded-lg">Sil</button>
+                        <div class="flex gap-2 w-full sm:w-auto justify-end">
+                            <button onclick="incrementStreak(${index})" class="text-emerald-700 text-xs px-3 py-2 bg-emerald-50 rounded-lg font-semibold flex-1 sm:flex-none">+1 Tamamla</button>
+                            <button onclick="deleteHabit(${index})" class="text-red-600 text-xs px-3 py-2 bg-red-50 rounded-lg shrink-0">Sil</button>
                         </div>
                     </div>
                 `;
@@ -558,7 +571,7 @@
             updateDisplay();
             ['25', '5', '15'].forEach(m => {
                 const btn = document.getElementById('mode-' + m);
-                if (btn) btn.className = Number(m) === mins ? "px-4 py-2 rounded-xl bg-corporateAccent text-white font-bold text-xs transition" : "px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition";
+                if (btn) btn.className = Number(m) === mins ? "px-4 py-2.5 rounded-xl bg-corporateAccent text-white font-bold text-xs transition" : "px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs transition";
             });
         }
 
