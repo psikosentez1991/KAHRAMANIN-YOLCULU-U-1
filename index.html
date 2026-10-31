@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahramanın Yolculuğu - Kurumsal Life OS (V19.4 Yaşayan Pusula)</title>
+    <title>Kahramanın Yolculuğu - Stoacı Öğrenci Life OS (V19.6)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,7 +37,7 @@
         <header class="md:hidden bg-cardBg border-b border-corporateBorder p-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
             <div>
                 <h1 class="font-bold text-corporatePrimary text-xs tracking-wider">KAHRAMANIN YOLCULUĞU</h1>
-                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V19.4 Yaşayan Pusula)</p>
+                <p class="text-[10px] text-slate-500">Aslan Kral 🛡️ (V19.6 Stoacı Öğrenci)</p>
             </div>
             <button onclick="toggleMobileMenu()" class="bg-corporateAccent text-white px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm active:scale-95 transition">
                 <span>☰</span> Menü
@@ -50,7 +50,7 @@
                 <div class="mb-6 flex justify-between items-center">
                     <div>
                         <h1 class="text-xl font-bold text-corporatePrimary tracking-wide">KAHRAMANIN YOLCULUĞU</h1>
-                        <p class="text-xs text-slate-500 mt-1">V19.4 • Yaşayan Pusula Aktif</p>
+                        <p class="text-xs text-slate-500 mt-1">V19.6 • Stoacı Öğrenci Aktif</p>
                     </div>
                     <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 text-xl font-bold px-3 py-1.5 bg-slate-100 rounded-lg">✕</button>
                 </div>
@@ -61,32 +61,32 @@
                     </button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">1. Yaşam Yönü</div>
-                    <button onclick="switchTab('yon', true)" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Değerler ve Yaşayan Pusula</button>
+                    <button onclick="switchTab('yon', true)" id="nav-yon" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🧭</span> Stoacı Varlık Pusulası</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">2. Yönetim</div>
-                    <button onclick="switchTab('yonetim', true)" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Hedefler ve Kararlar</button>
+                    <button onclick="switchTab('yonetim', true)" id="nav-yonetim" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🎯</span> Karar Laboratuvarı</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">3. Uygulama</div>
-                    <button onclick="switchTab('uygulama', true)" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Görevler ve Zaman</button>
-                    <button onclick="switchTab('pomodoro', true)" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> Derin Odak (Pomodoro)</button>
+                    <button onclick="switchTab('uygulama', true)" id="nav-uygulama" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📅</span> Günlük Pratikler</button>
+                    <button onclick="switchTab('pomodoro', true)" id="nav-pomodoro" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>⏳</span> İçsel Mabet (Odak)</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">4. Öğrenme (Akademi)</div>
-                    <button onclick="switchTab('ogrenme', true)" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Ana Fakülte Enstitüsü</button>
+                    <button onclick="switchTab('ogrenme', true)" id="nav-ogrenme" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📚</span> 12 Fakülte Sorgulama Havuzu</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">5. Alışkanlık</div>
-                    <button onclick="switchTab('aliskanlik', true)" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> Alışkanlık & Seriler (Gitar)</button>
+                    <button onclick="switchTab('aliskanlik', true)" id="nav-aliskanlik" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🔥</span> İrade ve Seri Takibi</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">6. Yaşam Verisi</div>
-                    <button onclick="switchTab('notlar', true)" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Dinamik Not Defteri</button>
+                    <button onclick="switchTab('notlar', true)" id="nav-notlar" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>📝</span> Sorgulayan Akıl Defteri</button>
 
                     <div class="pt-3 pb-1 text-[10px] uppercase tracking-wider text-slate-400 font-bold">7. Güvenlik & Bulut</div>
-                    <button onclick="switchTab('veri', true)" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> V19.4 GitHub & Veri Kasası</button>
+                    <button onclick="switchTab('veri', true)" id="nav-veri" class="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-700 transition text-left"><span>🛡️</span> Stoacı Veri Kasası</button>
                 </nav>
             </div>
 
             <div class="p-3.5 rounded-xl bg-slate-50 border border-corporateBorder text-xs space-y-1 mt-4">
                 <p class="font-semibold text-corporatePrimary">Aslan Kral 🛡️</p>
-                <p class="text-slate-500">Yaşayan Pusula V19.4</p>
+                <p class="text-slate-500">Stoacı Öğrenci V19.6</p>
             </div>
         </aside>
 
@@ -97,9 +97,9 @@
             <section id="tab-ana" class="space-y-6">
                 <div class="bg-gradient-to-br from-white to-slate-50 rounded-3xl p-6 md:p-12 border border-corporateBorder shadow-sm relative overflow-hidden">
                     <div class="relative z-10 max-w-2xl">
-                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">V19.4 Yaşayan Bilgelik Mimarisi</span>
+                        <span class="px-3 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-full uppercase tracking-wider">V19.6 Stoacı Öğrenci Mimarisi</span>
                         <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-corporatePrimary mt-3">Hoş geldin, Aslan Kral</h2>
-                        <p class="text-slate-600 mt-2 text-sm sm:text-base md:text-lg">1. Yaşam Yönü modülü; öğrenilebilir, günlük hayatta uygulanabilir ve anlık kararlara rehberlik eden etkileşimli bir bilgelik laboratuvarına dönüştürüldü.</p>
+                        <p class="text-slate-600 mt-2 text-sm sm:text-base md:text-lg">Tüm modüller merak eden, sorgulayan, öğrendiğini uygulayan bir Stoacı öğrencinin entelektüel ve pratik ihtiyaçlarına göre yeniden yapılandırıldı.</p>
                         
                         <div class="mt-6 w-full bg-slate-200 h-2.5 rounded-full overflow-hidden border border-slate-300">
                             <div id="analytics-progress-bar" class="bg-gradient-to-r from-corporateAccent to-emerald-500 h-full w-[100%] transition-all"></div>
@@ -109,18 +109,18 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
-                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">AI Disiplin Skoru</h4>
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Stoacı Bilgelik Skoru</h4>
                         <p id="analytics-score-display" class="text-2xl md:text-3xl font-bold text-emerald-600 mt-1">100 / 100</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Saf Varlık Uyumlu</span>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Sorgulayan Akıl Uyumlu</span>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-5 shadow-sm">
-                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Modül Odak</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">Uygulamalı Bilgelik</p>
-                        <span class="text-xs text-slate-400 mt-1 inline-block">Teoriden Pratiğe</span>
+                        <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Öğrenci Vizyonu</h4>
+                        <p class="text-2xl md:text-3xl font-bold text-corporateAccent mt-1">Pratik Felsefe</p>
+                        <span class="text-xs text-slate-400 mt-1 inline-block">Teoriden Uygulamaya</span>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm sm:col-span-2 md:col-span-1">
                         <h4 class="text-xs sm:text-sm font-semibold text-slate-500">Sistem Sürümü</h4>
-                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">V19.4 Laboratuvar</p>
+                        <p class="text-2xl md:text-3xl font-bold text-corporatePrimary mt-1">V19.6 Stoacı</p>
                         <span class="text-xs text-corporateAccent mt-1 inline-block">GitHub Uyumlu</span>
                     </div>
                 </div>
@@ -128,90 +128,29 @@
                 <!-- AI ÖZET RAPOR KUTUSU -->
                 <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-3">
                     <h3 class="text-sm font-bold text-corporatePrimary flex items-center gap-2">
-                        <span>🤖</span> AI Günlük İçgörü ve Varlık Raporu
+                        <span>🤖</span> Stoacı Öğrenci İçgörü Raporu
                     </h3>
                     <p id="ai-insight-text" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Maksimum fayda sağlandı, Aslan Kral! Yaşam Yönü modülü artık sadece okunan bir metin değil; her kuralı günlük hayatına entegre edebileceğin yaşayan bir pusuladır.
+                        Zihnin sorgulamaya ve öğrenmeye açık, Aslan Kral. Tüm modüller dış gürültüden arındırılarak saf bilgelik ve uygulama alanına dönüştürüldü.
                     </p>
                 </div>
             </section>
 
-            <!-- 1. YAŞAM YÖNÜ (V19.4 YAŞAYAN BİLGELİK VE UYGULAMA LABORATUVARI) -->
+            <!-- 1. YAŞAM YÖNÜ -->
             <section id="tab-yon" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">1. Yaşam Yönü: Yaşayan Bilgelik ve Karar Laboratuvarı</h2>
-                    <p class="text-slate-500 text-sm mt-1">Bu modül; teoride kalan bilgiyi günlük hayata indirmek, kararları test etmek ve sarsılmaz bir zihinsel duruş inşa etmek için tasarlandı.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">1. Yaşam Yönü: Stoacı Varlık Pusulası</h2>
+                    <p class="text-slate-500 text-sm mt-1">Merak eden ve sorgulayan bir öğrencinin hayattaki ana aksiyomları.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <!-- Sütun 1: Ontolojik Akıl Yürütme (Ne Düşünmelisin?) -->
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                        <div class="flex items-center gap-2">
-                            <span class="px-2.5 py-1 bg-blue-50 text-corporateAccent text-xs font-bold rounded-lg">Temel 01</span>
-                            <h3 class="text-base font-bold text-corporatePrimary">Ontolojik Akıl Yürütme</h3>
-                        </div>
-                        <p class="text-xs text-slate-600 leading-relaxed">Zihnini dogmalardan arındırıp mutlak hakikate ve üretkenliğe bağlayan zihinsel modeller:</p>
-                        <ul class="space-y-2.5 text-xs text-slate-700">
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>1. Gerçeklik Filtresi:</b> "Bir olaya tepki vermeden önce, kanıtlar ne diyor?" Duygusal reaksiyon yerine olgusal analiz yap.
-                            </li>
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>2. Üretkenlik Paktı:</b> Düşünce ancak maddeye veya somut bir değere dönüştüğünde anlam kazanır. Zihni eylemsizlikten koru.
-                            </li>
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>3. Sorumluluk Merkezliliği:</b> Dış faktörleri suçlamak yerine, "Bu durumda benim kontrolümde olan alan neresi?" sorusunu sor.
-                            </li>
-                        </ul>
+                        <h3 class="text-base font-bold text-corporatePrimary">Kontrol Sınırı (Epiktetos Yasası)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Öğrenci, enerjisini asla değiştiremeyeceği dış olaylara harcamaz; sadece kendi iradesine, öğrenme isteğine ve erdemine odaklanır.</p>
                     </div>
-
-                    <!-- Sütun 2: Günlük Uygulama Pratikleri (Nasıl Yaşamalısın?) -->
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                        <div class="flex items-center gap-2">
-                            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-600 text-xs font-bold rounded-lg">Uygulama 02</span>
-                            <h3 class="text-base font-bold text-corporatePrimary">Günlük Erdem Pratikleri</h3>
-                        </div>
-                        <p class="text-xs text-slate-600 leading-relaxed">Erdemleri kelime olmaktan çıkarıp günlük rutinlere dönüştürme rehberi:</p>
-                        <ul class="space-y-2.5 text-xs text-slate-700">
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>🛡️ Cesaret Pratiği:</b> Gün içinde kaçındığın zor bir konuşma veya kararla yüzleş. Rahatsızlık büyümenin habercisidir.
-                            </li>
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>⚖️ Ölçülülük Pratiği:</b> Tüketimde, tepkilerde ve zaman harcamada aşırılıklardan kaçın; dengeyi (Ataraxia) koru.
-                            </li>
-                            <li class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <b>🔥 Aile ve Ocak Pratiği:</b> Eve adım attığında zihinsel yükleri dışarıda bırak; eş ve çocuklara yüzde yüz odaklanmış huzur alanı sun.
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- İnteraktif Karar Simülatörü / Süzgeci -->
-                <div class="bg-gradient-to-br from-slate-900 to-corporatePrimary rounded-3xl p-6 md:p-8 text-white shadow-sm space-y-4">
-                    <div class="flex items-center gap-2">
-                        <span class="px-2.5 py-1 bg-blue-600 text-white text-xs font-bold rounded-lg">Karar Süzgeci</span>
-                        <h3 class="text-lg font-bold">Kriz ve İkilem Anı Karar Algoritması</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                        Önüne karmaşık bir karar çıktığında veya strese girdiğinde bu 3 adımlı Stoacı süzgeçten geçir:
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                        <div class="p-4 bg-white/10 rounded-2xl border border-white/10 space-y-2">
-                            <span class="text-corporateAccent font-bold text-xs">ADIM 1</span>
-                            <h4 class="font-bold text-sm">Kontrol Sınırı</h4>
-                            <p class="text-xs text-slate-300">"Bu durumun ne kadarı benim kontrolümde?" Kontrol dışındakileri tamamen akışa bırak.</p>
-                        </div>
-                        <div class="p-4 bg-white/10 rounded-2xl border border-white/10 space-y-2">
-                            <span class="text-corporateAccent font-bold text-xs">ADIM 2</span>
-                            <h4 class="font-bold text-sm">Değer Uyumu</h4>
-                            <p class="text-xs text-slate-300">"Alacağım karar uzun vadeli erdemlerimle ve aile mirasımla %100 uyumlu mu?"</p>
-                        </div>
-                        <div class="p-4 bg-white/10 rounded-2xl border border-white/10 space-y-2">
-                            <span class="text-corporateAccent font-bold text-xs">ADIM 3</span>
-                            <h4 class="font-bold text-sm">İrade Testi</h4>
-                            <p class="text-xs text-slate-300">"Bu karar korkudan mı kaçıyor, yoksa doğru olanı yapma cesaretinden mi doğuyor?"</p>
-                        </div>
+                        <h3 class="text-base font-bold text-corporatePrimary">Dört Temel Erdem</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Bilgelik, Cesaret, Adalet ve Ölçülülük; öğrencinin her gün test ettiği ve pratik hayata geçirdiği temel sütunlardır.</p>
                     </div>
                 </div>
             </section>
@@ -219,30 +158,30 @@
             <!-- 2. YÖNETİM -->
             <section id="tab-yonetim" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">2. Yönetim: Hedefler ve Kararlar</h2>
-                    <p class="text-slate-500 text-sm mt-1">Stratejik kararlar, yıllık ve aylık vizyon hedefleri.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">2. Yönetim: Karar Laboratuvarı</h2>
+                    <p class="text-slate-500 text-sm mt-1">Hedefleri ve kararları Stoacı süzgeçten geçirme alanı.</p>
                 </div>
                 <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                    <h3 class="text-lg font-semibold text-corporateAccent">Stratejik Planlama</h3>
-                    <p class="text-slate-600 text-sm">Kişisel gelişim, aile hedefleri ve akademik çalışma takvimi.</p>
+                    <h3 class="text-lg font-semibold text-corporateAccent">Stratejik Karar Süzgeci</h3>
+                    <p class="text-slate-600 text-sm">Bir hedef koyarken veya karar alırken sorulan sorular: "Bu erdemli mi?", "Elimde mi?", "Gerçek mi?"</p>
                 </div>
             </section>
 
             <!-- 3. UYGULAMA -->
             <section id="tab-uygulama" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">3. Uygulama: Görevler ve Zaman</h2>
-                    <p class="text-slate-500 text-sm mt-1">Günlük operasyonlar, görevler ve zaman yönetimi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">3. Uygulama: Günlük Pratikler</h2>
+                    <p class="text-slate-500 text-sm mt-1">Öğrenilen felsefeyi eyleme dönüştürme zamanı.</p>
                 </div>
                 <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                    <h3 class="text-lg font-semibold text-corporateAccent">Günlük Görev Çizelgesi</h3>
-                    <p class="text-slate-600 text-sm">Günün öncelikli işleri ve pratik zaman dağılımı.</p>
+                    <h3 class="text-lg font-semibold text-corporateAccent">Günlük Eylem Çizelgesi</h3>
+                    <p class="text-slate-600 text-sm">Bugün hangi erdemi uyguladın? Hangi zorlukla yüzleştin?</p>
                 </div>
             </section>
 
             <!-- POMODORO -->
             <section id="tab-pomodoro" class="hidden space-y-6">
-                <h2 class="text-2xl font-bold text-corporatePrimary">Derin Odak ve Zamanlayıcı</h2>
+                <h2 class="text-2xl font-bold text-corporatePrimary">İçsel Mabet (Derin Odak)</h2>
                 <div class="bg-cardBg border border-corporateBorder rounded-3xl p-6 sm:p-8 max-w-xl mx-auto text-center space-y-6 shadow-sm">
                     <div class="flex flex-wrap justify-center gap-2 sm:gap-3">
                         <button onclick="setTimerMode(25)" id="mode-25" class="px-4 py-2.5 rounded-xl bg-corporateAccent text-white font-bold text-xs transition">Odak (25 dk)</button>
@@ -251,7 +190,7 @@
                     </div>
                     <div class="py-6 sm:py-8">
                         <span id="timer-display" class="text-6xl sm:text-7xl md:text-8xl font-black text-corporatePrimary tracking-wider">25:00</span>
-                        <p id="timer-status" class="text-corporateAccent text-sm mt-2 font-medium">Çalışmaya Hazır</p>
+                        <p id="timer-status" class="text-corporateAccent text-sm mt-2 font-medium">Zihinsel Sığınak Aktif</p>
                     </div>
                     <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
                         <button onclick="startTimer()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 sm:px-8 py-3.5 rounded-xl transition shadow-sm text-sm">Başlat</button>
@@ -264,39 +203,39 @@
             <!-- 4. ÖĞRENME -->
             <section id="tab-ogrenme" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">4. Öğrenme: 12 Ana Fakülte Enstitüsü</h2>
-                    <p class="text-slate-500 text-sm mt-1">Yaşam boyu eğitim, derinlemesine bilgi ve akademik disiplin havuzu.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">4. Öğrenme: 12 Fakülte Sorgulama Havuzu</h2>
+                    <p class="text-slate-500 text-sm mt-1">Merak eden ve soran bir öğrencinin evreni okuma fakülteleri.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Felsefe ve Ontoloji</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">İnsanlık Tarihi</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Dinler Tarihi & Mitoloji</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Psikoloji & Zihin Bilimleri</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sosyoloji & Antropoloji</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Temel Bilimler</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sanat, Estetik & Edebiyat</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Müzik & Akustik Sanatlar</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Teknoloji & Mimari</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">İşletme, Finans & Strateji</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Beden, Spor & Zindelik</h4></div>
-                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Doğa, Ekoloji & Pratikler</h4></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Felsefe & Ontoloji</h4><p class="text-xs text-slate-500 mt-1">Hakikat arayışı</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">İnsanlık Tarihi</h4><p class="text-xs text-slate-500 mt-1">Geçmişin dersleri</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Dinler & Mitoloji</h4><p class="text-xs text-slate-500 mt-1">İnsan bilinci</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Psikoloji & Zihin</h4><p class="text-xs text-slate-500 mt-1">İçsel mekanizmalar</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sosyoloji & Antropoloji</h4><p class="text-xs text-slate-500 mt-1">Toplum ve yapı</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Temel Bilimler</h4><p class="text-xs text-slate-500 mt-1">Evrenin yasaları</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Sanat & Edebiyat</h4><p class="text-xs text-slate-500 mt-1">İfade ve estetik</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Müzik & Akustik</h4><p class="text-xs text-slate-500 mt-1">Ruhun melodisi</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Teknoloji & Mimari</h4><p class="text-xs text-slate-500 mt-1">Yaratım ve yapı</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Strateji & Finans</h4><p class="text-xs text-slate-500 mt-1">Kaynak yönetimi</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Beden & Zindelik</h4><p class="text-xs text-slate-500 mt-1">Fiziksel tapınak</p></div>
+                    <div class="bg-cardBg border border-corporateBorder p-5 rounded-2xl shadow-sm"><h4 class="font-bold text-corporatePrimary text-base">Doğa & Ekoloji</h4><p class="text-xs text-slate-500 mt-1">Evrenin döngüsü</p></div>
                 </div>
             </section>
 
             <!-- 5. ALIŞKANLIK -->
             <section id="tab-aliskanlik" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">5. Alışkanlık: Disiplin ve Seriler</h2>
-                    <p class="text-slate-500 text-sm mt-1">Günlük rutinler, gitar pratiği ve seri (streak) takibi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">5. Alışkanlık: İrade ve Seri Takibi</h2>
+                    <p class="text-slate-500 text-sm mt-1">Her gün taviz vermeden uygulanan Stoacı disiplin serileri.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
-                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Alışkanlık</h3>
+                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Disiplin Ekle</h3>
                         <input type="text" id="habit-title" placeholder="Alışkanlık adı..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
                         <button onclick="addHabitAtomic()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">Atomik Ekle ➕</button>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 lg:col-span-2">
-                        <h3 class="text-lg font-semibold text-corporateAccent">Seriler</h3>
+                        <h3 class="text-lg font-semibold text-corporateAccent">Seriler (Ataraxia)</h3>
                         <div id="habits-list" class="space-y-3 max-h-96 overflow-y-auto pr-2"></div>
                     </div>
                 </div>
@@ -305,12 +244,12 @@
             <!-- 6. YAŞAM VERİSİ -->
             <section id="tab-notlar" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">6. Yaşam Verisi: Dinamik Not Defteri</h2>
-                    <p class="text-slate-500 text-sm mt-1">Kişisel kayıtlar, fikirler ve çalışma notları arşivi.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">6. Yaşam Verisi: Sorgulayan Akıl Defteri</h2>
+                    <p class="text-slate-500 text-sm mt-1">Öğrencinin gün içinde edindiği içgörüler ve felsefi notlar.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4 lg:col-span-1">
-                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Not Ekle</h3>
+                        <h3 class="text-lg font-semibold text-corporateAccent">Yeni Düşünce Ekle</h3>
                         <div class="space-y-3">
                             <input type="text" id="note-title" placeholder="Başlık..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent">
                             <textarea id="note-content" rows="4" placeholder="İçerik..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporateAccent"></textarea>
@@ -324,16 +263,16 @@
                 </div>
             </section>
 
-            <!-- 7. V19.4 VERİ KASASI -->
+            <!-- 7. V19.6 VERİ KASASI -->
             <section id="tab-veri" class="hidden space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V19.4 Varlık Veri Kasası</h2>
-                    <p class="text-slate-500 text-sm mt-1">GitHub uyumlu bulut yedekleme, V19.4 Yaşayan Pusula ve atomik veri kasası.</p>
+                    <h2 class="text-2xl font-bold text-corporatePrimary">7. V19.6 Stoacı Veri Kasası</h2>
+                    <p class="text-slate-500 text-sm mt-1">GitHub uyumlu bulut yedekleme, V19.6 Stoacı Öğrenci Mimarisi.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
                         <h3 class="text-lg font-semibold text-corporateAccent">GitHub Bulut Paketi (Export)</h3>
-                        <p class="text-xs text-slate-600">Sistem verilerini doğrudan GitHub deposuna commit edilebilir V19.4 JSON formatında indir.</p>
+                        <p class="text-xs text-slate-600">Sistem verilerini doğrudan GitHub deposuna commit edilebilir V19.6 JSON formatında indir.</p>
                         <button onclick="exportDataVault()" class="w-full bg-corporateAccent hover:bg-corporateHover text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm">GitHub Paketi İndir ☁️📥</button>
                     </div>
                     <div class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-4">
@@ -344,8 +283,8 @@
                     </div>
                 </div>
                 <div id="vault-status-log" class="bg-cardBg border border-corporateBorder rounded-2xl p-6 shadow-sm space-y-2 text-xs font-mono text-slate-600">
-                    <p class="font-bold text-corporatePrimary font-sans">V19.4 Laboratuvar Günlüğü:</p>
-                    <p>🔹 Life Direction (Yaşayan Pusula V19.4): Uygulamalı Bilgelik ve Karar Algoritması ile Güncellendi.</p>
+                    <p class="font-bold text-corporatePrimary font-sans">V19.6 Stoacı Günlüğü:</p>
+                    <p>🔹 Stoacı Öğrenci Mimarisi & Rollback Motoru: Aktif ve Sükûnet Modunda.</p>
                 </div>
             </section>
 
@@ -353,7 +292,6 @@
     </div>
 
     <script>
-        // PWA Service Worker Kaydı
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
@@ -362,9 +300,6 @@
             });
         }
 
-        // ==========================================
-        // V19.4 AKILLI ROUTER & SAYFA KORUMA MOTORU
-        // ==========================================
         const validTabs = ['ana', 'yon', 'yonetim', 'uygulama', 'pomodoro', 'ogrenme', 'aliskanlik', 'notlar', 'veri'];
 
         window.onload = function() {
@@ -440,9 +375,6 @@
             document.getElementById('import-file').click();
         }
 
-        // ==========================================
-        // V19.4 ANALİTİK & ATOMİK MOTORU
-        // ==========================================
         function runAIAnalytics() {
             try {
                 const notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
@@ -460,7 +392,7 @@
 
                 const insightEl = document.getElementById('ai-insight-text');
                 if (insightEl) {
-                    insightEl.innerHTML = `V19.4 Yaşayan Pusula aktif, Aslan Kral! Uygulamalı bilgelik ve karar algoritmaları devreye alındı. Disiplin ve ontolojik uyum skorun <b>${calculatedScore}/100</b> olarak korunuyor.`;
+                    insightEl.innerHTML = `V19.6 Stoacı Öğrenci Mimarisi aktif, Aslan Kral! Sorgulayan akıl ve pratik felsefe ilkeleriyle sistem kararlılığı tescillendi. Disiplin skorun <b>${calculatedScore}/100</b>.`;
                 }
             } catch (err) {
                 console.error("AI Analytics Error:", err);
@@ -474,15 +406,15 @@
             try {
                 transactionFn();
                 runAIAnalytics();
-                logVaultStatus(`✅ [V19.4 LABORATUVAR]: ${successMsg}`);
+                logVaultStatus(`✅ [V19.6 STOACI ÖĞRENCİ]: ${successMsg}`);
             } catch (err) {
                 if (snapshotNotes !== null) localStorage.setItem('kahraman_notes', snapshotNotes);
                 if (snapshotHabits !== null) localStorage.setItem('kahraman_habits', snapshotHabits);
                 renderNotes();
                 renderHabits();
                 runAIAnalytics();
-                logVaultStatus(`❌ [ROLLBACK]: İşlem hatası, eski güvenli duruma dönüldü. (${err.message})`);
-                alert("İşlem Hatası (Rollback Uygulandı): " + err.message);
+                logVaultStatus(`🛡️ [STOACI ROLLBACK]: Dışsal hata engellendi, güvenli duruma dönüldü.`);
+                alert("İşlem Hatası (Stoacı Rollback Uygulandı): " + err.message);
             }
         }
 
@@ -490,8 +422,8 @@
             if (eventType === 'HABIT_STREAK_INCREMENTED') {
                 let notes = JSON.parse(localStorage.getItem('kahraman_notes')) || [];
                 notes.unshift({
-                    title: `[Pusula Köprüsü] ${payload.title} Serisi Güncellendi`,
-                    content: `Seri ${payload.streak} güne ulaştı, varlık kayıtlarına işlendi.`
+                    title: `[Stoacı Köprü] ${payload.title} Serisi Güncellendi`,
+                    content: `Seri ${payload.streak} güne ulaştı, irade hanesine işlendi.`
                 });
                 localStorage.setItem('kahraman_notes', JSON.stringify(notes));
             }
@@ -511,7 +443,7 @@
                 titleInput.value = '';
                 contentInput.value = '';
                 renderNotes();
-            }, "Yeni not sisteme kaydedildi.");
+            }, "Yeni düşünce sisteme kaydedildi.");
         }
 
         function deleteNote(index) {
@@ -520,7 +452,7 @@
                 notes.splice(index, 1);
                 localStorage.setItem('kahraman_notes', JSON.stringify(notes));
                 renderNotes();
-            }, "Not silindi.");
+            }, "Düşünce silindi.");
         }
 
         function addHabitAtomic() {
@@ -535,7 +467,7 @@
                 localStorage.setItem('kahraman_habits', JSON.stringify(habits));
                 titleInput.value = '';
                 renderHabits();
-            }, "Yeni alışkanlık eklendi.");
+            }, "Yeni disiplin eklendi.");
         }
 
         function incrementStreak(index) {
@@ -555,12 +487,12 @@
                 habits.splice(index, 1);
                 localStorage.setItem('kahraman_habits', JSON.stringify(habits));
                 renderHabits();
-            }, "Alışkanlık silindi.");
+            }, "Disiplin silindi.");
         }
 
         function exportDataVault() {
             const vaultData = {
-                version: "V19.4",
+                version: "V19.6",
                 repository: "kahramanin-yolculugu",
                 timestamp: new Date().toISOString(),
                 owner: "Aslan Kral",
@@ -570,11 +502,11 @@
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(vaultData, null, 2));
             const downloadAnchor = document.createElement('a');
             downloadAnchor.setAttribute("href", dataStr);
-            downloadAnchor.setAttribute("download", `kahraman_life_os_v19.4_lab_${Date.now()}.json`);
+            downloadAnchor.setAttribute("download", `kahraman_life_os_v19.6_student_${Date.now()}.json`);
             document.body.appendChild(downloadAnchor);
             downloadAnchor.click();
             downloadAnchor.remove();
-            logVaultStatus("☁️📥 Başarılı: V19.4 Yaşayan Pusula bulut paketi indirildi.");
+            logVaultStatus("☁️📥 Başarılı: V19.6 Stoacı öğrenci bulut paketi indirildi.");
         }
 
         function importDataVaultAtomic() {
@@ -596,7 +528,7 @@
                     renderNotes();
                     renderHabits();
                     runAIAnalytics();
-                }, "V19.4 Bulut yedeği başarıyla geri yüklendi.");
+                }, "V19.6 Stoacı bulut yedeği başarıyla geri yüklendi.");
                 alert("Bulut yedeği başarıyla geri yüklendi!");
             };
             reader.readAsText(file);
@@ -641,7 +573,7 @@
                     <div class="p-4 bg-slate-50 rounded-xl border border-corporateBorder flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 shadow-sm">
                         <div>
                             <h4 class="font-bold text-slate-800 text-sm">${h.title}</h4>
-                            <span class="text-xs text-corporateAccent font-semibold mt-0.5 inline-block">🔥 Seri: ${h.streak} Gün (Yaşayan Pusula)</span>
+                            <span class="text-xs text-corporateAccent font-semibold mt-0.5 inline-block">🔥 Seri: ${h.streak} Gün (Stoacı İrade)</span>
                         </div>
                         <div class="flex gap-2 w-full sm:w-auto justify-end">
                             <button onclick="incrementStreak(${index})" class="text-emerald-700 text-xs px-3 py-2 bg-emerald-50 rounded-lg font-semibold flex-1 sm:flex-none">+1 Tamamla</button>
@@ -677,13 +609,13 @@
         function startTimer() {
             if (isRunning) return;
             isRunning = true;
-            document.getElementById('timer-status').innerText = "Çalışma Devam Ediyor...";
+            document.getElementById('timer-status').innerText = "İçsel Mabet Odak Devam Ediyor...";
             timerInterval = setInterval(() => {
                 if (timerSeconds === 0) {
                     if (timerMinutes === 0) {
                         clearInterval(timerInterval);
                         isRunning = false;
-                        alert('Süre tamamlandı!');
+                        alert('Odak seansı tamamlandı!');
                         return;
                     }
                     timerMinutes--;
